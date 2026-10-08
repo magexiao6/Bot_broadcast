@@ -260,6 +260,11 @@ def main():
         if english_id in state["pending"]:
             continue
         state["pending"][english_id] = english_item
+      
+    if not state["pending"]:
+    print("当前没有待匹配的英文消息")
+    save_state(state)
+    return
 
     chinese_news = get_chinese_news(5)
     pending_items = list(state["pending"].items()) # 创建 pending 的快照
