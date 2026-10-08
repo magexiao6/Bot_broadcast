@@ -24,3 +24,11 @@ jobs:
           python --version
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Run bot
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TG_EN_URL: ${{ vars.TG_EN_URL }}
+          RSS_ZH_URL: ${{ vars.RSS_ZH_URL }}
+        run: python bot.py
