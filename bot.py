@@ -31,7 +31,7 @@ def save_state(state):
     with STATE_FILE.open("w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2) # indent=2可以自动给json排版，2的意思是每一级缩进两个空格
 
-def get_article_paragraphs(article_url):
+def get_article_content(article_url):
     # 获取文章正文
     # 按照 HTML 规则解析 article_response.text
     article_response = requests.get(article_url, timeout=30)
@@ -41,6 +41,9 @@ def get_article_paragraphs(article_url):
         article_response.text,
         "html.parser"
     )
+    title_tag = soup.select_one("article.reading-shell.article-section h1")
+    title = title_tag.get_text(" ", strip=True) if title_tag else ""
+
     article_paragraph_tags = soup.select("article.reading-shell.article-section div.msg-prose > p")
     paragraphs = []
     for p in article_paragraph_tags:
@@ -50,7 +53,7 @@ def get_article_paragraphs(article_url):
         if text.startswith("🌸"):
             continue
         paragraphs.append(text)
-    return paragraphs
+    return title, paragraphs
 
 def get_chinese_news_metadata(n):
     # 获取 n 个中文新闻，n <= 50
@@ -60,10 +63,7 @@ def get_chinese_news_metadata(n):
     feed = feedparser.parse(response.content)
     chinese_news = []
     for entry in feed.entries[:n]:
-        # 由于rss里面没有正文段落信息，不方便分段，所以直接访问html原文
-        article_url = entry.get("link", "")
-
-        # 将新闻id、标题、链接、发布时间、正文存储在一个字典中
+        # 将新闻id、标题、链接、发布时间存储在字典中，后面会在匹配到中文新闻后将title替换，并补充正文
         news_item = {
             "id": entry.get("id", ""),
             "title": entry.get("title", ""),
@@ -279,7 +279,8 @@ def main():
                     state["alerts_sent"].append(alert_key)
         best_match, best_difference = find_best_match(english_item, chinese_news)
         if best_match:
-            paragraphs = get_article_paragraphs(best_match["link"])
+            zh_title, paragraphs = get_article_content(best_match["link"])
+            best_match["title"] = zh_title
             best_match["paragraphs"] = paragraphs
             message = format_bilingual_message(english_item, best_match)
             if message is None:
