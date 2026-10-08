@@ -2,4 +2,5 @@
   "initialized": false,
   "sent_ids": [],
   "pending": {}
+  "alerts_sent": []
 }
