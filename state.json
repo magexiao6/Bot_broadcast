@@ -1,6 +1,12 @@
 {
-  "initialized": false,
-  "sent_ids": [],
+  "initialized": true,
+  "sent_ids": [
+    "zaihua_news/2701",
+    "zaihua_news/2702",
+    "zaihua_news/2703",
+    "zaihua_news/2704",
+    "zaihua_news/2705"
+  ],
   "pending": {},
   "alerts_sent": []
 }
