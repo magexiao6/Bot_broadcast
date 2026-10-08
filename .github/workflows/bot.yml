@@ -59,7 +59,3 @@ jobs:
           git add state.json
           git commit -m "Update bot state [skip ci]"
           git push
-
-          git add state.json
-          git commit -m "Update bot state"
-          git push
