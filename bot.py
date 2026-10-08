@@ -52,17 +52,16 @@ def get_article_paragraphs(article_url):
         paragraphs.append(text)
     return paragraphs
 
-def get_chinese_news(n):
+def get_chinese_news_metadata(n):
     # 获取 n 个中文新闻，n <= 50
     # 获取 rss 池里文章的id、标题、发布时间、文章链接
     response = requests.get(RSS_ZH_URL, timeout=30)
-    response.raise_for_status() # 如果http状态码不是200，直接报错
+    response.raise_for_status()  # 如果http状态码不是200，直接报错
     feed = feedparser.parse(response.content)
     chinese_news = []
     for entry in feed.entries[:n]:
         # 由于rss里面没有正文段落信息，不方便分段，所以直接访问html原文
         article_url = entry.get("link", "")
-        paragraphs = get_article_paragraphs(article_url)
 
         # 将新闻id、标题、链接、发布时间、正文存储在一个字典中
         news_item = {
@@ -70,7 +69,6 @@ def get_chinese_news(n):
             "title": entry.get("title", ""),
             "link": entry.get("link", ""),
             "published": entry.get("published", ""),
-            "paragraphs": paragraphs
         }
         chinese_news.append(news_item)
     return chinese_news
@@ -88,9 +86,9 @@ def get_english_news(n):
         post_id = message.get("data-post", "")
         message_link = "https://t.me/" + post_id
 
-        time_element = message.select_one("time")
+        time_element = message.select_one(".tgme_widget_message_date time[datetime]")
         if time_element:
-            published = time_element.get("datetime", "")
+            published = time_element.get("datetime", "").strip()
         else:
             published = ""
 
@@ -240,7 +238,7 @@ def send_status_message(message):
 def main():
     state = load_state()
     """"初始化，将已在消息池内的消息略过，等待处理下一条新消息"""
-    english_news = get_english_news(5)
+    english_news = get_english_news(10)
     if not state["initialized"]:
         for english_item in english_news:
             english_id = english_item["id"]
@@ -258,20 +256,31 @@ def main():
         if english_id in state["sent_ids"]:
             continue
         if english_id in state["pending"]:
+            if english_item.get("published"):
+                state["pending"][english_id]["published"] = (english_item["published"])
             continue
         state["pending"][english_id] = english_item
-      
-    if not state["pending"]:
-    print("当前没有待匹配的英文消息")
-    save_state(state)
-    return
 
-    chinese_news = get_chinese_news(5)
+    if not state["pending"]:
+        print("当前没有待匹配的英文消息")
+        save_state(state)
+        return
+
+    chinese_news = get_chinese_news_metadata(10)
     pending_items = list(state["pending"].items()) # 创建 pending 的快照
 
     for english_id, english_item in pending_items:
+        if not english_item.get("published"):
+            alert_key = english_id + ":time_error"
+            if alert_key not in state["alerts_sent"]:
+                error_message = "⚠️ 英文消息发布时间提取失败\n英文ID：" + english_id
+                alert_success = send_status_message(error_message)
+                if alert_success:
+                    state["alerts_sent"].append(alert_key)
         best_match, best_difference = find_best_match(english_item, chinese_news)
         if best_match:
+            paragraphs = get_article_paragraphs(best_match["link"])
+            best_match["paragraphs"] = paragraphs
             message = format_bilingual_message(english_item, best_match)
             if message is None:
                 alert_key = english_id + ":format_error"
