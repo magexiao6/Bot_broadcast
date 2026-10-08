@@ -1,1 +1,15 @@
+name: Telegram News Bot
 
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "*/10 * * * *"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test workflow
+        run: echo "GitHub Actions started successfully"
