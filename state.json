@@ -25,8 +25,41 @@
     "zaihua_news/2720",
     "zaihua_news/2721",
     "zaihua_news/2722",
-    "zaihua_news/2723"
+    "zaihua_news/2723",
+    "zaihua_news/2724",
+    "zaihua_news/2725",
+    "zaihua_news/2729",
+    "zaihua_news/2730",
+    "zaihua_news/2731",
+    "zaihua_news/2732",
+    "zaihua_news/2734"
   ],
-  "pending": {},
-  "alerts_sent": []
+  "pending": {
+    "zaihua_news/2726": {
+      "id": "zaihua_news/2726",
+      "title": "Southeast Asia accounts for 32% of global short drama downloads, with romance, revenge, and family-conflict stories proving most popular.",
+      "link": "https://t.me/zaihua_news/2726",
+      "published": "2026-10-09T02:30:56+00:00",
+      "paragraphs": [
+        "In Q1 2026, Southeast Asia led global short-drama app downloads with about 32%, but generated only 9% of in-app purchase revenue. In Thailand, romance made up 29.35% of 92 popular vertical dramas; betrayal, revenge, and family-conflict stories accounted for 27.17%. Fantasy ranked third at 18.48%.",
+        "Popular plotlines include marriages of convenience, wealthy families, reunions with exes, and family revenge. Identity twists, emotional entanglements, and cliffhangers keep viewers watching. Streaming platforms are adding short dramas to their services, while local producers build brands with original content. Governments and platforms are investing in talent, AI tools, and international distribution.",
+        "TechNode"
+      ]
+    },
+    "zaihua_news/2733": {
+      "id": "zaihua_news/2733",
+      "title": "China’s State Post Bureau: China’s per capita express delivery volume exceeds 140 parcels a year.",
+      "link": "https://t.me/zaihua_news/2733",
+      "published": "2026-10-09T06:00:16+00:00",
+      "paragraphs": [
+        "China’s State Post Bureau said today that China has built the world’s largest delivery network, with the widest coverage and the most beneficiaries. People in China use more than 140 express delivery services per person each year.",
+        "China continues to expand network coverage, with major hub clusters largely established in the Beijing-Tianjin-Hebei region, the Yangtze River Delta, the Guangdong-Hong Kong-Macao Greater Bay Area, the Chengdu-Chongqing region and central China. Powered by a “hubs + corridors + network” model, more than 6,300 parcels enter the delivery network every second, averaging 540 million a day. Annual express delivery use exceeds 140 parcels per person, while average end-to-end delivery times and public satisfaction continue to improve.",
+        "Interface"
+      ]
+    }
+  },
+  "alerts_sent": [
+    "zaihua_news/2726:format_error",
+    "zaihua_news/2733:format_error"
+  ]
 }
