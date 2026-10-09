@@ -221,10 +221,16 @@ def format_bilingual_message(english_item, chinese_item):
         en_parts = [english_item["title"]] + en_parts # 组合成标题+内容
 
     zh_parts = [chinese_item["title"]] + chinese_item["paragraphs"]
-    if len(en_parts) != len(zh_parts):
-        print("中英文段落数量不一致")
-        return None
     message_parts = []
+    if len(en_parts) != len(zh_parts):
+        print("中英文段落数量不一致，采用整段双语排版")
+        message_parts = [en_parts[0], zh_parts[0]]
+        if len(en_parts) > 1:
+            message_parts.append("\n\n".join(en_parts[1:]))
+        if len(zh_parts) > 1:
+            message_parts.append("\n\n".join(zh_parts[1:]))
+        message = "\n\n".join(message_parts)
+        return message
     for en_part, zh_part in zip(en_parts, zh_parts):
         message_parts.append(en_part)
         message_parts.append(zh_part)
@@ -266,7 +272,7 @@ def main():
         save_state(state)
         return
 
-    chinese_news = get_chinese_news_metadata(10)
+    chinese_news = get_chinese_news_metadata(50)
     pending_items = list(state["pending"].items()) # 创建 pending 的快照
 
     for english_id, english_item in pending_items:
