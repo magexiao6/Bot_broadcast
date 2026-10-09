@@ -2,6 +2,7 @@ import os
 import json
 import requests
 import feedparser
+import re
 from pathlib import Path
 from bs4 import BeautifulSoup
 from datetime import datetime
@@ -84,6 +85,16 @@ def get_english_news(n):
     english_news = []
     for message in message_tags[-n:]:
         post_id = message.get("data-post", "")
+        # 获取图片并放入media
+        photo_tags = message.select(".tgme_widget_message_photo_wrap")
+        media = []
+        for photo in photo_tags:
+            style = photo.get("style", "")
+            match = re.search(r"background-image\s*:\s*url\(\s*['\"]?([^'\")]+)",style)
+            if match:
+                photo_url = match.group(1)
+                media.append({"type": "photo", "url": photo_url})
+
         message_link = "https://t.me/" + post_id
 
         time_element = message.select_one(".tgme_widget_message_date time[datetime]")
@@ -122,7 +133,9 @@ def get_english_news(n):
             "title": title,
             "link": message_link,
             "published": published,
-            "paragraphs": body_paragraphs
+            "paragraphs": body_paragraphs,
+            "media": media,
+            "media_sent": False
         } # 保持与中文相同的结构，先把每条新闻组装成字典，再放入english_news新闻列表中
         english_news.append(news_item)
     return english_news
@@ -241,6 +254,46 @@ def send_status_message(message):
     text = "🤖 Bot运行通知\n\n" + message
     return send_telegram_message(text)
 
+def send_telegram_photo(photo_url):
+    # 发送单张图片
+    # 第一步：根据URL下载图片
+    image_response = requests.get(photo_url, timeout=30)
+    image_response.raise_for_status()
+    # 第二步：构造Telegram上传地址
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
+    data = {"chat_id": CHAT_ID}
+    files = {"photo": ("news.jpg", image_response.content, "image/jpeg")}
+    response = requests.post(url, data=data, files=files, timeout=60)
+    result = response.json()
+    if result.get("ok"):
+        print("图片发送成功")
+        return True
+    else:
+        print("图片发送失败：", result.get("description"))
+        return False
+
+def send_telegram_album(media):
+    # 多张图片当作一个相册发送
+    files = {}
+    media_payload = []
+    for i, item in enumerate(media): # enumerate就是将medai[图1，图2，图3]转化成[(0, 图1), (1, 图2), (2, 图3)]
+        photo_url = item["url"]
+        image_response = requests.get(photo_url, timeout=30)
+        image_response.raise_for_status()
+        file_key = f"photo{i}"
+        files[file_key] = (f"photo{i}.jpg", image_response.content, "image/jpeg")
+        media_payload.append({"type": "photo", "media": f"attach://{file_key}"})
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMediaGroup"
+    data = {"chat_id": CHAT_ID, "media": json.dumps(media_payload)}
+    response = requests.post(url, data=data, files=files, timeout=60)
+    result = response.json()
+    if result.get("ok"):
+        print("相册发送成功")
+        return True
+    else:
+        print("相册发送失败：", result.get("description"))
+        return False
+
 def main():
     state = load_state()
     """"初始化，将已在消息池内的消息略过，等待处理下一条新消息"""
@@ -265,6 +318,7 @@ def main():
             if english_item.get("published"):
                 state["pending"][english_id]["published"] = (english_item["published"])
             continue
+        english_item["media_sent"] = False
         state["pending"][english_id] = english_item
 
     if not state["pending"]:
@@ -297,12 +351,31 @@ def main():
                     if alert_success:
                         state["alerts_sent"].append(alert_key)
                 continue
+            media = english_item.get("media", [])
+            photos = [
+                item for item in media
+                if item.get("type") == "photo"
+            ]
+
+            if photos and not english_item.get("media_sent", False):
+                if len(photos) == 1:
+                    media_success = send_telegram_photo(photos[0]["url"])
+                elif 2 <= len(photos) <= 10:
+                    media_success = send_telegram_album(photos)
+                else:
+                    print("图片数量超过当前支持范围")
+                    continue
+                if not media_success:
+                    print("图片发送失败，保留在pending：", english_id)
+                    continue
+                english_item["media_sent"] = True
+
             success = send_telegram_message(message)
             if success:
                 state["sent_ids"].append(english_id)
                 state["pending"].pop(english_id)
             else:
-                print("发送失败，保留在pending：", english_id)
+                print("文字发送失败，保留在pending：", english_id)
         else:
             alert_key = english_id + ":no_match"
             if alert_key not in state["alerts_sent"]:
