@@ -81,11 +81,30 @@
     "zaihua_news/2778",
     "zaihua_news/2779",
     "zaihua_news/2780",
-    "zaihua_news/2781"
+    "zaihua_news/2781",
+    "zaihua_news/2783",
+    "zaihua_news/2784",
+    "zaihua_news/2786",
+    "zaihua_news/2787",
+    "zaihua_news/2788"
   ],
-  "pending": {},
+  "pending": {
+    "zaihua_news/2782": {
+      "id": "zaihua_news/2782",
+      "title": "“Avengers: Doomsday” set for release on December 16.",
+      "link": "https://t.me/zaihua_news/2782",
+      "published": "2026-10-12T02:33:46+00:00",
+      "paragraphs": [
+        "Marvel Studios has announced that *Avengers: Doomsday* will hit theaters on December 16, opening worldwide two days ahead of North America.",
+        "Marvel Studios"
+      ],
+      "media": [],
+      "media_sent": false
+    }
+  },
   "alerts_sent": [
     "zaihua_news/2726:format_error",
-    "zaihua_news/2733:format_error"
+    "zaihua_news/2733:format_error",
+    "zaihua_news/2782:no_match"
   ]
 }
