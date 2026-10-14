@@ -136,7 +136,8 @@
     "zaihua_news/2839",
     "zaihua_news/2840",
     "zaihua_news/2841",
-    "zaihua_news/2842"
+    "zaihua_news/2842",
+    "zaihua_news/2843"
   ],
   "pending": {
     "zaihua_news/2782": {
@@ -150,11 +151,28 @@
       ],
       "media": [],
       "media_sent": false
+    },
+    "zaihua_news/2844": {
+      "id": "zaihua_news/2844",
+      "title": "Dongchedi Responds to the Maextro V800 Brake Test: How Do Bench Tests Differ from Emergency Braking on the Road?",
+      "link": "https://t.me/zaihua_news/2844",
+      "published": "2026-10-14T16:09:22+00:00",
+      "paragraphs": [
+        "I. What’s the difference between the two types of tests?",
+        "Bench test: The pedal assembly is secured to a test rig and force is gradually applied in the specified direction. The more stringent test uses a loading rate of 20 mm per minute. The test mainly checks whether the pedal deforms, cracks, or is damaged.",
+        "Emergency braking in an actual vehicle: The vehicle is brought to a full stop while driving, with the pedal, bracket, and braking system in their real-world installed configuration and dynamic operating state. The main question is whether the vehicle can stop.",
+        "How they relate: The two tests address different issues and complement each other, but bench-test results cannot cover all the dynamic conditions of emergency braking in an actual vehicle.",
+        "II. What the published statement says—and three points that need clarification",
+        "The published statement says that"
+      ],
+      "media": [],
+      "media_sent": false
     }
   },
   "alerts_sent": [
     "zaihua_news/2726:format_error",
     "zaihua_news/2733:format_error",
-    "zaihua_news/2782:no_match"
+    "zaihua_news/2782:no_match",
+    "zaihua_news/2844:no_match"
   ]
 }
