@@ -190,7 +190,10 @@
     "zaihua_news/2899",
     "zaihua_news/2900",
     "zaihua_news/2901",
-    "zaihua_news/2902"
+    "zaihua_news/2902",
+    "zaihua_news/2903",
+    "zaihua_news/2904",
+    "zaihua_news/2906"
   ],
   "pending": {
     "zaihua_news/2782": {
@@ -220,6 +223,19 @@
       ],
       "media": [],
       "media_sent": false
+    },
+    "zaihua_news/2905": {
+      "id": "zaihua_news/2905",
+      "title": "🤖 OpenAI updates ChatGPT: parallel multi-agent workflows and slide support",
+      "link": "https://t.me/zaihua_news/2905",
+      "published": "2026-10-17T02:07:00+00:00",
+      "paragraphs": [
+        "OpenAI The [ordinal] day of 28 consecutive days of updates 12-day update: OpenAI announced an upgrade to GPT-6 Astra Pro in ChatGPT, bringing faster response times and improved plugin and tool-calling capabilities. Multiple agents can now work on different parts of the same task in parallel. Users can track each task’s progress and open completed subtasks to view details. The feature is gradually rolling out to Pro users and is available in the Conversations tab.",
+        "Codex and Work are increasing effective usage by sharing context across subagents, keeping context cached for longer, and improving request routing to increase cache hit rates. ChatGPT Slides support has also been added and is gradually rolling out to Pro, Business, and Enterprise users with Space access.",
+        "OpenAI (@OpenAI)) | Tibo(1) , 2"
+      ],
+      "media": [],
+      "media_sent": false
     }
   },
   "alerts_sent": [
@@ -227,6 +243,7 @@
     "zaihua_news/2733:format_error",
     "zaihua_news/2782:no_match",
     "zaihua_news/2844:no_match",
-    "zaihua_news/2902:no_match"
+    "zaihua_news/2902:no_match",
+    "zaihua_news/2905:no_match"
   ]
 }
