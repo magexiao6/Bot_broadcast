@@ -188,7 +188,8 @@
     "zaihua_news/2897",
     "zaihua_news/2898",
     "zaihua_news/2899",
-    "zaihua_news/2900"
+    "zaihua_news/2900",
+    "zaihua_news/2901"
   ],
   "pending": {
     "zaihua_news/2782": {
@@ -218,12 +219,30 @@
       ],
       "media": [],
       "media_sent": false
+    },
+    "zaihua_news/2902": {
+      "id": "zaihua_news/2902",
+      "title": "From now on, all ads on 𝕏 will be held to reasonable aesthetic standards.",
+      "link": "https://t.me/zaihua_news/2902",
+      "published": "2026-10-17T00:22:30+00:00",
+      "paragraphs": [
+        "Advertisers who run ads that are ugly, obnoxious, noisy, or make exaggerated claims about their products will be banned from advertising.",
+        "https://x.com/elonmusk/status/2111131160348688395"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/ZH1jP_nL92Uf-xA_NmmJ8NE5dnf-nYU5D985WNcFBEjjdKcqYT8HjuhOHSeAOTuSAmixZr8M1UFIW0YEnkJNps6G7DPvwLZqoGn_5OdYCuhqa5Nj8IBtwa7G6TS1nvlmafg3xxmS1gP7fswGkZw8i-3Sagwi-o4qEwdzCsBD_8yW2O-Kx2bNDboXILqwBsQoBJWhwzgWB3kTdd3o5ijMEZV7Qt3vO8xPKd2g7oXvNQl-ckUm362flblJU9FigdnYrCuiPOw9RGc6ETFCqVldh7FCAxVKw3XyuVoD1W4SxgfEfJ5YUoXRoVtyd8w6DGfORwOQI28-9gJd-69I0Gekqg.jpg"
+        }
+      ],
+      "media_sent": false
     }
   },
   "alerts_sent": [
     "zaihua_news/2726:format_error",
     "zaihua_news/2733:format_error",
     "zaihua_news/2782:no_match",
-    "zaihua_news/2844:no_match"
+    "zaihua_news/2844:no_match",
+    "zaihua_news/2902:no_match"
   ]
 }
