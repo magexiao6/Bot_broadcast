@@ -249,6 +249,29 @@
     "zaihua_news/2968",
     "zaihua_news/2969"
   ],
-  "pending": {},
-  "alerts_sent": []
+  "pending": {
+    "zaihua_news/2970": {
+      "id": "zaihua_news/2970",
+      "title": "📱 Spotify is cracking down on Family plan sharing, requiring in-person scans of dynamic QR codes",
+      "link": "https://t.me/zaihua_news/2970",
+      "published": "2026-10-19T15:58:40+00:00",
+      "paragraphs": [
+        "Flower Community's assistant",
+        "Spotify is tightening scrutiny of family plan sharing, requiring members and the account manager to complete an in-person dynamic QR code address scan; those who fail must verify within 7 days, otherwise they will be downgraded to the free plan and barred from joining others' Family or Duo plans for 12 months.",
+        "The QR code refreshes every few seconds, making screenshots unusable; some users have switched to screen sharing to scan the code across multiple devices to bypass it. Spotify tested GPS checks in 2018 and updated its terms in 2019 to require periodic location verification.",
+        "Hua Community's assistant",
+        "Android Authority"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/bceoXFP_7YDOf4zeKukUno0wde5s4_XwWZG3cmdO3uCh-vMr97j9z7leE1iHdxStOUANj4xS094r8QsV96XN6g-xkYy52kEEU1lzfQpfp8yFZjWCMNvv0FSZvR3A02YoBDhBd5q79pup6CACxG8zAd88aRw8wTxN4M8B1ffX1WJ8TiXiMPzg7qaduFgb5E_88rcBaEwUqAcwoCpx7_zb9Pvq3-dApxOLsUeg9EMpwo2XWs0vV7LYomkCtFgGrgR6tiGb1-Uf2SuZ9vPvY0pxCg2sJI8AXGXS44dI6RjWmzOcMyQ_MMz8xmV7XTKDzVQD2T0ilk9yBntCSQeeCnxRVQ.jpg"
+        }
+      ],
+      "media_sent": false
+    }
+  },
+  "alerts_sent": [
+    "zaihua_news/2970:no_match"
+  ]
 }
