@@ -228,7 +228,16 @@
     "zaihua_news/2943",
     "zaihua_news/2944",
     "zaihua_news/2945",
-    "zaihua_news/2946"
+    "zaihua_news/2946",
+    "zaihua_news/2950",
+    "zaihua_news/2951",
+    "zaihua_news/2952",
+    "zaihua_news/2953",
+    "zaihua_news/2954",
+    "zaihua_news/2955",
+    "zaihua_news/2956",
+    "zaihua_news/2958",
+    "zaihua_news/2959"
   ],
   "pending": {
     "zaihua_news/2782": {
@@ -271,6 +280,18 @@
       ],
       "media": [],
       "media_sent": false
+    },
+    "zaihua_news/2957": {
+      "id": "zaihua_news/2957",
+      "title": "ChangXin Technology plunged nearly 9% at one point during trading, hitting a new low since its listing.",
+      "link": "https://t.me/zaihua_news/2957",
+      "published": "2026-10-19T05:48:15+00:00",
+      "paragraphs": [
+        "ChangXin Technology plunged nearly 9% at one point after the market opened on October 19, hitting a new low since its first day of trading. In market news, the company announced late Friday that it expects net profit attributable to shareholders to reach 131.0–132.5 billion yuan in the first three quarters of 2026, turning a loss into a profit year over year. However, ChangXin’s third-quarter net profit growth quarter over quarter has slowed sharply to between 1% and 3.9%. The quarter-over-quarter growth rates in the first and second quarters were as high as 246.09% and 113.4%, respectively.",
+        "Gelonghui"
+      ],
+      "media": [],
+      "media_sent": false
     }
   },
   "alerts_sent": [
@@ -279,6 +300,7 @@
     "zaihua_news/2782:no_match",
     "zaihua_news/2844:no_match",
     "zaihua_news/2902:no_match",
-    "zaihua_news/2905:no_match"
+    "zaihua_news/2905:no_match",
+    "zaihua_news/2957:no_match"
   ]
 }
