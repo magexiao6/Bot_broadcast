@@ -339,19 +339,40 @@ def main():
                     state["alerts_sent"].append(alert_key)
         best_match, best_difference = find_best_match(english_item, chinese_news)
         if best_match:
-            zh_title, paragraphs = get_article_content(best_match["link"])
+            try:
+                zh_title, paragraphs = get_article_content(best_match["link"])
+
+            except requests.RequestException as e:
+                print("中文文章获取失败：", best_match["link"])
+                print("错误原因：", e)
+                print("跳过本条新闻，继续处理其他新闻")
+                continue
+
             best_match["title"] = zh_title
             best_match["paragraphs"] = paragraphs
+
             message = format_bilingual_message(english_item, best_match)
+
             if message is None:
                 alert_key = english_id + ":format_error"
+
                 if alert_key not in state["alerts_sent"]:
-                    error_message = "❌ 双语消息格式化失败\n英文ID：" + english_id + "\n中文ID：" + best_match["id"]
+                    error_message = (
+                            "❌ 双语消息格式化失败\n英文ID："
+                            + english_id
+                            + "\n中文ID："
+                            + best_match["id"]
+                    )
+
                     alert_success = send_status_message(error_message)
+
                     if alert_success:
                         state["alerts_sent"].append(alert_key)
+
                 continue
+
             media = english_item.get("media", [])
+
             photos = [
                 item for item in media
                 if item.get("type") == "photo"
