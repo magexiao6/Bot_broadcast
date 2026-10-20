@@ -264,7 +264,13 @@
     "zaihua_news/2994",
     "zaihua_news/2995",
     "zaihua_news/2996",
-    "zaihua_news/2997"
+    "zaihua_news/2997",
+    "zaihua_news/2980",
+    "zaihua_news/2981",
+    "zaihua_news/2982",
+    "zaihua_news/2985",
+    "zaihua_news/2998",
+    "zaihua_news/3000"
   ],
   "pending": {
     "zaihua_news/2970": {
@@ -287,76 +293,73 @@
       ],
       "media_sent": false
     },
-    "zaihua_news/2980": {
-      "id": "zaihua_news/2980",
-      "title": "OpenAI is accelerating its fundraising ahead of Anthropic’s IPO.",
-      "link": "https://t.me/zaihua_news/2980",
-      "published": "2026-10-20T03:50:47+00:00",
+    "zaihua_news/2999": {
+      "id": "zaihua_news/2999",
+      "title": "Use AMD and you can't attend! Nvidia issues a ban on small cloud providers: use a rival chip and don't come",
+      "link": "https://t.me/zaihua_news/2999",
+      "published": "2026-10-20T14:31:53+00:00",
       "paragraphs": [
-        "Sources say OpenAI is accelerating fundraising to lock in investors before rival Anthropic goes public in mid-November. The round is expected to raise around $30 billion, potentially valuing the company at more than $1.4 trillion. Existing investors, including SoftBank and Abu Dhabi’s MGX, are in talks to participate.",
-        "OpenAI says growth has accelerated since the launch of GPT-6 Astra, with annualized revenue reaching $50 billion and expected to rise to $70 billion by year-end. The company raised $122 billion in March this year at a valuation of $852 billion.",
-        "A helper from Hua Community"
-      ],
-      "media": [
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/KMR496NYnq6PSlr4QAdx92tMhTTMxMzwJIHq4LTx2yOHgax5MEprKsw_3aTxjSwjJBEOL4l0jqwoHmZ9oRan8Hyyw295X2ANHrhaYoQBiUTWQABz-yZYHQyjx-UwsdjMkfYVOuB0gfA1GSq1ZCbQW7so24OXaZghggdDHm-TeDigYAbAtTMAy3Hcgr-yEGXndO-Kwj9sbsI3AlpVirh6ueSX0XelnTAbPn3eYb0LIzBo-0mKOj2VMMBxOrRC9EoQJNNJHaW-Rg_Mw0R09zExb6EwuElTTsSsGwyGg5sqNMSf5O9L7E2q8LJQdDNv2xrLMCP0ElJIYXFklXGbXcFLhw.jpg"
-        }
-      ],
-      "media_sent": false
-    },
-    "zaihua_news/2981": {
-      "id": "zaihua_news/2981",
-      "title": "Japan’s MMX probe launches to collect samples from Phobos, one of Mars’s moons.",
-      "link": "https://t.me/zaihua_news/2981",
-      "published": "2026-10-20T04:37:47+00:00",
-      "paragraphs": [
-        "JAXA’s MMX spacecraft launched from Tanegashima aboard an H3 rocket on October 20. It successfully separated about 71 minutes later and entered its planned orbit. The mission is scheduled to reach the vicinity of Mars in 2027, study its moons Phobos and Deimos, and collect at least 10 grams of samples, with the goal of returning them to Earth by 2031 to help determine the moons’ origins.",
-        "JAXA | Japan Aerospace Exploration Agency | MMX - Martian Moons eXploration"
+        "Nvidia recently rejected several emerging cloud service providers from attending the upcoming GTC conference in Berlin. The reason for rejection was not that they failed to meet technical standards, but that these providers had introduced rival chips such as AMD GPUs and Google TPUs into their own cloud platforms. Nvidia has not yet publicly commented on the incident. Nvidia is a chip supplier and also a major investor in emerging cloud providers such as CoreWeave and Nebius; it has made a strategic investment of $2 billion in each and also provided revenue backstops for their compute leasing. Many emerging cloud providers with limited scale do not dare to publicly use Nvidia's rival products, fearing that their priority GPU supply, financing, and IPO plans will be affected. This restriction does not apply to hyperscale cloud providers with sufficient purchasing volume and in-house chip capabilities.",
+        "快科技"
       ],
       "media": [],
       "media_sent": false
     },
-    "zaihua_news/2982": {
-      "id": "zaihua_news/2982",
-      "title": "🍏 The “Wuhan Tong” transit card is now available on Apple Pay, with the company saying it is currently in beta testing.",
-      "link": "https://t.me/zaihua_news/2982",
-      "published": "2026-10-20T04:49:19+00:00",
+    "zaihua_news/3001": {
+      "id": "zaihua_news/3001",
+      "title": "Xiaomi MiMo-V2.6-Pro launches on WorkBuddy",
+      "link": "https://t.me/zaihua_news/3001",
+      "published": "2026-10-20T15:19:39+00:00",
       "paragraphs": [
-        "On October 20, a user reported that the Wuhan Tong transit card was available in Apple Wallet. It can be used to pay for buses and the subway with an iPhone or Apple Watch, and topped up anytime. There’s no card issuance fee, and the minimum top-up is 30 yuan. Wuhan Tong said this is only an internal test, not an official launch. Details about features and services will follow in an official announcement.",
-        "The assistant at IT Home | Sohu.com"
+        "Xiaomi Technology announced that Xiaomi MiMo-V2.6-Pro is officially available on WorkBuddy. The model scored 46 on the Artificial Analysis Intelligence Index, ranking first among open-source models globally. It supports a 1M ultra-long context, multi-agent division of labor and collaboration, and full-modal joint understanding of images, video, audio, and text.",
+        "It targets long-horizon workflows such as long-running task hosting, deep research, design drafting, document work, and mini-tool development, and is now available for public trial.",
+        "Xiaomi Technology"
       ],
       "media": [
         {
           "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/vuWY9cF1nb8dp3NTVhjDbgE3Rd2eAWq79UazWA1OFGJqUwWZje7usgKYoLZMLebV5WSUiGDy50kapBOaUSiSYI5GzRx0R4Hibm1U3JmMImwjXvgzTtqvAado7wVoCaVSM5gtGJdCFJinElt5uUvMG5JaQrBC6JGjwUEg-gjji7lMok_q2t35qJaRRMCSOpnvx3Vp6MUZLWjcJgvpVCBablUeGCJNTEqCET3Ecp7Ou5hGaZ02tp0uHTXzWov2JzQQ6e9OErvpxKMnc-PlxJagsRl7T-XynIchjRKoHsHxPi-34nWANg1-TmVlD-WsgEYUWoqpS6Z109486PKlKc1xIA.jpg"
-        },
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/J4DaCVQIgfTsSKeEjOTpxZJ93jpf_8qTRmUEXhvlOR4Kp8RcxlxSbtZK1pVxb8_6PuULSimZxfrfBfrrXm_t9ntru-EWDHICU9o9UhUpx2C8RMnuxwdcg0JTf-5noLYUy5w2qLDn1gatmzHIY5eTXxFXrIq63zqBxvZeu6IvO7BIt_zpKr1aEmJ11u6kEhAiV_ym-_iHBLX9iJg6UFH819o9wuYGZFE4EoEuxD1PMZ3TRVvNh7zOsf64qtDb7rtWt9G9nfj-aOFw0lQwWCMLYoYeWsz28GkKKEYPoMoq4z2ohy7iYkKnhHR3nHKs1xUSzck7GFWXy_fEm4dXxeFU2g.jpg"
+          "url": "https://cdn1.telesco.pe/file/Xwl8PJNgX4V2yaZzu9oT86MJGRg55sP64zJMoa6NLYiJ-4-7PdCrMgO2mzXgWId64wlOCvIofg73kS56-10bF57U6H_1duEstDXxZ5hktkWWVKSAe-VNY1-kVEKJpaf-UoSHqmlBHfLO-tVZNqdtI_nssYL_2jeCNbCNze-pLqp4e5TwmSdrLG8FdFPdoOir4QsxVZ-h56hOaF1H7WChB1VrzKHWF7ZIceb6slHZuFpLRMfoWSe8Hp1jJYmwhCknJgDk82jH0NWYbIQ0sznStUPyE_Jp_wtUcx4RBGRdSCGrOFwzpuWn7OArtWgTyRtQ7uhwUtHAmdv-e-rpMmAHEw.jpg"
         }
       ],
       "media_sent": false
     },
-    "zaihua_news/2985": {
-      "id": "zaihua_news/2985",
-      "title": "Tibo: Day 15 reset",
-      "link": "https://t.me/zaihua_news/2985",
-      "published": "2026-10-20T06:48:57+00:00",
+    "zaihua_news/3002": {
+      "id": "zaihua_news/3002",
+      "title": "Rumor claims Nvidia RTX 6060 may be delayed to 2029",
+      "link": "https://t.me/zaihua_news/3002",
+      "published": "2026-10-20T16:03:46+00:00",
       "paragraphs": [
-        "(DLC) Day 15 of OpenAI’s 28-day streak of updates:OpenAI demos new features in the Codex cloud environment and CLI",
-        "The little assistant at Zaihua Community, Tibo (@thsottiaux)"
+        "Leaker Kepler_L2 says Nvidia's next-generation mainstream graphics card, the RTX 6060, could be delayed until as late as 2029, with memory supply shortages being one reason.",
+        "The card's performance may fall short of the Sony PS6, which is expected to launch earlier, but accurate comparisons are not yet possible. The leak also mentions that the RTX 60 series is expected to launch in 2028, and the previously rumored RTX 50 Super series may also be delayed due to memory supply shortages.",
+        "TechSpot"
+      ],
+      "media": [],
+      "media_sent": false
+    },
+    "zaihua_news/3003": {
+      "id": "zaihua_news/3003",
+      "title": "Flower Community Assistant  Smart TV users use AI coding assistants to remove homepage ads",
+      "link": "https://t.me/zaihua_news/3003",
+      "published": "2026-10-20T17:42:14+00:00",
+      "paragraphs": [
+        "Some smart TV users have begun using AI coding assistants such as Claude Code to remove TV homepage ads and bloatware. A developer said on 10/17 that he used one to connect to a Xiaomi TV, delete 25 packages, and bypass startup ads to go straight to Netflix.",
+        "These efforts feed into the open-source project CleanYourTV. TiVo says more than one-third of respondents complain about excessive homepage ads; using it requires a computer running Claude Code and only supports Android TV and Google TV.",
+        "Mashable"
       ],
       "media": [
         {
           "type": "photo",
-          "url": "https://cdn5.telesco.pe/file/HjzfUEb9j30eBEc-nrxN7u-0IaUznHsbV13hhhGaG24mkloS-pAxDPVx3IHcsfXx9No02r4oC3tfSeyUEY1729Hat_Ub0J7B9L7kbe_q5YGHvjjcEftimDL19f1yg5EPpQ3YejpP-8geLTT3UvcJEXH_pyMmG6XvgwLKnoCLye7cH6BKBg6bHIV1xT6T8Asrvmn4loQ88i_ULze3JAu8ov7sOO-AWgqaLMWQxV3Ue1lSlxj2jst0-HYLnfrx7AmNJ0IDZl3ViHWd8OhLoZHYduvjOPtkwtNt6QhI6r4IpPE01sgQzb3Q3h-g-S2PODNpGkfpvzu3zpaGRjJAvzpkog.jpg"
+          "url": "https://cdn1.telesco.pe/file/rBCo6j2H3JlPoFhanXCU67O4g5SfMJR8qlsCRyRVU6iXkGeY48O6W89vkdUd0VTWzvMtfmPxsNmwpXjY6sZd-OSWanYiUbSIv9orTaiK670M3cMnyC6UxpKt5wclaqKoyXeE8Ew06r8YrIdgNkfPYTVPvJrNq6TFEdlzWcmoeOWcN78FLS736pq6kZy00K_PzfeFQxTR9TJBveO5qIeQaA0telF9YrAwTWtSsV4zZJ2nyvxfAYRxlYNpw9OMS45Z-j7ffZjoHLQ0EdNof0aDaoRnR98-OKcJa8XQdT0eUU_TkARyE4ahRj_5uwTHuCYW8x5JPT96eF7A1gA1G8yQ4Q.jpg"
         }
       ],
       "media_sent": false
     }
   },
   "alerts_sent": [
-    "zaihua_news/2970:no_match"
+    "zaihua_news/2970:no_match",
+    "zaihua_news/2999:no_match",
+    "zaihua_news/3001:no_match",
+    "zaihua_news/3002:no_match",
+    "zaihua_news/3003:no_match"
   ]
 }
