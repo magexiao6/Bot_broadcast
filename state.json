@@ -254,7 +254,17 @@
     "zaihua_news/2974",
     "zaihua_news/2975",
     "zaihua_news/2976",
-    "zaihua_news/2979"
+    "zaihua_news/2979",
+    "zaihua_news/2984",
+    "zaihua_news/2986",
+    "zaihua_news/2987",
+    "zaihua_news/2991",
+    "zaihua_news/2992",
+    "zaihua_news/2993",
+    "zaihua_news/2994",
+    "zaihua_news/2995",
+    "zaihua_news/2996",
+    "zaihua_news/2997"
   ],
   "pending": {
     "zaihua_news/2970": {
@@ -328,19 +338,6 @@
       ],
       "media_sent": false
     },
-    "zaihua_news/2984": {
-      "id": "zaihua_news/2984",
-      "title": "🤖 DeepSeek is deeply involved 📱 Huawei’s future AI chip design",
-      "link": "https://t.me/zaihua_news/2984",
-      "published": "2026-10-20T05:10:46+00:00",
-      "paragraphs": [
-        "Sources say DeepSeek is working closely with Huawei on the design of future AI chips. Huawei engineers have been stationed at DeepSeek’s offices for an extended period, incorporating DeepSeek’s input on model computation, data transfers between processors, and other areas into designs for chips expected to launch in 2027 and beyond.",
-        "The collaboration goes beyond typical supplier discussions and could help China reduce its reliance on Nvidia technology to build advanced AI models. But the report also says DeepSeek has not given up on Nvidia and is still seeking access to its advanced processors.",
-        "The information assistant in the flower community"
-      ],
-      "media": [],
-      "media_sent": false
-    },
     "zaihua_news/2985": {
       "id": "zaihua_news/2985",
       "title": "Tibo: Day 15 reset",
@@ -356,65 +353,6 @@
           "url": "https://cdn5.telesco.pe/file/HjzfUEb9j30eBEc-nrxN7u-0IaUznHsbV13hhhGaG24mkloS-pAxDPVx3IHcsfXx9No02r4oC3tfSeyUEY1729Hat_Ub0J7B9L7kbe_q5YGHvjjcEftimDL19f1yg5EPpQ3YejpP-8geLTT3UvcJEXH_pyMmG6XvgwLKnoCLye7cH6BKBg6bHIV1xT6T8Asrvmn4loQ88i_ULze3JAu8ov7sOO-AWgqaLMWQxV3Ue1lSlxj2jst0-HYLnfrx7AmNJ0IDZl3ViHWd8OhLoZHYduvjOPtkwtNt6QhI6r4IpPE01sgQzb3Q3h-g-S2PODNpGkfpvzu3zpaGRjJAvzpkog.jpg"
         }
       ],
-      "media_sent": false
-    },
-    "zaihua_news/2986": {
-      "id": "zaihua_news/2986",
-      "title": "🐦 X adjusts its recommendation algorithm to prioritize time spent and completion rate",
-      "link": "https://t.me/zaihua_news/2986",
-      "published": "2026-10-20T07:29:43+00:00",
-      "paragraphs": [
-        "X has adjusted the two-stage ranking system for the “For You” feed. The new model places greater emphasis on user dwell time and post completion rates. Elon Musk said the new ranking model is “much better at predicting effective time spent.”",
-        "The second change happens earlier, during retrieval. The system converts users and posts into vectors, pulls the most relevant content from accounts users don’t follow, and filters it based on completion rates—posts users typically abandon partway through will be less likely to enter the recommendation pool. X’s total daily active user time rose from about 410 billion seconds in mid-August to about 500 billion seconds in mid-October.",
-        "The Little Assistant in the Flower Community"
-      ],
-      "media": [
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/b65e4MFHHV87JIFlel_C7qmLwIp-Qk5RPMDV4OZnbJJK01x9t2XboA8WqBJZAZ_riW-0LoMgaIlcTBIJczHFxFE4_ClUssnbgFvRgCQFLG-PyqHYJXQSt3ew4D7s87XKegrVlJIViNj0xqLuOPFKEwaFpIQzihz44-DmILIgdRfdvz0TDNqc_x0AzxC7oWeToHcYj3RcAkRgpQy1brstHClbzm6Xw1LrKmm5196Fm4Lv6pfRXd71wxbBAx5znTNNA59N4o47b-wXKqwHCAb6QLoAv-7jK90QItAgXpmC_zyNyrvDBs1vTLz1LOp5Ju7hwF7NUFBxe-0wI1icpiqEEg.jpg"
-        }
-      ],
-      "media_sent": false
-    },
-    "zaihua_news/2987": {
-      "id": "zaihua_news/2987",
-      "title": "The creator of PCL, a third-party Minecraft launcher, has announced a suspension of its Minecraft download feature.",
-      "link": "https://t.me/zaihua_news/2987",
-      "published": "2026-10-20T08:09:32+00:00",
-      "paragraphs": [
-        "Bilibili"
-      ],
-      "media": [
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/CrgfyGhW0KBxPST2aaZ8wC7mlXBkbQqV7nHgdOQSOMz8c7KwC01BK4TBaIDcuEwGuVbiynwucQ2pKFPh4IPMvcGE5Sosop4riNF7uP4UclMJKJNYsZvUb2dnW2Ot9MK1Doto1nYecMY0YZpEhGAzlLqydhy6tivulPwB5z_vpyD83wQuGawfdPKLcLJFr8vrLRO8J-whtH0z9ZyjRdv84CJ8O4DCufSiHqIfbpC76gFAjyOZtZYhln3oiUoi9psfwhNYeYSt8WeRjzBXdDnXCpwz3NjoL1wnO737RVJr1if77ztb38dFuG3oW8MZrEv5UvRqmzn9iWMe_iDd4tE6ww.jpg"
-        },
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/JFD1NBCEUIBghRnS4zgt9bZI7t3H_YJyQLa-_2r68bZztMwmLB6qfcMFNVZ5qPxgYKQBwza8ZROjF_3uVXdpcZ9DOJlgPRpZgshyq5jkneuafDjSR78NKm9mwzKAO4K8YX0-WfSd8fuuuIszSe6aB_M_QMDVR5gFYDwM619DIL-kyhj8aGzj3F6CRrofLfTwDljzcc4f9bZQBRgsPpHiM9co0nI46rJf5SbBp35lgb1JWaWnrpVqir6QjyWkm9YEZtfBdPZKFwsdoH7nxevSWj-jx9Dvr9Y69mFPshe-CGZ4lPQ4eTJFDzgCrhtSb-cZ0TADs4M0UeccPPc2sC161A.jpg"
-        },
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/m8vZsLUdW8LP3evERfu-5DC9QjdnSWg_DH2XrLdwe1esCm-dU9Qzii0dxR0JnI4Ia3jJbDWmYe_9FzBeMrIPCbSLqMoaahKXIKJnRTziGIz-M9CVA8qdYCrR6NLRgST2Xez8x5N7vrIeT_VwCQeeu5bUqOPYHXhDasRgE41tJ7e9jiarhhx72UvIBEvX-MoJeKHwKF5u9RpHgVeGuwN9utZZOFbqbXcgfjUftQrrz7zjs6Qth6F-iEWEWc3_ysPpwJy9yAX70zRhvXV1sBRmXzUUdkkOhKYt9Cyc_Er7iYVnr7EsOWYIVBIYu-1Y26UJN2POH0tiR10HUvVY98NaBA.jpg"
-        },
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/O8VbNIBf7BYwFCPcNhKrkr__9PYaahe-kjz65GyflPerDtwb5AaNxNibHUYmCtI5MFZJyGujDKrpGGMhTcgzLfwOWVmuDn66SL_hdjGxvFH2j4an11j9ECcQSpiHrgCnDUU8qoHgEXr4NXF44gRc4FRLU3plWB2gIXFtrxI5deZ75Y8WZlmWbs4XcO9N-iIKAZl1-SoxhCeTESsKWfEfb1SeeAgq8pPNSZLLEczRNcN6pp6S8Xed5THEvnpD3aQRj9ijcy3KAVlz8adyL8AdTYVoXgkjYDwo0CYNaBF7nBWKbCqrn55zgjtGmehUxoIU3AIE--hnul7CROqCoiZ3aA.jpg"
-        }
-      ],
-      "media_sent": false
-    },
-    "zaihua_news/2991": {
-      "id": "zaihua_news/2991",
-      "title": "Chinese micro-dramas are emerging as the world’s fourth-largest new form of online entertainment and audiovisual content.",
-      "link": "https://t.me/zaihua_news/2991",
-      "published": "2026-10-20T08:39:42+00:00",
-      "paragraphs": [
-        "China’s National Radio and Television Administration released the *Report on the Development of International Communication Through Chinese Micro-Dramas*, noting that Chinese micro-dramas are rapidly reshaping the global audiovisual landscape and have become a major audiovisual format alongside American films, Japanese anime, and Korean dramas.",
-        "According to the report, 47,000 micro-dramas went online in China from January to September 2026. The market is expected to reach RMB 85 billion for the full year, with more than 600 million monthly active users. Overseas markets are also growing rapidly: the market for micro-dramas outside China is projected to exceed $16 billion in 2026, up 67% year over year. The share of AI-generated dramas among Chinese micro-dramas distributed overseas is also climbing and is expected to surpass 60% by the end of 2029. Over the next three to five years, micro-dramas are expected to become an important vehicle for bringing Chinese culture to the world.",
-        "CCTV News"
-      ],
-      "media": [],
       "media_sent": false
     }
   },
