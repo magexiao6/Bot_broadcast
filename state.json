@@ -270,7 +270,10 @@
     "zaihua_news/2982",
     "zaihua_news/2985",
     "zaihua_news/2998",
-    "zaihua_news/3000"
+    "zaihua_news/3000",
+    "zaihua_news/3004",
+    "zaihua_news/3006",
+    "zaihua_news/3007"
   ],
   "pending": {
     "zaihua_news/2970": {
@@ -353,6 +356,37 @@
         }
       ],
       "media_sent": false
+    },
+    "zaihua_news/3008": {
+      "id": "zaihua_news/3008",
+      "title": "OpenAI API launches 12-hour prompt caching",
+      "link": "https://t.me/zaihua_news/3008",
+      "published": "2026-10-21T01:24:02+00:00",
+      "paragraphs": [
+        "OpenAI announces that the API now supports 12-hour prompt caching. Persistent agents (such as dots) can reuse shared instructions, tools, and context throughout the day; even when requests are hours apart, they are still billed at the lower cached input rate.",
+        "In addition, logged-in users of Codex and Work get permanent caching: returning to an old conversation or continuing after pausing for several hours incurs no penalty, and cache hits are guaranteed.",
+        "OpenAI Developers(@OpenAIDevs) | Tibo(@thsottiaux)"
+      ],
+      "media": [],
+      "media_sent": false
+    },
+    "zaihua_news/3009": {
+      "id": "zaihua_news/3009",
+      "title": "Little assistant in the Flower CommunitySpaceX and Tesla Boards Set Up Special Committees to Review Merger",
+      "link": "https://t.me/zaihua_news/3009",
+      "published": "2026-10-21T02:09:22+00:00",
+      "paragraphs": [
+        "The boards of SpaceX and Tesla have each established a special committee made up of independent directors to review a possible merger. Musk said the committees were set up at shareholders' request and that he will not take part in discussions due to a conflict of interest; the two sides have not yet reached agreement on transaction terms.",
+        "Musk supports the merger idea but said the deal is not a sure thing and will ultimately require shareholder support. A shareholder vote at SpaceX would be relatively easy to win, while Tesla would need the approval of 50% of all shareholders.",
+        "TechCrunch"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/PyUf_-PkuHU_1L5hszYzeIRoabXx8-57i46WVsOS_1FGVwGIGWj-unFBH4fx35uHgiA7CkmFaRNu8_iy9OmatEXgisCFYtzcP766bXScIudrCzWO8--j-VNT4N9w_tNmjeBoNrit0MjYMjHrVmOe-6Dd4yh_mX65-x7fOnO4suQ1jFlCqu9opKhjLIe8JW2NKlTIlf6J-_jriFn3ffPi1FeSxc35WEe6TBMzz9w1a-WWPhUt3apognCWRBLZXKP1XNJuYFYJjlMDdd7UWclo0GFuE9DpKR8xdGaNAK6EtJwmKZoGExz1AyyNSyiEFVcByYG3Xft9XD74iXdKTgjE1w.jpg"
+        }
+      ],
+      "media_sent": false
     }
   },
   "alerts_sent": [
@@ -360,6 +394,8 @@
     "zaihua_news/2999:no_match",
     "zaihua_news/3001:no_match",
     "zaihua_news/3002:no_match",
-    "zaihua_news/3003:no_match"
+    "zaihua_news/3003:no_match",
+    "zaihua_news/3008:no_match",
+    "zaihua_news/3009:no_match"
   ]
 }
