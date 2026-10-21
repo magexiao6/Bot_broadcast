@@ -1,411 +1,328 @@
-import os
+"""英文 Telegram 新闻 -> 5 条微缓冲 -> Gemini 批量翻译 -> 双语逐段 Telegram 推送。"""
 import json
-import requests
-import feedparser
+import os
 import re
+from datetime import datetime, timezone
 from pathlib import Path
+
+import requests
 from bs4 import BeautifulSoup
-from datetime import datetime
-from email.utils import parsedate_to_datetime
 
-STATE_FILE = Path("state.json")
+from gemini_translate import translate_news_batch
 
-"""----------------读取英文tg、中文rss网址及bot_token等信息----------------"""
+STATE_FILE = Path(__file__).resolve().parent / "state.json"
 TG_EN_URL = os.getenv("TG_EN_URL", "").strip()
-"""
-  读取 TG_EN_URL 这个变量的值，找不到就返回 ""
-  后面的 strip 作用是去掉字符串前后的空格、换行
-"""
-RSS_ZH_URL = os.getenv("RSS_ZH_URL", "").strip()
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 
-"""---------------------读取、修改、保存JSON---------------------"""
-def load_state():
-    # json 文件转化为 python 字典，这里需要return是因为要把数据拿回来
-    with STATE_FILE.open("r", encoding="utf-8") as f: # with STATE_FILE as f 即打开 STATE_FILE 并暂时把它叫做 f
-        state = json.load(f) # 从文件 f 中读取 JSON，并转换成 Python 数据，放到 state 变量里面
-    return state
+MODE = "gemini_batch_v1"
+BATCH_SIZE = 5
+MAX_WAIT_MINUTES = 30  # 凑不满 5 条，最早一条等待超过 30 分钟后也翻译
+MAX_BATCHES_PER_RUN = 2  # 每次 Actions 最多调用 Gemini 两次
+MAX_SEND_PER_RUN = 10    # 每次最多完成 10 条新闻，防止恢复后刷屏
+TEXT_CHUNK_SIZE = 3500  # 比 Telegram 4096 字符限制留足余量
+
+
+def now_utc():
+    return datetime.now(timezone.utc)
+
+
+def parse_time(value):
+    try:
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        return dt.replace(tzinfo=timezone.utc) if dt.tzinfo is None else dt.astimezone(timezone.utc)
+    except (ValueError, TypeError):
+        return None
+
 
 def save_state(state):
-    # 将信息写入json文件，这里不需要return是因为它只把state中的内容写入json，并不用返回什么
-    with STATE_FILE.open("w", encoding="utf-8") as f:
-        json.dump(state, f, ensure_ascii=False, indent=2) # indent=2可以自动给json排版，2的意思是每一级缩进两个空格
+    # 写入临时文件后原子替换，避免程序异常时破坏本地 state.json
+    temporary = STATE_FILE.with_suffix(".tmp")
+    temporary.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+    temporary.replace(STATE_FILE)
 
-def get_article_content(article_url):
-    # 获取文章正文
-    # 按照 HTML 规则解析 article_response.text
-    article_response = requests.get(article_url, timeout=30)
-    article_response.raise_for_status()
-    """Soup 获取网页内的正文，将正文内容存储在 paragraphs 中"""
-    soup = BeautifulSoup(
-        article_response.text,
-        "html.parser"
-    )
-    title_tag = soup.select_one("article.reading-shell.article-section h1")
-    title = title_tag.get_text(" ", strip=True) if title_tag else ""
 
-    article_paragraph_tags = soup.select("article.reading-shell.article-section div.msg-prose > p")
-    paragraphs = []
-    for p in article_paragraph_tags:
-        text = p.get_text(" ", strip=True)
-        if not text:
-            continue
-        if text.startswith("🌸"):
-            continue
-        paragraphs.append(text)
-    return title, paragraphs
+def load_state():
+    if not STATE_FILE.exists():
+        return {"initialized": False, "sent_ids": [], "pending": {}, "alerts_sent": []}
+    return json.loads(STATE_FILE.read_text(encoding="utf-8"))
 
-def get_chinese_news_metadata(n):
-    # 获取 n 个中文新闻，n <= 50
-    # 获取 rss 池里文章的id、标题、发布时间、文章链接
-    response = requests.get(RSS_ZH_URL, timeout=30)
-    response.raise_for_status()  # 如果http状态码不是200，直接报错
-    feed = feedparser.parse(response.content)
-    chinese_news = []
-    for entry in feed.entries[:n]:
-        # 将新闻id、标题、链接、发布时间存储在字典中，后面会在匹配到中文新闻后将title替换，并补充正文
-        news_item = {
-            "id": entry.get("id", ""),
-            "title": entry.get("title", ""),
-            "link": entry.get("link", ""),
-            "published": entry.get("published", ""),
-        }
-        chinese_news.append(news_item)
-    return chinese_news
 
-def get_english_news(n):
-    # 读取tg页面上的英文消息
-    english_response = requests.get(TG_EN_URL, timeout=30)
-    english_response.raise_for_status()  # 如果http状态码不是200，直接报错
+def get_english_news(n=20):
+    if not TG_EN_URL:
+        raise RuntimeError("未配置 TG_EN_URL")
+    response = requests.get(TG_EN_URL, timeout=30)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+    messages = soup.select(".tgme_widget_message[data-post]")
+    news_list = []
 
-    english_soup = BeautifulSoup(english_response.text, "html.parser")
-    message_tags = english_soup.select(".tgme_widget_message") # 消息池中的所有新闻，是一个列表
-
-    english_news = []
-    for message in message_tags[-n:]:
-        post_id = message.get("data-post", "")
-        # 获取图片并放入media
-        photo_tags = message.select(".tgme_widget_message_photo_wrap")
-        media = []
-        for photo in photo_tags:
-            style = photo.get("style", "")
-            match = re.search(r"background-image\s*:\s*url\(\s*['\"]?([^'\")]+)",style)
-            if match:
-                photo_url = match.group(1)
-                media.append({"type": "photo", "url": photo_url})
-
-        message_link = "https://t.me/" + post_id
-
-        time_element = message.select_one(".tgme_widget_message_date time[datetime]")
-        if time_element:
-            published = time_element.get("datetime", "").strip()
-        else:
-            published = ""
-
+    for message in messages[-n:]:
+        post_id = (message.get("data-post") or "").strip()
         text_tag = message.select_one(".tgme_widget_message_text")
-        if not text_tag:
+        if not post_id or text_tag is None:
             continue
         for br in text_tag.find_all("br"):
-            br.replace_with("\n") # 把正文每段前后的 <br> 替换为换行符
-
-        text = text_tag.get_text()
-        parts = text.split("\n\n")
-        paragraphs = []
-        for part in parts:
-            part = part.strip() # 提取每段内容并去掉空格
-            if not part:
-                continue
-            if part.startswith("🌸"):
-                continue
-            paragraphs.append(part)
-            if len(paragraphs) >= 2:
-                title = paragraphs[0]
-                body_paragraphs = paragraphs[1:]
-            elif len(paragraphs) == 1: # 防止出现只有一句话导致标题数量为1，段落数量为0的情况
-                title = paragraphs[0]
-                body_paragraphs = paragraphs.copy()
-            else:
-                title = ""
-                body_paragraphs = []
-        news_item = {
-            "id": post_id,
-            "title": title,
-            "link": message_link,
-            "published": published,
-            "paragraphs": body_paragraphs,
-            "media": media,
-            "media_sent": False
-        } # 保持与中文相同的结构，先把每条新闻组装成字典，再放入english_news新闻列表中
-        english_news.append(news_item)
-    return english_news
-
-def parse_published_time(published, language):
-    # 把时间转换为真实时间
-    if not published:
-        return None
-    if language == 'zh':
-        time = parsedate_to_datetime(published)
-    elif language == 'en':
-        time = datetime.fromisoformat(published)
-    else:
-        return None
-    return time
-
-def get_time_difference_seconds(zh_time, en_time):
-    # 计算中英新闻时间差
-    if zh_time is None or en_time is None:
-        return None
-    difference_seconds = abs((en_time - zh_time).total_seconds())
-    return difference_seconds
-
-def find_best_match(english_item, chinese_news, max_time_difference=60):
-    # 传入参数为一条英文和中文列表
-    # 在中文新闻列表中寻找与某一篇英文新闻发布时间最接近的中文新闻。
-    best_match = None
-    best_difference = None
-    en_time = parse_published_time(english_item["published"], 'en')
-    if en_time is None:
-        return None, None
-
-    for chinese_item in chinese_news:
-        zh_time = parse_published_time(chinese_item["published"], 'zh')
-        difference_seconds = get_time_difference_seconds(zh_time, en_time)
-        if difference_seconds is None:
+            br.replace_with("\n")
+        raw = text_tag.get_text()
+        parts = [p.strip() for p in raw.split("\n\n") if p.strip() and not p.strip().startswith("🌸")]
+        parts = [p for p in parts if p.casefold() not in {
+            "flower community's assistant", "hua community's assistant"
+        }]
+        if not parts:
             continue
-        if best_difference is None or difference_seconds < best_difference:
-            best_difference = difference_seconds
-            best_match = chinese_item
+        date_tag = message.select_one(".tgme_widget_message_date time[datetime]")
+        media = []
+        for photo in message.select(".tgme_widget_message_photo_wrap"):
+            style = photo.get("style", "")
+            match = re.search(r"background-image\s*:\s*url\(\s*['\"]?([^'\")]+)", style)
+            if match:
+                media.append({"type": "photo", "url": match.group(1)})
 
-    if best_match is None or best_difference > max_time_difference:
-        return None, None
-    return best_match, best_difference
+        news_list.append({
+            "id": post_id,
+            "title": parts[0],
+            "paragraphs": parts[1:],
+            "published": date_tag.get("datetime", "") if date_tag else "",
+            "link": "https://t.me/" + post_id,
+            "media": media,
+            "media_sent": False,
+        })
+    return news_list
 
-def send_telegram_message(text):
-    # 给机器人发送消息
-    if not BOT_TOKEN:
-        print("未读取到BOT_TOKEN")
+
+def english_parts(item):
+    title = (item.get("title") or "").strip()
+    paragraphs = [p.strip() for p in item.get("paragraphs", [])
+                  if isinstance(p, str) and p.strip()]
+    if title and paragraphs and paragraphs[0] == title:
+        paragraphs.pop(0)
+    parts = ([title] if title else []) + paragraphs
+    if not parts:
+        raise ValueError("新闻正文为空：" + item.get("id", ""))
+    return parts
+
+
+def migrate_legacy_once(state, current_news):
+    """首次切换时归档旧 pending，并跳过当前页面已有消息，避免历史消息集中补发。"""
+    if state.get("mode") == MODE:
         return False
-    if not CHAT_ID:
-        print("未读取到CHAT_ID")
-        return False
+    old_pending = state.get("pending", {})
+    state["legacy_pending"] = old_pending  # 保留旧数据，不丢弃
+    skipped = set(state.get("skipped_ids", []))
+    skipped.update(old_pending)
+    sent = set(state.get("sent_ids", []))
+    skipped.update(x["id"] for x in current_news if x["id"] not in sent)
+    state["skipped_ids"] = sorted(skipped)
+    state["pending"] = {}
+    state["mode"] = MODE
+    state["initialized"] = True
+    save_state(state)
+    print(f"首次切换完成：归档旧 pending {len(old_pending)} 条；跳过当前频道历史消息。")
+    return True
 
-    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage" # fstring
-    data = {"chat_id": CHAT_ID, "text": text}
 
-    try:
-        response = requests.post(url, data=data, timeout=30)
-        # 尝试读取 Telegram 返回的 JSON
-        try:
-            result = response.json()
-        except ValueError:
-            print("Telegram 返回内容不是有效 JSON，HTTP状态码：", response.status_code)
-            return False
-
-        # Telegram 明确说明发送成功
-        if result.get("ok"):
-            print("Telegram发送成功")
-            return True
-        else:
-            print("Telegram发送失败：", result.get("description", f"HTTP {response.status_code}"))
-            return False
-
-    except requests.exceptions.Timeout:
-        print("Telegram 发送失败：连接超时")
-        return False
-
-    except requests.exceptions.SSLError as e:
-        print("Telegram 发送失败：SSL连接异常", str(e))
-        return False
-
-    except requests.exceptions.ConnectionError as e:
-        print("Telegram 发送失败：网络连接异常", str(e))
-        return False
-
-    except requests.exceptions.RequestException as e:
-        print("Telegram 发送失败：请求异常", str(e))
-        return False
-
-def format_bilingual_message(english_item, chinese_item):
-    en_parts = english_item["paragraphs"]
-    if not en_parts: # 单段消息
-        en_parts = [english_item["title"]] # 只发送这一段即可
-    elif en_parts[0] != english_item["title"]: # 正常多段消息
-        en_parts = [english_item["title"]] + en_parts # 组合成标题+内容
-
-    zh_parts = [chinese_item["title"]] + chinese_item["paragraphs"]
-    message_parts = []
-    if len(en_parts) != len(zh_parts):
-        print("中英文段落数量不一致，采用整段双语排版")
-        message_parts = [en_parts[0], zh_parts[0]]
-        if len(en_parts) > 1:
-            message_parts.append("\n\n".join(en_parts[1:]))
-        if len(zh_parts) > 1:
-            message_parts.append("\n\n".join(zh_parts[1:]))
-        message = "\n\n".join(message_parts)
-        return message
-    for en_part, zh_part in zip(en_parts, zh_parts):
-        message_parts.append(en_part)
-        message_parts.append(zh_part)
-    message = "\n\n".join(message_parts)
-    return message
-
-def send_status_message(message):
-    text = "🤖 Bot运行通知\n\n" + message
-    return send_telegram_message(text)
-
-def send_telegram_photo(photo_url):
-    # 发送单张图片
-    # 第一步：根据URL下载图片
-    image_response = requests.get(photo_url, timeout=30)
-    image_response.raise_for_status()
-    # 第二步：构造Telegram上传地址
-    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
-    data = {"chat_id": CHAT_ID}
-    files = {"photo": ("news.jpg", image_response.content, "image/jpeg")}
-    response = requests.post(url, data=data, files=files, timeout=60)
+def post_telegram(method, *, data=None, files=None, timeout=45):
+    if not BOT_TOKEN or not CHAT_ID:
+        raise RuntimeError("缺少 TELEGRAM_BOT_TOKEN 或 TELEGRAM_CHAT_ID")
+    response = requests.post(
+        f"https://api.telegram.org/bot{BOT_TOKEN}/{method}",
+        data=data, files=files, timeout=timeout,
+    )
+    response.raise_for_status()
     result = response.json()
-    if result.get("ok"):
-        print("图片发送成功")
-        return True
-    else:
-        print("图片发送失败：", result.get("description"))
-        return False
+    if not result.get("ok"):
+        raise RuntimeError(f"Telegram {method} 失败：{result.get('description')}")
+    return result["result"]
 
-def send_telegram_album(media):
-    # 多张图片当作一个相册发送
+
+def send_photo(url):
+    image = requests.get(url, timeout=30)
+    image.raise_for_status()
+    return post_telegram(
+        "sendPhoto", data={"chat_id": CHAT_ID},
+        files={"photo": ("news.jpg", image.content, "image/jpeg")}, timeout=75,
+    )
+
+
+def send_album(items):
     files = {}
-    media_payload = []
-    for i, item in enumerate(media): # enumerate就是将medai[图1，图2，图3]转化成[(0, 图1), (1, 图2), (2, 图3)]
-        photo_url = item["url"]
-        image_response = requests.get(photo_url, timeout=30)
-        image_response.raise_for_status()
-        file_key = f"photo{i}"
-        files[file_key] = (f"photo{i}.jpg", image_response.content, "image/jpeg")
-        media_payload.append({"type": "photo", "media": f"attach://{file_key}"})
-    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMediaGroup"
-    data = {"chat_id": CHAT_ID, "media": json.dumps(media_payload)}
-    response = requests.post(url, data=data, files=files, timeout=60)
-    result = response.json()
-    if result.get("ok"):
-        print("相册发送成功")
-        return True
+    album = []
+    for index, item in enumerate(items):
+        image = requests.get(item["url"], timeout=30)
+        image.raise_for_status()
+        key = f"photo{index}"
+        files[key] = (f"photo{index}.jpg", image.content, "image/jpeg")
+        album.append({"type": "photo", "media": f"attach://{key}"})
+    return post_telegram(
+        "sendMediaGroup",
+        data={"chat_id": CHAT_ID, "media": json.dumps(album)},
+        files=files, timeout=90,
+    )
+
+
+def message_chunks(english_item):
+    en_parts = english_parts(english_item)
+    zh_parts = english_item.get("zh_parts")
+    if not isinstance(zh_parts, list) or len(en_parts) != len(zh_parts):
+        raise ValueError("译文尚未准备好或段落数量不一致")
+
+    pair_texts = [f"{en}\n\n{zh}" for en, zh in zip(en_parts, zh_parts)]
+    chunks = []
+    current = ""
+    for pair in pair_texts:
+        # 单组中英文本过长时按字符分片，避免 Telegram 的 4096 字符限制
+        fragments = [pair[i:i + TEXT_CHUNK_SIZE] for i in range(0, len(pair), TEXT_CHUNK_SIZE)]
+        for fragment in fragments:
+            candidate = f"{current}\n\n{fragment}" if current else fragment
+            if len(candidate) > TEXT_CHUNK_SIZE:
+                if current:
+                    chunks.append(current)
+                current = fragment
+            else:
+                current = candidate
+
+    if current:
+        chunks.append(current)
+    note = "\n\n🤖 中文由 Gemini 翻译"
+    if len(chunks[-1]) + len(note) <= TEXT_CHUNK_SIZE:
+        chunks[-1] += note
     else:
-        print("相册发送失败：", result.get("description"))
+        chunks.append(note.strip())
+    return chunks
+
+
+def deliver_one(state, news_id):
+    """逐步发送并保存进度。成功完成时返回 True，否则返回 False。"""
+    item = state["pending"][news_id]
+    if "zh_parts" not in item:
         return False
+
+    photos = [m for m in item.get("media", []) if m.get("type") == "photo"]
+    media_index = item.get("media_next_index", 0)
+    if not item.get("media_sent", False):
+        while media_index < len(photos):
+            count = min(10, len(photos) - media_index)
+            group = photos[media_index:media_index + count]
+            try:
+                if len(group) == 1:
+                    send_photo(group[0]["url"])
+                else:
+                    send_album(group)
+            except (requests.RequestException, RuntimeError, ValueError) as exc:
+                item["media_failures"] = item.get("media_failures", 0) + 1
+                print(f"图片发送失败 {news_id}，第 {item['media_failures']} 次：{exc}")
+                if item["media_failures"] < 3:
+                    save_state(state)
+                    return False
+                # 图片链接可能过期。连续三次失败后只发送文字，避免新闻永远积压。
+                print(f"已连续三次发送图片失败，跳过此条剩余图片：{news_id}")
+                item["media_skipped"] = True
+                break
+            media_index += count
+            item["media_next_index"] = media_index
+            item["media_failures"] = 0
+            save_state(state)
+        item["media_sent"] = True
+        save_state(state)
+
+    chunks = message_chunks(item)
+    cursor = item.get("text_next_index", 0)
+    while cursor < len(chunks):
+        try:
+            post_telegram("sendMessage", data={"chat_id": CHAT_ID, "text": chunks[cursor]}, timeout=40)
+        except (requests.RequestException, RuntimeError, ValueError) as exc:
+            print(f"双语文字发送失败 {news_id}，第 {cursor + 1} 段：{exc}")
+            return False
+        cursor += 1
+        item["text_next_index"] = cursor
+        save_state(state)
+
+    if news_id not in state["sent_ids"]:
+        state["sent_ids"].append(news_id)
+    state["pending"].pop(news_id, None)
+    save_state(state)
+    print("成功推送：", news_id)
+    return True
+
 
 def main():
     state = load_state()
-    """"初始化，将已在消息池内的消息略过，等待处理下一条新消息"""
-    english_news = get_english_news(10)
-    if not state["initialized"]:
-        for english_item in english_news:
-            english_id = english_item["id"]
-            if english_id not in state["sent_ids"]:
-                state["sent_ids"].append(english_id)
-        state["initialized"] = True
-        save_state(state)
-        print("首次初始化完成")
-        return # 这里的return表示main()到这里直接结束，不会运行下面的部分（目的就是为了把现在消息池里面已有的消息标为已处理）
+    recent = get_english_news(20)
+    print("本次抓取英文消息：", len(recent))
 
-    """初始化结束后的第二次运行，就执行下面的代码，如果有新消息传入，就在设置的3条中文消息中进行匹配"""
-    for english_item in english_news:
-        # 将已发送和未发送的消息id分别放入sent_ids和pending
-        english_id = english_item["id"]
-        if english_id in state["sent_ids"]:
-            continue
-        if english_id in state["pending"]:
-            if english_item.get("published"):
-                state["pending"][english_id]["published"] = (english_item["published"])
-            continue
-        english_item["media_sent"] = False
-        state["pending"][english_id] = english_item
-
-    if not state["pending"]:
-        print("当前没有待匹配的英文消息")
-        save_state(state)
+    if migrate_legacy_once(state, recent):
         return
 
-    chinese_news = get_chinese_news_metadata(50)
-    pending_items = list(state["pending"].items()) # 创建 pending 的快照
-
-    for english_id, english_item in pending_items:
-        if not english_item.get("published"):
-            alert_key = english_id + ":time_error"
-            if alert_key not in state["alerts_sent"]:
-                error_message = "⚠️ 英文消息发布时间提取失败\n英文ID：" + english_id
-                alert_success = send_status_message(error_message)
-                if alert_success:
-                    state["alerts_sent"].append(alert_key)
-        best_match, best_difference = find_best_match(english_item, chinese_news)
-        if best_match:
-            try:
-                zh_title, paragraphs = get_article_content(best_match["link"])
-
-            except requests.RequestException as e:
-                print("中文文章获取失败：", best_match["link"])
-                print("错误原因：", e)
-                print("跳过本条新闻，继续处理其他新闻")
-                continue
-
-            best_match["title"] = zh_title
-            best_match["paragraphs"] = paragraphs
-
-            message = format_bilingual_message(english_item, best_match)
-
-            if message is None:
-                alert_key = english_id + ":format_error"
-
-                if alert_key not in state["alerts_sent"]:
-                    error_message = (
-                            "❌ 双语消息格式化失败\n英文ID："
-                            + english_id
-                            + "\n中文ID："
-                            + best_match["id"]
-                    )
-
-                    alert_success = send_status_message(error_message)
-
-                    if alert_success:
-                        state["alerts_sent"].append(alert_key)
-
-                continue
-
-            media = english_item.get("media", [])
-
-            photos = [
-                item for item in media
-                if item.get("type") == "photo"
-            ]
-
-            if photos and not english_item.get("media_sent", False):
-                if len(photos) == 1:
-                    media_success = send_telegram_photo(photos[0]["url"])
-                elif 2 <= len(photos) <= 10:
-                    media_success = send_telegram_album(photos)
-                else:
-                    print("图片数量超过当前支持范围")
-                    continue
-                if not media_success:
-                    print("图片发送失败，保留在pending：", english_id)
-                    continue
-                english_item["media_sent"] = True
-
-            success = send_telegram_message(message)
-            if success:
-                state["sent_ids"].append(english_id)
-                state["pending"].pop(english_id)
-            else:
-                print("文字发送失败，保留在pending：", english_id)
-        else:
-            alert_key = english_id + ":no_match"
-            if alert_key not in state["alerts_sent"]:
-                error_message = "⚠️ 暂未找到对应中文\n英文ID：" + english_id
-                alert_success = send_status_message(error_message)
-                if alert_success:
-                    state["alerts_sent"].append(alert_key)
+    state.setdefault("sent_ids", [])
+    state.setdefault("skipped_ids", [])
+    state.setdefault("pending", {})
+    sent_ids = set(state["sent_ids"])
+    skipped_ids = set(state["skipped_ids"])
+    first_seen = now_utc().isoformat()
+    new_count = 0
+    for item in recent:
+        news_id = item["id"]
+        if news_id in sent_ids or news_id in skipped_ids or news_id in state["pending"]:
             continue
+        item["first_seen_at"] = first_seen
+        item["media_next_index"] = 0
+        item["text_next_index"] = 0
+        state["pending"][news_id] = item
+        new_count += 1
     save_state(state)
+    print(f"新增待处理新闻：{new_count}，待处理总数：{len(state['pending'])}")
+
+    # 先恢复上次已完成翻译但尚未成功推送的新闻，不再浪费 Gemini 调用。
+    send_count = 0
+    order = lambda pair: (
+        parse_time(pair[1].get("published")) or parse_time(pair[1].get("first_seen_at")) or now_utc(),
+        pair[0]
+    )
+    for news_id, item in sorted(list(state["pending"].items()), key=order):
+        if send_count >= MAX_SEND_PER_RUN:
+            break
+        if "zh_parts" in item:
+            if not deliver_one(state, news_id):
+                print("已有译文推送未完成，停止本轮后续请求")
+                return
+            send_count += 1
+
+    batch_count = 0
+    while batch_count < MAX_BATCHES_PER_RUN and send_count < MAX_SEND_PER_RUN:
+        untranslated = sorted(
+            [(news_id, item) for news_id, item in state["pending"].items() if "zh_parts" not in item],
+            key=order,
+        )
+        if not untranslated:
+            break
+        oldest = parse_time(untranslated[0][1].get("first_seen_at")) or now_utc()
+        minutes = (now_utc() - oldest).total_seconds() / 60
+        if len(untranslated) < BATCH_SIZE and minutes < MAX_WAIT_MINUTES:
+            print(f"微缓冲池：{len(untranslated)}/{BATCH_SIZE} 条，最早等待 {minutes:.1f}/{MAX_WAIT_MINUTES} 分钟")
+            break
+        batch = untranslated[:min(BATCH_SIZE, MAX_SEND_PER_RUN - send_count)]
+        payload = [{"id": news_id, "parts": english_parts(item)} for news_id, item in batch]
+        print(f"本次调用 Gemini：合并 {len(payload)} 条新闻")
+        try:
+            translations = translate_news_batch(payload)
+        except (requests.RequestException, RuntimeError, ValueError, KeyError) as exc:
+            print("Gemini 批量翻译失败，保留待处理消息，下次重试：", exc)
+            return
+
+        for news_id, _ in batch:
+            state["pending"][news_id]["zh_parts"] = translations[news_id]
+        save_state(state)  # 翻译结果先落盘，之后 Telegram 发送失败不必再次调用 Gemini
+        batch_count += 1
+
+        for news_id, _ in batch:
+            if not deliver_one(state, news_id):
+                print("消息发送未完成，留到下次继续")
+                return
+            send_count += 1
+
+    print(f"本轮完成推送 {send_count} 条，剩余待处理 {len(state['pending'])} 条")
+
 
 if __name__ == "__main__":
     main()
