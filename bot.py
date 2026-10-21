@@ -1,26 +1,31 @@
-"""英文 Telegram 新闻 -> 5 条微缓冲 -> Gemini 批量翻译 -> 双语逐段 Telegram 推送。"""
+"""Fetch public Telegram channel history, translate via Gemini, publish bilingual news."""
 import json
 import os
 import re
+import time
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 import requests
 from bs4 import BeautifulSoup
 
 from gemini_translate import translate_news_batch
 
-STATE_FILE = Path(__file__).resolve().parent / "state.json"
+BASE_DIR = Path(__file__).resolve().parent
+STATE_FILE = BASE_DIR / "state.json"
 TG_EN_URL = os.getenv("TG_EN_URL", "").strip()
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 
-MODE = "gemini_batch_v1"
+MODE = "gemini_batch_v2"
 BATCH_SIZE = 5
-MAX_WAIT_MINUTES = 30  # 凑不满 5 条，最早一条等待超过 30 分钟后也翻译
-MAX_BATCHES_PER_RUN = 2  # 每次 Actions 最多调用 Gemini 两次
-MAX_SEND_PER_RUN = 10    # 每次最多完成 10 条新闻，防止恢复后刷屏
-TEXT_CHUNK_SIZE = 3500  # 比 Telegram 4096 字符限制留足余量
+MAX_HISTORY_PAGES = int(os.getenv("MAX_HISTORY_PAGES", "25"))
+MAX_BATCHES_PER_RUN = int(os.getenv("MAX_BATCHES_PER_RUN", "12"))
+MAX_SEND_PER_RUN = int(os.getenv("MAX_SEND_PER_RUN", "60"))
+PAGE_DELAY_SECONDS = 0.3
+TEXT_CHUNK_SIZE = 3400  # UTF-16 units; Telegram limit is 4096.
+PHOTO_MAX_FAILURES = 3
 
 
 def now_utc():
@@ -29,14 +34,15 @@ def now_utc():
 
 def parse_time(value):
     try:
-        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
-        return dt.replace(tzinfo=timezone.utc) if dt.tzinfo is None else dt.astimezone(timezone.utc)
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(timezone.utc)
     except (ValueError, TypeError):
         return None
 
 
 def save_state(state):
-    # 写入临时文件后原子替换，避免程序异常时破坏本地 state.json
     temporary = STATE_FILE.with_suffix(".tmp")
     temporary.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
     temporary.replace(STATE_FILE)
@@ -48,38 +54,69 @@ def load_state():
     return json.loads(STATE_FILE.read_text(encoding="utf-8"))
 
 
-def get_english_news(n=20):
-    if not TG_EN_URL:
-        raise RuntimeError("未配置 TG_EN_URL")
-    response = requests.get(TG_EN_URL, timeout=30)
+def channel_name():
+    parsed = urlparse(TG_EN_URL)
+    path = parsed.path.strip("/").split("/")
+    if parsed.hostname not in ("t.me", "www.t.me") or len(path) != 2 or path[0] != "s":
+        raise ValueError("TG_EN_URL must look like https://t.me/s/zaihua_news")
+    return path[1]
+
+
+def number_from_post_id(post_id, expected_channel):
+    prefix, separator, number = str(post_id).partition("/")
+    if separator and prefix.casefold() == expected_channel.casefold() and number.isdecimal():
+        return int(number)
+    return None
+
+
+def fetch_telegram_page(before=None):
+    """Read one preview page and its older-page cursor."""
+    channel = channel_name()
+    base_url = f"https://t.me/s/{channel}"
+    response = requests.get(
+        base_url,
+        params={"before": before} if before is not None else None,
+        headers={"User-Agent": "Mozilla/5.0 (compatible; TelegramNewsBot/1.0)"},
+        timeout=30,
+    )
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")
-    messages = soup.select(".tgme_widget_message[data-post]")
-    news_list = []
+    posts = soup.select(".tgme_widget_message[data-post]")
 
-    for message in messages[-n:]:
-        post_id = (message.get("data-post") or "").strip()
-        text_tag = message.select_one(".tgme_widget_message_text")
-        if not post_id or text_tag is None:
+    numbers = []
+    news = {}
+    for post in posts:
+        post_id = (post.get("data-post") or "").strip()
+        number = number_from_post_id(post_id, channel)
+        if number is None:
+            continue
+        numbers.append(number)
+
+        text_tag = post.select_one(".tgme_widget_message_text")
+        if text_tag is None:
             continue
         for br in text_tag.find_all("br"):
             br.replace_with("\n")
         raw = text_tag.get_text()
-        parts = [p.strip() for p in raw.split("\n\n") if p.strip() and not p.strip().startswith("🌸")]
-        parts = [p for p in parts if p.casefold() not in {
+        parts = [part.strip() for part in raw.split("\n\n") if part.strip()]
+        parts = [part for part in parts if not part.startswith("\U0001f338")]
+        parts = [part for part in parts if part.casefold() not in {
             "flower community's assistant", "hua community's assistant"
         }]
         if not parts:
             continue
-        date_tag = message.select_one(".tgme_widget_message_date time[datetime]")
+
+        date_tag = post.select_one(".tgme_widget_message_date time[datetime]")
         media = []
-        for photo in message.select(".tgme_widget_message_photo_wrap"):
-            style = photo.get("style", "")
-            match = re.search(r"background-image\s*:\s*url\(\s*['\"]?([^'\")]+)", style)
+        for photo in post.select(".tgme_widget_message_photo_wrap"):
+            match = re.search(
+                r"background-image\s*:\s*url\(\s*['\"]?([^'\")]+)",
+                photo.get("style", ""),
+            )
             if match:
                 media.append({"type": "photo", "url": match.group(1)})
 
-        news_list.append({
+        news[number] = {
             "id": post_id,
             "title": parts[0],
             "paragraphs": parts[1:],
@@ -87,8 +124,107 @@ def get_english_news(n=20):
             "link": "https://t.me/" + post_id,
             "media": media,
             "media_sent": False,
-        })
-    return news_list
+        }
+
+    if not numbers:
+        raise RuntimeError("Telegram returned no channel posts; refusing to move the bookmark")
+
+    older_link = soup.select_one("a.tme_messages_more[data-before]")
+    cursor_text = older_link.get("data-before", "") if older_link else ""
+    next_before = int(cursor_text) if cursor_text.isdecimal() else None
+    return news, numbers, next_before
+
+
+def fetch_since(last_seen_id):
+    """Backfill every visible post newer than last_seen_id, page by page.
+
+    Returns (new_items, newest_id, complete, pages_scanned).
+    Never call the scan complete unless an older page crosses the bookmark.
+    """
+    collected = {}
+    scanned_ids = set()
+    before = None
+    newest_id = None
+    complete = False
+    pages_scanned = 0
+
+    for index in range(MAX_HISTORY_PAGES):
+        page, numbers, next_before = fetch_telegram_page(before)
+        pages_scanned += 1
+        if index == 0:
+            newest_id = max(numbers)
+        if scanned_ids and not (set(numbers) - scanned_ids):
+            raise RuntimeError("Telegram history pagination made no progress; bookmark unchanged")
+        scanned_ids.update(numbers)
+
+        for number, item in page.items():
+            if number > last_seen_id:
+                collected[number] = item
+
+        if min(numbers) <= last_seen_id or newest_id <= last_seen_id:
+            complete = True
+            break
+
+        if next_before is None or next_before > min(numbers):
+            break
+        if before is not None and next_before >= before:
+            break
+        before = next_before
+        if index + 1 < MAX_HISTORY_PAGES:
+            time.sleep(PAGE_DELAY_SECONDS)
+
+    ordered = [collected[number] for number in sorted(collected)]
+    return ordered, newest_id, complete, pages_scanned
+
+
+def highest_known_id(state):
+    channel = channel_name()
+    values = []
+    sources = [
+        state.get("sent_ids", []),
+        state.get("skipped_ids", []),
+        list(state.get("pending", {}).keys()),
+    ]
+    for source in sources:
+        for post_id in source:
+            number = number_from_post_id(post_id, channel)
+            if number is not None:
+                values.append(number)
+    return max(values, default=None)
+
+
+def upgrade_state(state):
+    """Keep v1 pending intact; archive RSS-era pending once on initial switch."""
+    if state.get("mode") == MODE and isinstance(state.get("last_seen_post_id"), int):
+        return False
+
+    if state.get("mode") in ("gemini_batch_v1", MODE):
+        anchor = state.get("last_seen_post_id") or highest_known_id(state)
+        if anchor is not None:
+            state["last_seen_post_id"] = int(anchor)
+            state["mode"] = MODE
+            save_state(state)
+            print("Updated existing Gemini state; history bookmark:", anchor)
+            return False
+
+    # Switching from the old RSS matching version, or a new empty state.
+    page, numbers, _ = fetch_telegram_page()
+    old_pending = state.get("pending", {})
+    state.setdefault("sent_ids", [])
+    state.setdefault("alerts_sent", [])
+    state["legacy_pending"] = old_pending
+    skipped = set(state.get("skipped_ids", []))
+    skipped.update(old_pending)
+    skipped.update(item["id"] for item in page.values())
+    state["skipped_ids"] = sorted(skipped)
+    state["pending"] = {}
+    state["last_seen_post_id"] = max(numbers)
+    state["mode"] = MODE
+    state["initialized"] = True
+    save_state(state)
+    print("First migration: archived", len(old_pending),
+          "legacy items and skipped existing preview posts.")
+    return True
 
 
 def english_parts(item):
@@ -99,111 +235,121 @@ def english_parts(item):
         paragraphs.pop(0)
     parts = ([title] if title else []) + paragraphs
     if not parts:
-        raise ValueError("新闻正文为空：" + item.get("id", ""))
+        raise ValueError("News has no English text: " + item.get("id", ""))
     return parts
 
 
-def migrate_legacy_once(state, current_news):
-    """首次切换时归档旧 pending，并跳过当前页面已有消息，避免历史消息集中补发。"""
-    if state.get("mode") == MODE:
-        return False
-    old_pending = state.get("pending", {})
-    state["legacy_pending"] = old_pending  # 保留旧数据，不丢弃
-    skipped = set(state.get("skipped_ids", []))
-    skipped.update(old_pending)
-    sent = set(state.get("sent_ids", []))
-    skipped.update(x["id"] for x in current_news if x["id"] not in sent)
-    state["skipped_ids"] = sorted(skipped)
-    state["pending"] = {}
-    state["mode"] = MODE
-    state["initialized"] = True
-    save_state(state)
-    print(f"首次切换完成：归档旧 pending {len(old_pending)} 条；跳过当前频道历史消息。")
-    return True
+def utf16_length(text):
+    return len(text.encode("utf-16-le")) // 2
 
 
-def post_telegram(method, *, data=None, files=None, timeout=45):
-    if not BOT_TOKEN or not CHAT_ID:
-        raise RuntimeError("缺少 TELEGRAM_BOT_TOKEN 或 TELEGRAM_CHAT_ID")
-    response = requests.post(
-        f"https://api.telegram.org/bot{BOT_TOKEN}/{method}",
-        data=data, files=files, timeout=timeout,
-    )
-    response.raise_for_status()
-    result = response.json()
-    if not result.get("ok"):
-        raise RuntimeError(f"Telegram {method} 失败：{result.get('description')}")
-    return result["result"]
+def split_text(text, limit):
+    pieces = []
+    current = []
+    units = 0
+    for char in text:
+        width = 2 if ord(char) > 0xFFFF else 1
+        if units + width > limit and current:
+            pieces.append("".join(current))
+            current = []
+            units = 0
+        current.append(char)
+        units += width
+    if current:
+        pieces.append("".join(current))
+    return pieces
 
 
-def send_photo(url):
-    image = requests.get(url, timeout=30)
-    image.raise_for_status()
-    return post_telegram(
-        "sendPhoto", data={"chat_id": CHAT_ID},
-        files={"photo": ("news.jpg", image.content, "image/jpeg")}, timeout=75,
-    )
+def message_chunks(item):
+    english = english_parts(item)
+    chinese = item.get("zh_parts")
+    if not isinstance(chinese, list) or len(english) != len(chinese):
+        raise ValueError("Translation not ready or paragraph count mismatch")
 
-
-def send_album(items):
-    files = {}
-    album = []
-    for index, item in enumerate(items):
-        image = requests.get(item["url"], timeout=30)
-        image.raise_for_status()
-        key = f"photo{index}"
-        files[key] = (f"photo{index}.jpg", image.content, "image/jpeg")
-        album.append({"type": "photo", "media": f"attach://{key}"})
-    return post_telegram(
-        "sendMediaGroup",
-        data={"chat_id": CHAT_ID, "media": json.dumps(album)},
-        files=files, timeout=90,
-    )
-
-
-def message_chunks(english_item):
-    en_parts = english_parts(english_item)
-    zh_parts = english_item.get("zh_parts")
-    if not isinstance(zh_parts, list) or len(en_parts) != len(zh_parts):
-        raise ValueError("译文尚未准备好或段落数量不一致")
-
-    pair_texts = [f"{en}\n\n{zh}" for en, zh in zip(en_parts, zh_parts)]
     chunks = []
     current = ""
-    for pair in pair_texts:
-        # 单组中英文本过长时按字符分片，避免 Telegram 的 4096 字符限制
-        fragments = [pair[i:i + TEXT_CHUNK_SIZE] for i in range(0, len(pair), TEXT_CHUNK_SIZE)]
-        for fragment in fragments:
-            candidate = f"{current}\n\n{fragment}" if current else fragment
-            if len(candidate) > TEXT_CHUNK_SIZE:
+    for en, zh in zip(english, chinese):
+        pair = en + "\n\n" + zh
+        for fragment in split_text(pair, TEXT_CHUNK_SIZE):
+            candidate = current + "\n\n" + fragment if current else fragment
+            if utf16_length(candidate) > TEXT_CHUNK_SIZE:
                 if current:
                     chunks.append(current)
                 current = fragment
             else:
                 current = candidate
-
     if current:
         chunks.append(current)
-    note = "\n\n🤖 中文由 Gemini 翻译"
-    if len(chunks[-1]) + len(note) <= TEXT_CHUNK_SIZE:
+    if not chunks:
+        raise ValueError("News body is empty")
+
+    note = "\n\n\U0001f916 \u4e2d\u6587\u7531 Gemini \u7ffb\u8bd1"
+    if utf16_length(chunks[-1] + note) <= TEXT_CHUNK_SIZE:
         chunks[-1] += note
     else:
         chunks.append(note.strip())
     return chunks
 
 
+def post_telegram(method, *, data=None, files=None, timeout=45):
+    if not BOT_TOKEN or not CHAT_ID:
+        raise RuntimeError("Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID")
+    try:
+        response = requests.post(
+            f"https://api.telegram.org/bot{BOT_TOKEN}/{method}",
+            data=data, files=files, timeout=timeout,
+        )
+    except requests.RequestException as exc:
+        # Never log the request URL; it embeds the private Telegram bot token.
+        raise RuntimeError(f"Telegram {method} network error: {type(exc).__name__}") from None
+    try:
+        result = response.json()
+    except ValueError:
+        raise RuntimeError(f"Telegram {method} non-JSON response: HTTP {response.status_code}") from None
+    if not response.ok or not result.get("ok"):
+        description = str(result.get("description", "Unknown error"))
+        retry_after = result.get("parameters", {}).get("retry_after")
+        raise RuntimeError(
+            f"Telegram {method} HTTP {response.status_code}: {description}; "
+            f"retry_after={retry_after}"
+        )
+    return result["result"]
+
+
+def send_photo(url):
+    photo = requests.get(url, timeout=30)
+    photo.raise_for_status()
+    return post_telegram(
+        "sendPhoto", data={"chat_id": CHAT_ID},
+        files={"photo": ("news.jpg", photo.content, "image/jpeg")}, timeout=75,
+    )
+
+
+def send_album(photos):
+    files = {}
+    media = []
+    for index, item in enumerate(photos):
+        photo = requests.get(item["url"], timeout=30)
+        photo.raise_for_status()
+        key = f"photo{index}"
+        files[key] = (f"photo{index}.jpg", photo.content, "image/jpeg")
+        media.append({"type": "photo", "media": f"attach://{key}"})
+    return post_telegram(
+        "sendMediaGroup", data={"chat_id": CHAT_ID, "media": json.dumps(media)},
+        files=files, timeout=90,
+    )
+
+
 def deliver_one(state, news_id):
-    """逐步发送并保存进度。成功完成时返回 True，否则返回 False。"""
     item = state["pending"][news_id]
     if "zh_parts" not in item:
         return False
 
-    photos = [m for m in item.get("media", []) if m.get("type") == "photo"]
-    media_index = item.get("media_next_index", 0)
+    photos = [x for x in item.get("media", []) if x.get("type") == "photo"]
+    cursor = item.get("media_next_index", 0)
     if not item.get("media_sent", False):
-        while media_index < len(photos):
-            count = min(10, len(photos) - media_index)
-            group = photos[media_index:media_index + count]
+        while cursor < len(photos):
+            group = photos[cursor:cursor + 10]
             try:
                 if len(group) == 1:
                     send_photo(group[0]["url"])
@@ -211,117 +357,121 @@ def deliver_one(state, news_id):
                     send_album(group)
             except (requests.RequestException, RuntimeError, ValueError) as exc:
                 item["media_failures"] = item.get("media_failures", 0) + 1
-                print(f"图片发送失败 {news_id}，第 {item['media_failures']} 次：{exc}")
-                if item["media_failures"] < 3:
+                print("Photo upload failed:", news_id, type(exc).__name__)
+                if item["media_failures"] < PHOTO_MAX_FAILURES:
                     save_state(state)
                     return False
-                # 图片链接可能过期。连续三次失败后只发送文字，避免新闻永远积压。
-                print(f"已连续三次发送图片失败，跳过此条剩余图片：{news_id}")
+                print("Skipping expired photo after repeated failures:", news_id)
                 item["media_skipped"] = True
                 break
-            media_index += count
-            item["media_next_index"] = media_index
+            cursor += len(group)
+            item["media_next_index"] = cursor
             item["media_failures"] = 0
             save_state(state)
         item["media_sent"] = True
         save_state(state)
 
-    chunks = message_chunks(item)
-    cursor = item.get("text_next_index", 0)
-    while cursor < len(chunks):
+    pieces = message_chunks(item)
+    text_cursor = item.get("text_next_index", 0)
+    while text_cursor < len(pieces):
         try:
-            post_telegram("sendMessage", data={"chat_id": CHAT_ID, "text": chunks[cursor]}, timeout=40)
-        except (requests.RequestException, RuntimeError, ValueError) as exc:
-            print(f"双语文字发送失败 {news_id}，第 {cursor + 1} 段：{exc}")
+            post_telegram(
+                "sendMessage",
+                data={"chat_id": CHAT_ID, "text": pieces[text_cursor]},
+                timeout=45,
+            )
+        except RuntimeError as exc:
+            print("Text send failed:", news_id, str(exc))
             return False
-        cursor += 1
-        item["text_next_index"] = cursor
+        text_cursor += 1
+        item["text_next_index"] = text_cursor
         save_state(state)
 
     if news_id not in state["sent_ids"]:
         state["sent_ids"].append(news_id)
-    state["pending"].pop(news_id, None)
+    state["pending"].pop(news_id)
     save_state(state)
-    print("成功推送：", news_id)
+    print("Sent:", news_id)
     return True
+
+
+def pending_order(pair):
+    news_id, item = pair
+    return (parse_time(item.get("published")) or
+            parse_time(item.get("first_seen_at")) or datetime.max.replace(tzinfo=timezone.utc),
+            news_id)
 
 
 def main():
     state = load_state()
-    recent = get_english_news(20)
-    print("本次抓取英文消息：", len(recent))
-
-    if migrate_legacy_once(state, recent):
+    if upgrade_state(state):
         return
 
     state.setdefault("sent_ids", [])
-    state.setdefault("skipped_ids", [])
     state.setdefault("pending", {})
+    state.setdefault("skipped_ids", [])
+    watermark = state["last_seen_post_id"]
+    recent, newest, complete, page_count = fetch_since(watermark)
+    print(f"Scanned {page_count} Telegram pages; found {len(recent)} posts after {watermark}.")
+
     sent_ids = set(state["sent_ids"])
     skipped_ids = set(state["skipped_ids"])
-    first_seen = now_utc().isoformat()
+    discovered = now_utc().isoformat()
     new_count = 0
     for item in recent:
         news_id = item["id"]
         if news_id in sent_ids or news_id in skipped_ids or news_id in state["pending"]:
             continue
-        item["first_seen_at"] = first_seen
+        item["first_seen_at"] = discovered
         item["media_next_index"] = 0
         item["text_next_index"] = 0
         state["pending"][news_id] = item
         new_count += 1
-    save_state(state)
-    print(f"新增待处理新闻：{new_count}，待处理总数：{len(state['pending'])}")
 
-    # 先恢复上次已完成翻译但尚未成功推送的新闻，不再浪费 Gemini 调用。
-    send_count = 0
-    order = lambda pair: (
-        parse_time(pair[1].get("published")) or parse_time(pair[1].get("first_seen_at")) or now_utc(),
-        pair[0]
-    )
-    for news_id, item in sorted(list(state["pending"].items()), key=order):
-        if send_count >= MAX_SEND_PER_RUN:
-            break
-        if "zh_parts" in item:
-            if not deliver_one(state, news_id):
-                print("已有译文推送未完成，停止本轮后续请求")
-                return
-            send_count += 1
+    # The watermark advances ONLY after reaching the old watermark.
+    if complete:
+        state["last_seen_post_id"] = max(watermark, newest)
+    save_state(state)
+    print(f"Added {new_count}; pending {len(state['pending'])}; bookmark {state['last_seen_post_id']}.")
+    if not complete:
+        raise RuntimeError(
+            "Telegram history backfill incomplete. Pending saved, bookmark NOT advanced. "
+            "Increase MAX_HISTORY_PAGES or inspect Telegram preview pagination."
+        )
 
     batch_count = 0
-    while batch_count < MAX_BATCHES_PER_RUN and send_count < MAX_SEND_PER_RUN:
-        untranslated = sorted(
-            [(news_id, item) for news_id, item in state["pending"].items() if "zh_parts" not in item],
-            key=order,
-        )
-        if not untranslated:
+    sent_count = 0
+    while sent_count < MAX_SEND_PER_RUN:
+        ordered = sorted(state["pending"].items(), key=pending_order)
+        if not ordered:
             break
-        oldest = parse_time(untranslated[0][1].get("first_seen_at")) or now_utc()
-        minutes = (now_utc() - oldest).total_seconds() / 60
-        if len(untranslated) < BATCH_SIZE and minutes < MAX_WAIT_MINUTES:
-            print(f"微缓冲池：{len(untranslated)}/{BATCH_SIZE} 条，最早等待 {minutes:.1f}/{MAX_WAIT_MINUTES} 分钟")
-            break
-        batch = untranslated[:min(BATCH_SIZE, MAX_SEND_PER_RUN - send_count)]
-        payload = [{"id": news_id, "parts": english_parts(item)} for news_id, item in batch]
-        print(f"本次调用 Gemini：合并 {len(payload)} 条新闻")
-        try:
-            translations = translate_news_batch(payload)
-        except (requests.RequestException, RuntimeError, ValueError, KeyError) as exc:
-            print("Gemini 批量翻译失败，保留待处理消息，下次重试：", exc)
-            return
 
-        for news_id, _ in batch:
-            state["pending"][news_id]["zh_parts"] = translations[news_id]
-        save_state(state)  # 翻译结果先落盘，之后 Telegram 发送失败不必再次调用 Gemini
-        batch_count += 1
+        news_id, item = ordered[0]
+        if "zh_parts" not in item:
+            if batch_count >= MAX_BATCHES_PER_RUN:
+                print("Reached Gemini batch budget for this run; remaining news kept in pending.")
+                break
+            untranslated = [(key, value) for key, value in ordered if "zh_parts" not in value]
+            capacity = min(BATCH_SIZE, MAX_SEND_PER_RUN - sent_count)
+            batch = untranslated[:capacity]
+            payload = [{"id": key, "parts": english_parts(value)} for key, value in batch]
+            print(f"Gemini request {batch_count + 1}: translating {len(payload)} news posts.")
+            try:
+                translations = translate_news_batch(payload)
+            except (requests.RequestException, RuntimeError, ValueError, KeyError) as exc:
+                raise RuntimeError(f"Gemini translation failed; pending preserved: {exc}") from exc
+            for key, _ in batch:
+                state["pending"][key]["zh_parts"] = translations[key]
+            save_state(state)
+            batch_count += 1
+            continue
 
-        for news_id, _ in batch:
-            if not deliver_one(state, news_id):
-                print("消息发送未完成，留到下次继续")
-                return
-            send_count += 1
+        if not deliver_one(state, news_id):
+            raise RuntimeError("Telegram delivery unfinished; pending progress saved")
+        sent_count += 1
 
-    print(f"本轮完成推送 {send_count} 条，剩余待处理 {len(state['pending'])} 条")
+    print(f"Run finished: sent {sent_count}; left {len(state['pending'])} pending; "
+          f"Gemini requests {batch_count}.")
 
 
 if __name__ == "__main__":
