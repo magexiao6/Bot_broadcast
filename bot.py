@@ -282,12 +282,6 @@ def message_chunks(item):
         chunks.append(current)
     if not chunks:
         raise ValueError("News body is empty")
-
-    note = "\n\n\U0001f916 \u4e2d\u6587\u7531 Gemini \u7ffb\u8bd1"
-    if utf16_length(chunks[-1] + note) <= TEXT_CHUNK_SIZE:
-        chunks[-1] += note
-    else:
-        chunks.append(note.strip())
     return chunks
 
 
