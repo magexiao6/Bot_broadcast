@@ -273,7 +273,8 @@
     "zaihua_news/3000",
     "zaihua_news/3004",
     "zaihua_news/3006",
-    "zaihua_news/3007"
+    "zaihua_news/3007",
+    "zaihua_news/3013"
   ],
   "pending": {
     "zaihua_news/2970": {
@@ -387,6 +388,68 @@
         }
       ],
       "media_sent": false
+    },
+    "zaihua_news/3010": {
+      "id": "zaihua_news/3010",
+      "title": "People's Daily Sharp Commentary: Tesla can \"fly\" — so does that mean we've been left behind?",
+      "link": "https://t.me/zaihua_news/3010",
+      "published": "2026-10-21T03:17:44+00:00",
+      "paragraphs": [
+        "Recently, Tesla's release of a \"flying car\" sparked heated discussion. What's needed now is clear-headed composure. There's no need to belittle ourselves, and we certainly shouldn't dismiss the solid foundation China's new energy vehicle industry has built just because of a flashy new demonstration.",
+        "Tesla's \"flight\" this time is more like a polished concept show, while what Chinese automakers hold in their hands is a set of systematic, hard-earned capabilities. It can be said that China's automotive innovation is a multi-dimensional breakthrough, a flourishing of diverse and deep cultivation, and a progression of real-world results. Momentary flashiness may catch the eye, but pragmatic implementation is what enables steady, long-term progress. Avoid falling into \"binary\" thinking — either putting something on a pedestal or trampling it into the ground.",
+        "People's Daily Online"
+      ],
+      "media": [],
+      "media_sent": false
+    },
+    "zaihua_news/3011": {
+      "id": "zaihua_news/3011",
+      "title": "UK regulator requires Apple to open up iPhone NFC payments",
+      "link": "https://t.me/zaihua_news/3011",
+      "published": "2026-10-21T03:22:41+00:00",
+      "paragraphs": [
+        "The UK Competition and Markets Authority (CMA) has proposed measures requiring Apple to open up iPhone NFC and Wallet access to the international general-purpose contactless payment standard and to significantly reduce fees, saying its rules hinder innovation among UK fintech firms.",
+        "The CMA said payments in the UK 39% are already contactless and Apple Wallet is the most popular, yet no company has launched a competing product; the consultation period runs until 2026 year 11 month 17 day. Apple opposes the move, saying existing arrangements already allow developers to securely offer contactless transactions within apps.",
+        "Engadget"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/rBRNyzEQ_Xg2OMn8Bp9HO0iCw24mA2j41Ln1QqGEbcNnuJGCHzrL1NCeJ-S0yqYA_SBmK05NSFvNWJN05NYZsUPtr_rTUdKfSo7NnD83VVcfe1nRqG4kSPqZyGP06gPXnqEAk4Q0c77-vWmJGo41-KmA7oqhzYEed-9qBVkckaNZ9KN7vNyX0-_7MoZJ5eeMnHbKlx8olLzM1VZO84fcHC2IFBF7I4DKm1pAsq2AiHi8y7lkzrqJ849ZYh6qeImKX1qWLl5ehdxwvxNbGThnUUtntSi7eCgP8L4PURdmVVnYTiGF7yeu4Wz5exfYsB6S4bp5KCFX44tLnap2tUXk8g.jpg"
+        }
+      ],
+      "media_sent": false
+    },
+    "zaihua_news/3012": {
+      "id": "zaihua_news/3012",
+      "title": "In the Huashe Community assistant , PHP Core has been exposed to high-risk RCE vulnerabilities, and the official release is scheduled for security updates on 10 month 21 day 22:00 (UTC+8).",
+      "link": "https://t.me/zaihua_news/3012",
+      "published": "2026-10-21T03:37:04+00:00",
+      "paragraphs": [
+        "The official PHP team announced the release of patches to fix two high-risk remote code execution vulnerabilities affecting its core interpreter (CVE-2026-109618 and CVE-2026-109619, CVSS 9.2). The affected scope covers all historical and modern versions since PHP 5.4, including PHP 5.x, 7.x, 8.0 through 8.5 and other branches, and attacks can be triggered before business framework code execution.",
+        "Official fixes are provided only for supported branches (PHP 8.2, 8.3, 8.4, 8.5); end-of-life (EOL) versions cannot obtain official patches and must immediately restrict public network access or implement network isolation to prevent exploitation attacks.",
+        "sansec"
+      ],
+      "media": [],
+      "media_sent": false
+    },
+    "zaihua_news/3014": {
+      "id": "zaihua_news/3014",
+      "title": "At Huahua Community’s little assistant\nAMD FSR 4.1 expands support to RX 6000 graphics cards and Xbox, with Vulkan API support coming",
+      "link": "https://t.me/zaihua_news/3014",
+      "published": "2026-10-21T04:42:30+00:00",
+      "paragraphs": [
+        "AMD is expanding FSR Upscaling 4.1 to RX 6000 series graphics cards, Ryzen AI Max processors, Ryzen AI 9 laptops, and handhelds such as the Z2 Extreme. Support for Xbox Series X|S is coming soon.",
+        "The feature is being released with the Adrenalin 26.10.1 driver, offering a clear image quality improvement over FSR 3.1. When FSR 4 first launched in 2025, it supported only the RX 9000 series. In 2026, it expanded to the RX 7 series in 7000.",
+        "Advanced Micro Devices, Inc."
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/Lbi0a0yWik4mu6GbnWCyEHadWzCsmQrxG21rFSBRr8y1eDcYI79OcU4ZEgsHj8PMfqZJD0lyC8Gi5Un1Z7GsXmEAMySeljyKWJdnrvhU8gKp7GIdzDzb61HbOFPrv7OsDaCYo_1Kq5mqWRAZ3PkRVzCSE39TPzCuGy80j7d1SgZFwqttr56rx3k2skR4fEO7U2IBqQ4hEOp_VCsZ_eeXrPDg1sNdGbjjbTYhuXpyv2-1WinoQUOj_4_n-dJPRyBH-BFIwmarCD1mUCsBxeYwzl7pu_G5gUk62AnspC6kjPs2B8RMHgL-Se0lNmrjpFlQXBEEAPdfZDWX3fBMG5zPPg.jpg"
+        }
+      ],
+      "media_sent": false
     }
   },
   "alerts_sent": [
@@ -396,6 +459,10 @@
     "zaihua_news/3002:no_match",
     "zaihua_news/3003:no_match",
     "zaihua_news/3008:no_match",
-    "zaihua_news/3009:no_match"
+    "zaihua_news/3009:no_match",
+    "zaihua_news/3010:no_match",
+    "zaihua_news/3011:no_match",
+    "zaihua_news/3012:no_match",
+    "zaihua_news/3014:no_match"
   ]
 }
