@@ -285,7 +285,21 @@
     "zaihua_news/3022",
     "zaihua_news/3023"
   ],
-  "pending": {
+  "pending": {},
+  "alerts_sent": [
+    "zaihua_news/2970:no_match",
+    "zaihua_news/2999:no_match",
+    "zaihua_news/3001:no_match",
+    "zaihua_news/3002:no_match",
+    "zaihua_news/3003:no_match",
+    "zaihua_news/3008:no_match",
+    "zaihua_news/3009:no_match",
+    "zaihua_news/3010:no_match",
+    "zaihua_news/3011:no_match",
+    "zaihua_news/3012:no_match",
+    "zaihua_news/3014:no_match"
+  ],
+  "legacy_pending": {
     "zaihua_news/2970": {
       "id": "zaihua_news/2970",
       "title": "📱 Spotify is cracking down on Family plan sharing, requiring in-person scans of dynamic QR codes",
@@ -461,17 +475,38 @@
       "media_sent": false
     }
   },
-  "alerts_sent": [
-    "zaihua_news/2970:no_match",
-    "zaihua_news/2999:no_match",
-    "zaihua_news/3001:no_match",
-    "zaihua_news/3002:no_match",
-    "zaihua_news/3003:no_match",
-    "zaihua_news/3008:no_match",
-    "zaihua_news/3009:no_match",
-    "zaihua_news/3010:no_match",
-    "zaihua_news/3011:no_match",
-    "zaihua_news/3012:no_match",
-    "zaihua_news/3014:no_match"
-  ]
+  "skipped_ids": [
+    "zaihua_news/2970",
+    "zaihua_news/2999",
+    "zaihua_news/3001",
+    "zaihua_news/3002",
+    "zaihua_news/3003",
+    "zaihua_news/3008",
+    "zaihua_news/3009",
+    "zaihua_news/3010",
+    "zaihua_news/3011",
+    "zaihua_news/3012",
+    "zaihua_news/3014",
+    "zaihua_news/3015",
+    "zaihua_news/3016",
+    "zaihua_news/3017",
+    "zaihua_news/3018",
+    "zaihua_news/3019",
+    "zaihua_news/3020",
+    "zaihua_news/3021",
+    "zaihua_news/3022",
+    "zaihua_news/3023",
+    "zaihua_news/3024",
+    "zaihua_news/3025",
+    "zaihua_news/3026",
+    "zaihua_news/3027",
+    "zaihua_news/3028",
+    "zaihua_news/3029",
+    "zaihua_news/3030",
+    "zaihua_news/3032",
+    "zaihua_news/3033",
+    "zaihua_news/3034"
+  ],
+  "last_seen_post_id": 3034,
+  "mode": "gemini_batch_v2"
 }
