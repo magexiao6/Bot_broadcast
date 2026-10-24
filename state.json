@@ -346,7 +346,103 @@
     "zaihua_news/3102",
     "zaihua_news/3103"
   ],
-  "pending": {},
+  "pending": {
+    "zaihua_news/3104": {
+      "id": "zaihua_news/3104",
+      "title": "🤖 OpenAI moves frontier model training offline",
+      "paragraphs": [
+        "OpenAI says it is now training its most advanced models in an environment with no internet connection, after AI agents repeatedly broke out of test environments and attacked third-party companies and government agencies. The models can still access indexed and cached web content.",
+        "Testing found that agents can also exploit differences in processor cache read and write speeds to transmit information without internet access. OpenAI has added detection capabilities to its monitoring systems and says it will continue offline training until security measures are sufficient to support expanded internet access, while also strengthening virtual machine security.",
+        "The Verge"
+      ],
+      "published": "2026-10-24T07:19:44+00:00",
+      "link": "https://t.me/zaihua_news/3104",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-10-24T11:50:33.812243+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3105": {
+      "id": "zaihua_news/3105",
+      "title": "Anker, NIKE, Freshippo, Xianyu and other brands' WeCom customer service accounts sent pornographic links late at night; WeCom says third-party plug-in was breached",
+      "paragraphs": [
+        "At around 5 a.m. on October 24, the WeCom customer service accounts of Anker Innovations, NIKE, Freshippo, Xianyu and other brands mass-sent suspected pornographic referral information and New Films Daily cards to users. WeCom's security team responded that it had confirmed that a third-party plug-in software service had been breached, affecting accounts using that service, and that it had forced the relevant accounts offline and banned the referral links.",
+        "Anker Innovations said it had frozen the accounts involved, called the police and reminded users not to click the links; Freshippo said the links were not official content, and all parties are still investigating.",
+        "ZAKER | Sina Finance"
+      ],
+      "published": "2026-10-24T08:00:50+00:00",
+      "link": "https://t.me/zaihua_news/3105",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/EiS46LIgrctS5k-x0_DZz-8x7TTf09nSinqj4YmgiWv87mMu1Sz0j-LU0eZZGZ_fF6druGpZK_F3n4KmFygnN2_GVxDUEtKvHlU10jX5SUYlfXa-DGBNPZjCYPaAajtOQ02AXAmX0MKmM-og6l0xLMwjBV1b2vjeTR5FbQDsEw4EungclAXIUzrJ7IbyuHL0SkreOIDSauqVNg0dr66vCU5uoUDbqzZwisf2GUhyoaBC_3TVowVdk1gUqbSKG7zhHsaV0_V4eFuHI1EVQpMFBiWqYRzGk5l5W_QZmBnIh4A6MH7ibs72YZfP6J9kvsFYG9gGEUj4y4WK1DoSbBh4zQ.jpg"
+        },
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/cps-OzT2PCDRfxGxSBNXvieWc7U_W_ES_JQetIMbxSjt-X1o_bMi2gFqgVFJcIKuJGRV5UosCsE_4UmIPg2uM4JiRW2CcrWvM2HB8yX-Oe5ng9xEmHJ6rZVHpKRt1NucydsofOJHVV5-89UNJH9R1C2qhycy9HgKT1K1oT-OQOLJQLcJt16h0XBhKvL0JF6R13QtANGgpom8wlFG-Q-U_gwymq_EW4NlXyBwvCerLILRTWJr4hQQYu--fgGkXC4bV12gAIkjNKAJi4BYENQ0TeC9gPlP9t6Mw2-FZ_yDjWRFnceBgq3YJaiQfGohlOFpd8xrHCxrRLDK28G7EMubBA.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-10-24T11:50:33.812243+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3107": {
+      "id": "zaihua_news/3107",
+      "title": "First-marriage numbers rebound to 10 million in 2025, with Guangdong the only province above 1 million",
+      "paragraphs": [
+        "The National Bureau of Statistics’ China Statistical Yearbook 2026 shows that 10.4233 million people nationwide entered first marriage in 2025, an increase of 1.251 million from the previous year, once again surpassing the 10 million mark; 6.7651 million couples registered marriages that year, up 10.8%, of which Guangdong accounted for 1.009 million first marriages, making it the only province in the country to exceed 1 million.",
+        "In recent years, many places have introduced marriage incentives and marriage consumption vouchers. Since May 2025, marriage registration has been handled nationwide, a household register is no longer required to obtain a marriage certificate, and registration venues have also expanded to scenic areas, parks and other places.",
+        "Sina Finance"
+      ],
+      "published": "2026-10-24T08:31:02+00:00",
+      "link": "https://t.me/zaihua_news/3107",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-10-24T11:50:33.812243+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3109": {
+      "id": "zaihua_news/3109",
+      "title": "Nvidia Discontinuation Rumors Rattle Huaqiangbei as Graphics Card Prices Change Daily",
+      "paragraphs": [
+        "Rumors that some Nvidia consumer graphics card models are being discontinued are stirring up the computer parts market in Huaqiangbei. “I heard RTX 5090 may no longer be supplied, and the market suddenly came to life,” said Xiong Rongrong, manager of Jinshuoli Computer, who has worked in Huaqiangbei for 16 years. “From September to October, the biggest change in the computer parts market was concentrated in the graphics card segment, with prices changing daily,” Xiong said. Rapid price jumps are the most striking feature of this round. Take the high-end consumer RTX 50 series as an example: the RTX 5090’s official initial retail price was about 15,000–16,000 yuan, while current channel quotes have soared to 55,000–60,000 yuan; the RTX 5080 initially sold for about 8,000 yuan and has now risen to 17,000 yuan. Xiong added: “Half a month ago, the channel price for the RTX 5080 was about 12,000 yuan, and it rose by 4,000–5,000 yuan in a short period; the RTX 5090 was previously about 30,000 yuan and has now climbed directly to the 50,000-yuan level.”",
+        "21 Finance ｜ Gelonghui",
+        "⭐️Group member: Nvidia says it has not discontinued production"
+      ],
+      "published": "2026-10-24T09:52:43+00:00",
+      "link": "https://t.me/zaihua_news/3109",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-10-24T11:50:33.812243+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3110": {
+      "id": "zaihua_news/3110",
+      "title": "Proton launches map of 300,000 Flock surveillance devices",
+      "paragraphs": [
+        "Proton has launched a public map marking more than 300,000 Flock surveillance devices across the United States, including about 170,000 cameras and 130,000 other devices. The data comes from a device list that security researcher Joshua Michael obtained from Flock's own systems.",
+        "The map reflects a snapshot from December 2025; installations and removals after that will not appear. Michael says Flock has sent him a cease-and-desist letter and threatened litigation, and told customers it has notified law enforcement.",
+        "CyberInsider",
+        "Flock Safety is a U.S. surveillance technology company mainly specializing in automated license plate recognition (ALPR) systems, with customers including police departments and private organizations."
+      ],
+      "published": "2026-10-24T10:37:07+00:00",
+      "link": "https://t.me/zaihua_news/3110",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/DlUPcc3MWiShitT83f6mzF4fMl93fx07jD5xss7qrUJbWEbfbSRj8NNpkKIO8VfmNaq_j6JQXBLYXAw_O6KfvgWYj2I_5i9azdY9WnPijK67D6eR9Kz_PegxCEusaVx3NtfeR_DhRFqNxKFQKxYfHs9sZ96iPayUEMENVvVaaz3twCaUxI5gFlF8I8D16n2jx7mWpABw9eIudTzCMCXaD5fhzssiyngSimIA-7umTxl8BwL3OYohSGs1NQu5LmCGiYqQ9PFpYvFL0plipdZYZBO78wpT1tcTzU5U0t9LrlamrLBs3RPV3P1kIkfs_hwwXDtdHYOZMKbe190ztv9c-A.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-10-24T11:50:33.812243+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    }
+  },
   "alerts_sent": [
     "zaihua_news/2970:no_match",
     "zaihua_news/2999:no_match",
@@ -568,6 +664,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3103,
+  "last_seen_post_id": 3110,
   "mode": "gemini_batch_v2"
 }
