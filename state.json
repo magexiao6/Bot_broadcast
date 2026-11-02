@@ -504,7 +504,15 @@
     "zaihua_news/3277",
     "zaihua_news/3278",
     "zaihua_news/3279",
-    "zaihua_news/3280"
+    "zaihua_news/3280",
+    "zaihua_news/3281",
+    "zaihua_news/3282",
+    "zaihua_news/3283",
+    "zaihua_news/3284",
+    "zaihua_news/3286",
+    "zaihua_news/3287",
+    "zaihua_news/3288",
+    "zaihua_news/3289"
   ],
   "pending": {},
   "alerts_sent": [
@@ -728,6 +736,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3280,
+  "last_seen_post_id": 3289,
   "mode": "gemini_batch_v2"
 }
