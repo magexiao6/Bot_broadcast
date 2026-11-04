@@ -551,9 +551,137 @@
     "zaihua_news/3328",
     "zaihua_news/3329",
     "zaihua_news/3330",
-    "zaihua_news/3331"
+    "zaihua_news/3331",
+    "zaihua_news/3332",
+    "zaihua_news/3333",
+    "zaihua_news/3335",
+    "zaihua_news/3336",
+    "zaihua_news/3337"
   ],
-  "pending": {},
+  "pending": {
+    "zaihua_news/3338": {
+      "id": "zaihua_news/3338",
+      "title": "Oracle cancels $7 billion chip leasing deal with Tencent",
+      "paragraphs": [
+        "Oracle has canceled a chip leasing deal worth about $7 billion with Tencent. U.S. officials had expressed concerns to Oracle about the deal, and Oracle later came under pressure from the Trump administration. The agreement was originally set to let Tencent lease about 100,000 advanced AI chips, with an upfront payment of roughly 30%.",
+        "Tencent signed the five-year leasing agreement this year, planning to access chips unavailable in China through Oracle’s data centers across Southeast Asia.",
+        "TradingView"
+      ],
+      "published": "2026-11-04T11:01:45+00:00",
+      "link": "https://t.me/zaihua_news/3338",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-04T15:41:31.583027+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3339": {
+      "id": "zaihua_news/3339",
+      "title": "Google expands voluntary severance plan to five countries",
+      "paragraphs": [
+        "Starting in June this year, Google expanded its voluntary severance plan to some employees in Canada, France, Germany, Japan and Switzerland to control costs amid heavy AI investment. 路透社It is unclear how many people accepted the offer.",
+        "In Switzerland, where Google has about 5,000 employees, the plan covers several departments but excludes DeepMind. It offers one month’s salary for each year of service, up to 12 months, with employees beginning to leave in August. Microsoft also offered voluntary buyouts to 60,000 employees last week.",
+        "The Edge Malaysia | Central Oregon Daily"
+      ],
+      "published": "2026-11-04T11:46:46+00:00",
+      "link": "https://t.me/zaihua_news/3339",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/qJvkyjgHA9gHUqlDXOabOcOHhOTRCBQAszL89SipEnEDGzR4RuP8mUsUjMoiDI5Wcxv85xc76Np83QS-9thVyDtYda6xs3FfYpAGd9fdnKI65ZF_wbJEuqRzEwRe2NWiRT_taURdLRrf8XDkyYW-4tgOyIFeRHFRfoHglqNiCbc_RotygUt-PhiOeVJTjDHk7IKLfe9riIlq3cKFLmWt7DCrrJoawc5Tw_A9mmvyZ3UqlG3LggRpw6HRiirdFnhIOe7G9ekcLVMr2bsNcvDrNU3RYUpfTzsNwYsKWA3F5iWxM0KmHTAr3Qx1HpsoaTNsw-gpfXijufUjS_TV6YbR4g.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-04T15:41:31.583027+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3340": {
+      "id": "zaihua_news/3340",
+      "title": "Chinese micro-dramas get their own English name: “Duanju”",
+      "paragraphs": [
+        "The pinyin word “duanju” has become an English term used overseas specifically for Chinese micro-dramas. It has been added to overseas encyclopedias, where page views have surged over the past two years.",
+        "According to the Report on AI-Driven Innovation and Development in the Global Micro-Drama Industry, the global micro-drama market was worth nearly $18 billion in 2025. China’s market exceeded $14 billion, accounting for 77.78% of the total. In international markets outside China, Chinese companies contributed around 90% of the market share.",
+        "STAR Market Daily"
+      ],
+      "published": "2026-11-04T12:34:44+00:00",
+      "link": "https://t.me/zaihua_news/3340",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/frrQDLUBA3VN5aLDji5PKJ_Xivta-GZXJaImAKoaHQdKl5WiR7LVAV1fZJ-8FL_n1IAtHGVOyuNRgNeBVwY2CkrRUdwzVersyfQZgtetKfeJqpeqnGPuNjciOWeQRfR7tUeDlP7Ylyw7bkx7JAySocxtlXu9mcECuQ6oIM4eiAKToIk87E_ghSKZLB9Vjv6qjwwo640rgV_2Rwpbv10JuQk3XTW3vKo5kOUhDh3WK3UBdBIM2z1lwpTTWQnBIaGzqP0Q-AG_22gV6OzHoz_nrvU-fy7lzm8lbkEZgbFeTlDX6d4L3KFM7LlJhIsM1xGEbr9A8qWEpv42giTo6hbYHA.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-04T15:41:31.583027+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3341": {
+      "id": "zaihua_news/3341",
+      "title": "Claude Code updates its game generation restriction rules",
+      "paragraphs": [
+        "Claude Code updated its game development restriction rules in version 2.1.317. Previously, to avoid recreating existing games, a rule was added to the Opus 5.5 prompt. But it sometimes incorrectly blocked users who mentioned a game only to describe the gameplay they wanted.",
+        "With the update, if you name a game to describe the type you want, Claude will use it as a reference to build an original game in the same genre. If you ask it to copy the original, it will instead offer a similar alternative. The team says it will continue to improve the rules and welcomes feedback about original projects that were wrongly rejected.",
+        "Addy Osmani"
+      ],
+      "published": "2026-11-04T13:19:47+00:00",
+      "link": "https://t.me/zaihua_news/3341",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-04T15:41:31.583027+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3342": {
+      "id": "zaihua_news/3342",
+      "title": "The midterms have cost Musk more than $60 billion",
+      "paragraphs": [
+        "Musk’s wealth has shrunk by more than $60 billion as a result of the midterms, and the losses are mounting. He was the cycle’s biggest Republican donor, with most of his Senate donations concentrated in Texas, where he now lives. As the FT previously reported, he poured more than $275 million into races across the country; The Washington Post put the figure at $446 million.",
+        "Texas is home to Tesla, SpaceX and the two companies’ joint chip project. Gina Hinojosa defeated Greg Abbott to become Texas governor, the first Democrat to do so in more than three decades. Hinojosa has proposed pausing new data center projects and ending tax breaks, which could slow SpaceX’s expansion of its AI computing capacity. SpaceX fell 3.8% in premarket trading, and Tesla fell 3.6%.",
+        "Financial Times"
+      ],
+      "published": "2026-11-04T13:53:16+00:00",
+      "link": "https://t.me/zaihua_news/3342",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-04T15:41:31.583027+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3343": {
+      "id": "zaihua_news/3343",
+      "title": "A hacker demonstrates jailbreaking an iPhone in Lockdown Mode",
+      "paragraphs": [
+        "Hacker team Calif posted a video on X showing an iPhone 18 Pro in Lockdown Mode being jailbroken, and remaining jailbroken after updating to iOS 27.2. In the video, a PDF is first sent via AirDrop, then the update is completed through Settings.",
+        "Calif has not disclosed technical details, saying it is reporting the vulnerability to Apple and will not release a jailbreak tool. Apple claimed in March 2026 that Lockdown Mode had achieved a 100% success rate in protecting users since 2022.",
+        "AppleInsider"
+      ],
+      "published": "2026-11-04T14:38:45+00:00",
+      "link": "https://t.me/zaihua_news/3343",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-04T15:41:31.583027+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3344": {
+      "id": "zaihua_news/3344",
+      "title": "Huawei tells customers they must source memory for Ascend 960DT themselves",
+      "paragraphs": [
+        "The Information reports that Huawei has told some customers its next-generation flagship AI chip, the Ascend 960DT, will primarily use HBM from Samsung and SK Hynix, and that customers must arrange their own memory supply because Chinese manufacturers lack sufficient HBM production capacity.",
+        "The HBM is soldered onto very low-performance processors, declared to customs under processor codes and shipped to Hong Kong, then carried into mainland China by couriers and removed by heating. A Shenzhen chip broker said the price of a single HBM3E unit has risen from several hundred dollars a year ago to around $4,000.",
+        "The Next Web"
+      ],
+      "published": "2026-11-04T14:52:45+00:00",
+      "link": "https://t.me/zaihua_news/3344",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-04T15:41:31.583027+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    }
+  },
   "alerts_sent": [
     "zaihua_news/2970:no_match",
     "zaihua_news/2999:no_match",
@@ -775,6 +903,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3331,
+  "last_seen_post_id": 3344,
   "mode": "gemini_batch_v2"
 }
