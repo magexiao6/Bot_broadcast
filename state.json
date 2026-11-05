@@ -572,7 +572,159 @@
     "zaihua_news/3350",
     "zaihua_news/3351"
   ],
-  "pending": {},
+  "pending": {
+    "zaihua_news/3352": {
+      "id": "zaihua_news/3352",
+      "title": "🍏 Apple to check iCloud public links for harmful content",
+      "paragraphs": [
+        "Apple says that, starting with iOS, iPadOS, macOS and visionOS 27.3, iCloud content shared using “Anyone with the link” will be checked for harmful content. Content shared only with specified people is outside the scope described.",
+        "If content is deemed harmful, Apple reserves the right to move, refuse, modify or delete it. Apple may restrict or disable accounts that upload harmful content and, when necessary, refer them to law enforcement.",
+        "9To5Mac"
+      ],
+      "published": "2026-11-05T02:11:44+00:00",
+      "link": "https://t.me/zaihua_news/3352",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3353": {
+      "id": "zaihua_news/3353",
+      "title": "Cat Wu joins OpenAI to lead core product management",
+      "paragraphs": [
+        "Cat Wu announced that she is joining OpenAI to lead product management for its core products. She said she will work with the OpenAI team to develop agents that keep users and their teams in control while freeing up more time for important work.",
+        "cat | LinkedIn",
+        "Tibo: CatGPT"
+      ],
+      "published": "2026-11-05T02:25:44+00:00",
+      "link": "https://t.me/zaihua_news/3353",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/LQWV7Z9nrsy0k8fOqtDe_d2jcJuOHMyvMUquV9dUtQMOh5UJY34mZLMVHvHAHVN_E7OWKfh3VwEPDd_NHWNvlK164KOOzr4XQfcQevw5BJpbHLSBCUwqCAoYuq1nYNSmUnGppF8w6wG6tH6FnKMs9pU2uw-Uu8CHaCby_9N_fDZq8TVaMvBIDlZqZdwUOVhgMCrkm-5z8m0WFRP5bLItI6jBpvu4vAqERDaMETY9WVI50Hq7JYMJIJxAiXJmHzmgel-XQpXVBc96-_SL8nHETlqcRxmnwp8eE-BZz3lJwBcC3TQHfdgtBbACjQFG_nc_fpcwmBg-KnZvgf5GZnFL9Q.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3355": {
+      "id": "zaihua_news/3355",
+      "title": "OpenAI Pipeline Finds 948 Linux Privilege Escalation Vulnerabilities",
+      "paragraphs": [
+        "OpenAI says its autonomous vulnerability research pipeline reproduced 1,724 vulnerabilities in a Linux kernel scan in October 2026 and generated 948 exploits that let local low-privilege users gain root access.\nA single rundynamically reproduced 1,724 vulnerabilitiesand generated 948 working local privilege escalation (LPE) exploits that let ordinary users gain root access.",
+        "There are also PoCs for  291 个信息泄露.",
+        "Total API cost:$1,213,430 , averaging just$1,279 per successful LPE exploit (the cost of actually developing a successful exploit was lower, at about $359).",
+        "Based on historical Pwn2Own / TyphoonPWN bounty levels ($20,000–$70,000 per exploit), these 948 LPEs would theoretically be worth $1890万–$6630 万, or  16–55 倍 times the cost.",
+        "At least 10 new Linux exploitation techniques were discovered (confirmed as novel by third-party experts), including:\n- A new persistent resilient object (for cache spraying)\n- A new page grooming technique\n- New data-only privilege escalation / arbitrary write techniques\n- Arbitrary type confusion",
+        "OpenAI"
+      ],
+      "published": "2026-11-05T03:05:20+00:00",
+      "link": "https://t.me/zaihua_news/3355",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3356": {
+      "id": "zaihua_news/3356",
+      "title": "West Hollywood, California, allows multiple partners to register as domestic partners",
+      "paragraphs": [
+        "The West Hollywood City Council unanimously passed an ordinance proposed by Mayor John Heilman, allowing groups of three or more partners to register as domestic partners with the city clerk. They will gain hospital and city jail visitation rights, as well as tenant protections.",
+        "Registration is open to nonresidents. All parties must consent and cannot be related by blood, though their rights do not extend as far as those of married couples. In March, the city added “family or relationship structure” to its list of protected categories under anti-discrimination rules.",
+        "California Post",
+        "Version Preview"
+      ],
+      "published": "2026-11-05T03:30:44+00:00",
+      "link": "https://t.me/zaihua_news/3356",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/XQGsP5qMPjHfFA7JLu2yB4b4tzE1sqGfjfjo0LZuNK65HjNsKbMB1o-exMB_F7YXuT_MRZX7rbjLRt78zC8cioPCgWgE9ECmI0Qu9kl17G_MOgtitcnAvmKUft4vwIcjcgf52zn1gXdMbndZFwdjjBBZATcFvS6G2JH24y47lcECOoFubKCui3PnOM9bEQ3e2ENmwEGnWQxqVijogaZPBG7hiqqBUFzBN7yc5CS0DX0mvC0bF9PHzgNWQY_2SYFsSFLFFDE9-RZ2Qvv5hTmlApRIHAmt6fIBvSMIORZTPTk4T_yp2jb0T7Pbuq9ykJBXEnRLvdD4CAKq2P62J2dsHQ.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3357": {
+      "id": "zaihua_news/3357",
+      "title": "USTC builds structure-guided RNA foundation model published in Nature",
+      "paragraphs": [
+        "A team from the University of Science and Technology of China has introduced structRFM, a structure-guided RNA foundation model. The paper was published online in Nature on November 5. The model incorporates base-pairing information from secondary structures into sequence pretraining, trained on about 21 million paired sequence–structure examples, and achieves state-of-the-art performance on multiple tasks.",
+        "The team also developed MUSES, a method that combines predictions from multiple secondary-structure predictors to reduce bias. Its 3D structure prediction module, Zfold, performs on par with AlphaFold 3. The data, weights, and code have all been made publicly available.",
+        "中国科大新闻网 | Nature"
+      ],
+      "published": "2026-11-05T04:49:35+00:00",
+      "link": "https://t.me/zaihua_news/3357",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/OXeU1TzuD6H-GTMJo7nnNLnkeMvX_inaXXEj-L_mJCtcZccc1-MQJJF8yQzX2h34lEzLA-KnDZ0mM1OYr91h2Kzs-6bCfXPWpLMekoAvcb6v4h2vC33XgPxdDj5nAX0_0IbacBa-mbNFY7i9ZDRPf-yv-PJ13jHb7TDSGSVK6_7JDYk7dvuBaB5_0exuh7jt34tlZnvvNO9PFSgclOIb1qlrUPZK2WRJpXnkOr5NF_NmCVpDm3kUG4Kowzr3zutTK_NZJTclHHjBN5cPDaelZLveGN2tu0-62sBmEpu4ztadoYTX3K32HDv08kpUiuo6GDok9xvg7OP2PWcAT80RCg.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3358": {
+      "id": "zaihua_news/3358",
+      "title": "Node.js to Release Security Updates for Three Release Lines After November 11",
+      "paragraphs": [
+        "Node.js has announced upcoming security updates: new versions of the 22, 24, and 26 release lines will be released on or shortly after November 11, 2026, to fix security vulnerabilities. The highest severity rating addressed in this release is HIGH.",
+        "Node.js(@nodejs) | Node.js"
+      ],
+      "published": "2026-11-05T05:18:06+00:00",
+      "link": "https://t.me/zaihua_news/3358",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3359": {
+      "id": "zaihua_news/3359",
+      "title": "A wealthy Indian bets on homegrown satellite internet, takes on SpaceX",
+      "paragraphs": [
+        "Indian billionaire Sunil Mittal says the Eutelsat backed OneWeb plans to build a global satellite internet network independent of the US and China, competing with SpaceX’s Starlink.",
+        "Starlink has more than 10,000 satellites in orbit and at least 13.6 million users in the September quarter, with connectivity revenue topping $5 billion. OneWeb has about 650 satellites, and its low Earth orbit revenue for the same period was just €70.9 million. Mittal says OneWeb has been awaiting approval in India for years and is first in the queue.",
+        "Bloomberg"
+      ],
+      "published": "2026-11-05T06:20:06+00:00",
+      "link": "https://t.me/zaihua_news/3359",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3360": {
+      "id": "zaihua_news/3360",
+      "title": "华尔街 Daily: Rising Memory Chip Prices Could Actually Boost Apple’s iPhone Profits",
+      "paragraphs": [
+        "华尔街 Daily estimates that upgrading the iPhone 18 Pro from 256 GB to 1 TB costs an extra $600, while the additional flash memory costs about $192. That leaves Apple with $408 more in profit, a 300% margin. The equivalent upgrade on the previous-generation iPhone 17 Pro cost an extra $400, while the additional memory cost just $42.",
+        "Apple has acknowledged that rising memory chip prices are squeezing its gross margin. However, analysts estimate that its flash memory purchases will cost about $25 billion in 2026, and its gross margin may fall by only one percentage point.",
+        "Blue Dot Network"
+      ],
+      "published": "2026-11-05T07:34:06+00:00",
+      "link": "https://t.me/zaihua_news/3360",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/Yi16dZx9pvnnILyyFRuyaqXVTbRL-7Zyl_PnPQYw0P8OP3fwVKtaBXxUk8KSFhUbQ4UPWEwsp4qP5u8y_ZTF52QUC9gfr0EmW5WG2pyxKSJyNbGiTLuV4h5cFOZByqQ2OUz-SssShh_EDsuw9luq4qcthGlvZ_UMVATeNb2Mhu5CopQQJzsxOSd8x_gaVGmymlawOK-jBStxWYhmg1WNDZ1tXlSI3qGmfAp8bSTydqwGYy2_YvirMYfz4MxDCXyTDZurqb0-_ylUsCzs7NlD5r0_5m-0EAa10xcfyUaS30wBz0QOqDhdHHLDdo0b_pamu2yLCQb5mXysyNJmdgAM-A.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    }
+  },
   "alerts_sent": [
     "zaihua_news/2970:no_match",
     "zaihua_news/2999:no_match",
@@ -794,6 +946,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3351,
+  "last_seen_post_id": 3360,
   "mode": "gemini_batch_v2"
 }
