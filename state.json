@@ -1009,6 +1009,27 @@
       "first_seen_at": "2026-11-05T16:50:48.301720+00:00",
       "media_next_index": 0,
       "text_next_index": 0
+    },
+    "zaihua_news/3377": {
+      "id": "zaihua_news/3377",
+      "title": "🤖 OpenAI releases GPT-6 Cyber security model",
+      "paragraphs": [
+        "OpenAI has released GPT-6 Cyber, calling it a major advance in security research, with stronger capabilities and better model alignment. The model powered the Linux kernel research announced yesterday, and security teams at companies including Mozilla, Palo Alto Networks, and Cisco are already using it.",
+        "The model is currently available only to select Daybreak Red customers. OpenAI says it will gradually expand access.",
+        "OpenAI(@OpenAI)"
+      ],
+      "published": "2026-11-05T17:18:15+00:00",
+      "link": "https://t.me/zaihua_news/3377",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/WpPpNi3QflJVEabKXGtTjaq1WNdar_sugOcWVCnft5Aa8m5aX4URTHwWGP3zcHWk65gkiZFRp5XJ-VAY10gIYnYyVKb9VBu86BqMZ4Lgsr8mDJkRWD7CkTPqIEOnxK6tGv9qpdWWm9Emj8m0x-We7a1m76jJdb4AsG2hbxp4_bMInE4kx7SQN97K0_SSu_z4pL2v-rLvsoWoUVipyO6i81XZ-l5CTM1Q64qcm2kEhUOiZ_4Xt97Z_T6i7eSqLV5ubJESlJ_6FEi84Skrpfg0kz7CB0Nr1rHAgBQ-bWmiyRblAhj3IdYOHZikbjpFoMnc9R4tLZI9jfIEobIhWEj3mw.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-05T22:31:40.337608+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
     }
   },
   "alerts_sent": [
@@ -1232,6 +1253,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3376,
+  "last_seen_post_id": 3377,
   "mode": "gemini_batch_v2"
 }
