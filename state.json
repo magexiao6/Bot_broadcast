@@ -570,25 +570,10 @@
     "zaihua_news/3348",
     "zaihua_news/3349",
     "zaihua_news/3350",
-    "zaihua_news/3351"
+    "zaihua_news/3351",
+    "zaihua_news/3352"
   ],
   "pending": {
-    "zaihua_news/3352": {
-      "id": "zaihua_news/3352",
-      "title": "🍏 Apple to check iCloud public links for harmful content",
-      "paragraphs": [
-        "Apple says that, starting with iOS, iPadOS, macOS and visionOS 27.3, iCloud content shared using “Anyone with the link” will be checked for harmful content. Content shared only with specified people is outside the scope described.",
-        "If content is deemed harmful, Apple reserves the right to move, refuse, modify or delete it. Apple may restrict or disable accounts that upload harmful content and, when necessary, refer them to law enforcement.",
-        "9To5Mac"
-      ],
-      "published": "2026-11-05T02:11:44+00:00",
-      "link": "https://t.me/zaihua_news/3352",
-      "media": [],
-      "media_sent": false,
-      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0
-    },
     "zaihua_news/3353": {
       "id": "zaihua_news/3353",
       "title": "Cat Wu joins OpenAI to lead core product management",
@@ -608,7 +593,14 @@
       "media_sent": false,
       "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
       "media_next_index": 0,
-      "text_next_index": 0
+      "text_next_index": 0,
+      "zh_parts": [
+        "Cat Wu 加入 OpenAI 负责核心产品管理",
+        "Cat Wu 宣布她将加入 OpenAI 担任核心产品的产品管理负责人。她表示，将与 OpenAI 团队合作开发能够让用户及其团队掌控全局的智能体，同时为重要工作腾出更多时间。",
+        "cat | LinkedIn",
+        "Tibo: CatGPT"
+      ],
+      "media_failures": 1
     },
     "zaihua_news/3355": {
       "id": "zaihua_news/3355",
@@ -627,7 +619,16 @@
       "media_sent": false,
       "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
       "media_next_index": 0,
-      "text_next_index": 0
+      "text_next_index": 0,
+      "zh_parts": [
+        "OpenAI 管道发现 948 个 Linux 提权漏洞",
+        "OpenAI 表示，其自主漏洞研究管道在 2026 年 10 月的 Linux 内核扫描中复现了 1,724 个漏洞，并生成了 948 个允许本地低权限用户获得 root 访问权限的漏洞利用程序。\n单次运行动态复现了 1,724 个漏洞并生成了 948 个可用的本地提权（LPE）漏洞利用程序，使普通用户能够获得 root 访问权限。",
+        "还有针对 291 个信息泄露的 PoC。",
+        "API 总成本为 1,213,430 美元，每个成功的 LPE 漏洞利用平均成本仅为 1,279 美元（实际开发成功漏洞利用的成本更低，约为 359 美元）。",
+        "根据历史 Pwn2Own / TyphoonPWN 赏金水平（每个漏洞 20,000 至 70,000 美元），这 948 个 LPE 在理论上的价值为 1890 万至 6630 万美元，是成本的 16 至 55 倍。",
+        "发现了至少 10 种新的 Linux 利用技术（经第三方专家确认为新发现），包括：\n- 一种新的持久弹性对象（用于缓存喷射）\n- 一种新的页面修剪技术\n- 新的数据专有提权/任意写入技术\n- 任意类型混淆",
+        "OpenAI"
+      ]
     },
     "zaihua_news/3356": {
       "id": "zaihua_news/3356",
@@ -649,7 +650,14 @@
       "media_sent": false,
       "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
       "media_next_index": 0,
-      "text_next_index": 0
+      "text_next_index": 0,
+      "zh_parts": [
+        "加利福尼亚州西好莱坞允许多个伴侣注册为家庭伴侣",
+        "西好莱坞市议会一致通过了由市长约翰·海尔曼（John Heilman）提出的条例，允许三个或更多伴侣组成的群体在市书记官处注册为家庭伴侣。他们将获得医院和市监狱的探视权以及租户保护。",
+        "非居民也可以注册。所有各方必须同意且不得有血缘关系，尽管他们的权利不像已婚夫妇那样广泛。今年 3 月，该市将“家庭或关系结构”加入了反歧视规则的保护类别列表中。",
+        "California Post",
+        "版本预览"
+      ]
     },
     "zaihua_news/3357": {
       "id": "zaihua_news/3357",
@@ -670,7 +678,13 @@
       "media_sent": false,
       "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
       "media_next_index": 0,
-      "text_next_index": 0
+      "text_next_index": 0,
+      "zh_parts": [
+        "中国科大构建结构引导的 RNA 基础模型并发表于《自然》",
+        "中国科学技术大学的一个团队推出了结构引导的 RNA 基础模型 structRFM。该论文于 11 月 5 日在线发表在《自然》杂志上。该模型将来自二级结构的碱基配对信息纳入序列预训练中，在约 2100 万对序列-结构示例上进行训练，并在多项任务上取得了先进的性能。",
+        "该团队还开发了 MUSES，这是一种结合多个二级结构预测器预测结果以减少偏差的方法。其 3D 结构预测模块 Zfold 的表现与 AlphaFold 3 相当。数据、权重和代码均已公开。",
+        "中国科大新闻网 | Nature"
+      ]
     },
     "zaihua_news/3358": {
       "id": "zaihua_news/3358",
@@ -1030,6 +1044,59 @@
       "first_seen_at": "2026-11-05T22:31:40.337608+00:00",
       "media_next_index": 0,
       "text_next_index": 0
+    },
+    "zaihua_news/3378": {
+      "id": "zaihua_news/3378",
+      "title": "Google Releases Gemini Omni 1.2 Flash Video Model",
+      "paragraphs": [
+        "Google has released Gemini Omni 1.2 Flash, a video generation model from Google DeepMind. The company says it generates videos faster at 30% lower cost: create 360p or 720p drafts ($0.07 per second), then upscale them to 1080p or 4K.",
+        "Videos can be up to 15 seconds long, with a choice of 3 to 15 seconds. The model supports conversational, iterative changes to backgrounds, subjects, and lighting; more natural multi-speaker audio and lip sync; and more controlled camera movement with fewer jump cuts.",
+        "Google(@Google)"
+      ],
+      "published": "2026-11-06T00:22:13+00:00",
+      "link": "https://t.me/zaihua_news/3378",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T02:48:18.888513+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3379": {
+      "id": "zaihua_news/3379",
+      "title": "Claude connects to bank accounts and launches personal finance features",
+      "paragraphs": [
+        "Anthropic is rolling out personal finance features for Claude, letting users connect their bank and credit card accounts through Plaid. Users can ask where their money went this month, and Claude will generate a spending overview by category, such as rent and utilities, shopping, and dining.",
+        "The feature is read-only. Claude can’t transfer money, manage finances, or provide investment advice, but it can view account balances, credit limits, and up to two years of transaction history. Testing begins this week for Pro, Max, and Ultra subscribers in the U.S.",
+        "The Verge"
+      ],
+      "published": "2026-11-06T00:55:14+00:00",
+      "link": "https://t.me/zaihua_news/3379",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn5.telesco.pe/file/J2b1uubeAR6pMEUYbsLAZr1fwn92C6a9z8utPapt4ZsUo8DXiESwupMNIlbcT--pq5tJIEAUsM82Vi3YOveS-rs1z7hYurZxZOoC3hRFKFiePhsimWGqF8yl380FYeLBV0H_KJRJzA9QrWjH1_nth3aKUkrzipqL3yVZ6vATB2Jmo9_WFDmXwIecKli2uoLVshVVPDSrTIHa9EdZjT_IUJzfi-yyQtv7aH0VkEyRw8WRVgDjQQHpL4YkaHlqexG7KurWCy9MQLoqlxUpI4ofPnzklZ4yiP7Ytxi0Xvu-aJjR548LSHC3GXSDoIMLHqB_hJExHlwdBtkrV_kYfeezuw.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T02:48:18.888513+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3380": {
+      "id": "zaihua_news/3380",
+      "title": "India aims to develop its own GPU chip within 24 months",
+      "paragraphs": [
+        "India’s Secretary of the Ministry of Electronics and Information Technology, S. Krishnan, said on November 4 that the country plans to develop a homegrown GPU chip in about 24 months under “India Semiconductor Mission 2.0.” He described AI as a new opportunity for the IT industry, comparable to the Y2K era.",
+        "He did not disclose the manufacturer or chip supplier. India also plans to bring its RISC-V-based SHAKTI and VEGA processors to market. India’s semiconductor market is currently worth about $50 billion and is expected to approach $100 billion by 2030.",
+        "Tom's Hardware"
+      ],
+      "published": "2026-11-06T02:00:44+00:00",
+      "link": "https://t.me/zaihua_news/3380",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T02:48:18.888513+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
     }
   },
   "alerts_sent": [
@@ -1253,6 +1320,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3377,
+  "last_seen_post_id": 3380,
   "mode": "gemini_batch_v2"
 }
