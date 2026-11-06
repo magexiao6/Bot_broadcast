@@ -600,7 +600,7 @@
         "cat | LinkedIn",
         "Tibo: CatGPT"
       ],
-      "media_failures": 1
+      "media_failures": 2
     },
     "zaihua_news/3355": {
       "id": "zaihua_news/3355",
@@ -1097,6 +1097,165 @@
       "first_seen_at": "2026-11-06T02:48:18.888513+00:00",
       "media_next_index": 0,
       "text_next_index": 0
+    },
+    "zaihua_news/3381": {
+      "id": "zaihua_news/3381",
+      "title": "🤖 OpenAI Advertisers top 100,000",
+      "paragraphs": [
+        "Since OpenAI launched ads in February 2026, ChatGPT has attracted over 100,000 advertisers. Last week, Google expanded ads in AI Mode to 10 countries outside the US. Anthropic still maintains that Claude won’t run ads, and its IPO filing made no mention of ad revenue.",
+        "Startup Koah serves ads across more than 200 apps, with just one-tenth as many clients as OpenAI. It says ads involving AI have double the click-through rate, averaging around 3% overall.",
+        "WIRED"
+      ],
+      "published": "2026-11-06T03:16:14+00:00",
+      "link": "https://t.me/zaihua_news/3381",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/L-TZr8y2igX7yd19LuoG89nQpuVSi3ap9wJCV523soxnky2p3_XJYiANcmbFM8Pk1E2Lisn-vVfJe2Ay9ezubOf0dcjV4zXD-pzdCELNQNTsxE0U05MTTMufZxC43Gb7PvRM9cAscxTo9HwbBjxsZw9_JraVNEHmTKitfgezscIGpdkyUYJAZLkCpGvTwA2vnMxgzS1cS2fj59EhIZDcmbJS9Fg4lEnG31KCG2l-p4kO1c1glAMMfC0HAbEIxQeVnnjfG8E7_fs9mrYxIZX5fCZso1gQV6STQiXFSu0KOlzzwH8V8ur4vIdm1MT8diZDkUr_SHPO6R5YrIiP8AMp9Q.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T10:23:13.257149+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3382": {
+      "id": "zaihua_news/3382",
+      "title": "🍏 Apple surveys iPhone Duo buyers about the crease and camera",
+      "paragraphs": [
+        "Apple is emailing some iPhone Duo buyers a survey asking whether the crease is noticeable, about the size of the outer display when the phone is closed, whether the under-display camera is distracting, and about image quality. The final question is open-ended, asking buyers what features they would like added or changed.",
+        "The Duo has a 5.4-inch outer display, and its 4-megapixel under-display camera is one of the main complaints in reviews. The survey doesn’t ask about Touch ID, the experience with apps that aren’t optimized, or screen cracks reported by some users.",
+        "MacRumors"
+      ],
+      "published": "2026-11-06T03:46:44+00:00",
+      "link": "https://t.me/zaihua_news/3382",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/bhALEJWgh77WTUBWbhc6flgGp3IADeJjJzeZ1mj6ESQQFjB1l8OOixrkZOMa36AeJe4CRh-mq0sicuvjt_FJ2gD7hFd0ePzvUtU7OhWqgqhfuCtKf3HJ02zk1--eDpqeWKYMDWpDVgyqyEYfSqEZL08gzjCLOE6R0QXs9Wusy51K0O-9hQxxTdNG45AGST97YzjfPJ2tRIUQhxTiCo73Xwnp14r4ykgETE5x1w3nJSt_ygSjMpAjkW-rf2jdR-0UdrxHi9Ntkdz4b9V6dI3Cd6S1De2pM4QgFBJlfqu7vpBqsJw07NYzFrcWdLVRckoW9WWYdxgkhFMPdfEa-8Oifg.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T10:23:13.257149+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3383": {
+      "id": "zaihua_news/3383",
+      "title": "China Mobile launches initiative to jointly develop 6G network applications",
+      "paragraphs": [
+        "On November 6, the 2026 China Mobile Global Partners Conference was held in Guangzhou. At the event, China Mobile’s chief engineer and an academician of the Chinese Academy of Engineering announced the “China Mobile Initiative for Jointly Developing 6G Network Applications.” The initiative aims to work with industry partners to explore the value of 6G, drive innovation in network technology, and jointly incubate new 6G network products and business models.",
+        "Speakers noted that commercial 6G service is less than 30 months away. Applications must drive development to unlock the network’s value sooner, and the entire industry chain needs to contribute resources including technology, funding, and talent.",
+        "C114 Communications Network"
+      ],
+      "published": "2026-11-06T04:18:14+00:00",
+      "link": "https://t.me/zaihua_news/3383",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/LVVthxS_loxsM54tVVVfJUDoQc_PFAR8tF9LsFGMZexS_9wR8ThXbSDj_uFUr5twoczqSZzeLQxiQNFm3oaIBrli6Gj6V-ujv_G6aGwvpl-D2wqpIBEmg5FyJ3w-qWo8HwDkc0PaBptDVRxqNZmML7ShvIkV57lMnOsDkJdoxpO26jT8gn0QQTItS-XW5LAfRklMniAD1NOOX56mN2eorAa2AnbRWQH9eG6zrxr4SXzaFF7kNUnmll7_z_rcYrA1RdK0odRo0dkJNQ_yFKDfGqnn0twiIaUs4aVqmAw9Q9Txfj2Pu2LdlZO5n_g0gcbaH4BVPFksqlnVg7b4u5bV8Q.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T10:23:13.257149+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3384": {
+      "id": "zaihua_news/3384",
+      "title": "🌙Moonshot AI is reportedly looking to rent Nvidia Blackwell computing power in Europe",
+      "paragraphs": [
+        "Sources say Moonshot AI is in talks to rent Nvidia Blackwell computing power from a European neocloud data center, on a scale of more than 8,000 GPUs, primarily for inference and also for training. The White House said in July that the company had accessed Blackwell chips through facilities in Thailand.",
+        "US export controls bar Blackwell imports into China, and remote access through overseas cloud services is seen as a workaround. One proposal would require Moonshot AI to pay 30% to 50% more upfront than non-Chinese buyers.",
+        "CNBC"
+      ],
+      "published": "2026-11-06T05:02:15+00:00",
+      "link": "https://t.me/zaihua_news/3384",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T10:23:13.257149+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3385": {
+      "id": "zaihua_news/3385",
+      "title": "Baidu open-sources ERNIE 5.5 Flash Base, its foundational model",
+      "paragraphs": [
+        "Baidu has officially open-sourced its latest foundational model, ERNIE 5.5 Flash Base. The model uses a MoE architecture, with 280 billion total parameters and 14 billion parameters activated per token. It was pretrained on 33.5 trillion tokens, with a maximum pretraining context length of 128K. Fine-tuning and inference support context lengths of up to 1 million tokens.",
+        "Focused on efficiency, the model has been systematically optimized across its attention mechanism, expert routing, and training objectives to improve resource utilization.",
+        "新华网"
+      ],
+      "published": "2026-11-06T05:41:44+00:00",
+      "link": "https://t.me/zaihua_news/3385",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T10:23:13.257149+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3386": {
+      "id": "zaihua_news/3386",
+      "title": "National Radio and Television Administration reiterates support for live-action micro-dramas and tighter rules for AI dramas",
+      "paragraphs": [
+        "A relevant official at the National Radio and Television Administration reiterated on November 5 that the micro-drama sector should support live-action productions and regulate AI dramas. The official also called on platforms to ensure that every title aired is reviewed, with all content checked by human reviewers, improve their algorithms, and continue cracking down on AI content laundering, pirated remakes, and unauthorized use of people’s likenesses and voices.",
+        "The official said AI should assist in producing high-quality content, while live-action productions should remain the mainstay of micro-dramas. Regulating AI dramas requires upholding copyright and ethical standards. Data released by the National Radio and Television Administration shows that 430,000 micro-dramas were released in the first eight months of this year, of which AI dramas accounted for more than 90%.",
+        "IT Home"
+      ],
+      "published": "2026-11-06T06:40:45+00:00",
+      "link": "https://t.me/zaihua_news/3386",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T10:23:13.257149+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3387": {
+      "id": "zaihua_news/3387",
+      "title": "Six departments issue measures to accelerate the adoption of frontier technologies such as embodied intelligence in elder care",
+      "paragraphs": [
+        "On November 4, the Ministry of Civil Affairs and five other departments issued Several Measures to Foster Diverse Scenarios and Promote Consumer Spending on Age-Friendly Products. The measures call for using major national science and technology projects to accelerate the application of frontier technologies—including embodied intelligence, large language models, brain-computer interfaces and exoskeletons—in elder care, and to develop and upgrade intelligent devices for long-term care, rehabilitation and companionship.",
+        "The measures also encourage faster deployment of intelligent elder care robots, promote rental models such as “rent-to-own,” and foster consumer venues such as senior malls and silver-age markets.",
+        "财联社"
+      ],
+      "published": "2026-11-06T07:32:14+00:00",
+      "link": "https://t.me/zaihua_news/3387",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T10:23:13.257149+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3388": {
+      "id": "zaihua_news/3388",
+      "title": "Yangtze Memory’s New Factory Aims for Up to 70% Domestic Equipment",
+      "paragraphs": [
+        "China’s largest flash memory chipmaker, Yangtze Memory, plans to build its fourth factory in Wuhan. Construction is expected to begin in 2027, with a goal of raising the share of equipment purchased domestically to at least 60%, and as high as 70%, up from more than 50% at its third factory. The new facility will produce advanced NAND flash with more than 300 layers, primarily to meet demand for data centers and AI storage.",
+        "U.S. export controls are accelerating Yangtze Memory’s shift to domestic equipment. Cleaning, polishing and etching tools are expected to see the biggest gains. However, the company still relies on overseas suppliers for advanced equipment such as lithography and inspection tools. Yangtze Memory now holds 38.5% of China’s NAND market, overtaking Samsung. Once all three planned new factories are fully operational, its overall capacity could double.",
+        "Reuters"
+      ],
+      "published": "2026-11-06T08:35:22+00:00",
+      "link": "https://t.me/zaihua_news/3388",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T10:23:13.257149+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3389": {
+      "id": "zaihua_news/3389",
+      "title": "Doubao Work Personal removes the 5-hour usage limit",
+      "paragraphs": [
+        "Starting November 6, Doubao Work Personal users will no longer be subject to the 5-hour usage limit. Personal users can arrange their usage freely within their weekly quota. Weekly quotas and other usage rules remain subject to the applicable plan. Users can check their remaining quota and detailed rules under “Settings – Subscription and Quota Management.”",
+        "Doubao Work is an AI product designed for productivity. It can break down tasks based on their goals and use tools to carry out research and analysis, create content, process data, build applications, and more.",
+        "IT之家"
+      ],
+      "published": "2026-11-06T10:09:43+00:00",
+      "link": "https://t.me/zaihua_news/3389",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T10:23:13.257149+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
     }
   },
   "alerts_sent": [
@@ -1320,6 +1479,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3380,
+  "last_seen_post_id": 3389,
   "mode": "gemini_batch_v2"
 }
