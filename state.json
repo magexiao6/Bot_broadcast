@@ -571,65 +571,11 @@
     "zaihua_news/3349",
     "zaihua_news/3350",
     "zaihua_news/3351",
-    "zaihua_news/3352"
+    "zaihua_news/3352",
+    "zaihua_news/3353",
+    "zaihua_news/3355"
   ],
   "pending": {
-    "zaihua_news/3353": {
-      "id": "zaihua_news/3353",
-      "title": "Cat Wu joins OpenAI to lead core product management",
-      "paragraphs": [
-        "Cat Wu announced that she is joining OpenAI to lead product management for its core products. She said she will work with the OpenAI team to develop agents that keep users and their teams in control while freeing up more time for important work.",
-        "cat | LinkedIn",
-        "Tibo: CatGPT"
-      ],
-      "published": "2026-11-05T02:25:44+00:00",
-      "link": "https://t.me/zaihua_news/3353",
-      "media": [
-        {
-          "type": "photo",
-          "url": "https://cdn4.telesco.pe/file/LQWV7Z9nrsy0k8fOqtDe_d2jcJuOHMyvMUquV9dUtQMOh5UJY34mZLMVHvHAHVN_E7OWKfh3VwEPDd_NHWNvlK164KOOzr4XQfcQevw5BJpbHLSBCUwqCAoYuq1nYNSmUnGppF8w6wG6tH6FnKMs9pU2uw-Uu8CHaCby_9N_fDZq8TVaMvBIDlZqZdwUOVhgMCrkm-5z8m0WFRP5bLItI6jBpvu4vAqERDaMETY9WVI50Hq7JYMJIJxAiXJmHzmgel-XQpXVBc96-_SL8nHETlqcRxmnwp8eE-BZz3lJwBcC3TQHfdgtBbACjQFG_nc_fpcwmBg-KnZvgf5GZnFL9Q.jpg"
-        }
-      ],
-      "media_sent": false,
-      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0,
-      "zh_parts": [
-        "Cat Wu 加入 OpenAI 负责核心产品管理",
-        "Cat Wu 宣布她将加入 OpenAI 担任核心产品的产品管理负责人。她表示，将与 OpenAI 团队合作开发能够让用户及其团队掌控全局的智能体，同时为重要工作腾出更多时间。",
-        "cat | LinkedIn",
-        "Tibo: CatGPT"
-      ],
-      "media_failures": 2
-    },
-    "zaihua_news/3355": {
-      "id": "zaihua_news/3355",
-      "title": "OpenAI Pipeline Finds 948 Linux Privilege Escalation Vulnerabilities",
-      "paragraphs": [
-        "OpenAI says its autonomous vulnerability research pipeline reproduced 1,724 vulnerabilities in a Linux kernel scan in October 2026 and generated 948 exploits that let local low-privilege users gain root access.\nA single rundynamically reproduced 1,724 vulnerabilitiesand generated 948 working local privilege escalation (LPE) exploits that let ordinary users gain root access.",
-        "There are also PoCs for  291 个信息泄露.",
-        "Total API cost:$1,213,430 , averaging just$1,279 per successful LPE exploit (the cost of actually developing a successful exploit was lower, at about $359).",
-        "Based on historical Pwn2Own / TyphoonPWN bounty levels ($20,000–$70,000 per exploit), these 948 LPEs would theoretically be worth $1890万–$6630 万, or  16–55 倍 times the cost.",
-        "At least 10 new Linux exploitation techniques were discovered (confirmed as novel by third-party experts), including:\n- A new persistent resilient object (for cache spraying)\n- A new page grooming technique\n- New data-only privilege escalation / arbitrary write techniques\n- Arbitrary type confusion",
-        "OpenAI"
-      ],
-      "published": "2026-11-05T03:05:20+00:00",
-      "link": "https://t.me/zaihua_news/3355",
-      "media": [],
-      "media_sent": false,
-      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0,
-      "zh_parts": [
-        "OpenAI 管道发现 948 个 Linux 提权漏洞",
-        "OpenAI 表示，其自主漏洞研究管道在 2026 年 10 月的 Linux 内核扫描中复现了 1,724 个漏洞，并生成了 948 个允许本地低权限用户获得 root 访问权限的漏洞利用程序。\n单次运行动态复现了 1,724 个漏洞并生成了 948 个可用的本地提权（LPE）漏洞利用程序，使普通用户能够获得 root 访问权限。",
-        "还有针对 291 个信息泄露的 PoC。",
-        "API 总成本为 1,213,430 美元，每个成功的 LPE 漏洞利用平均成本仅为 1,279 美元（实际开发成功漏洞利用的成本更低，约为 359 美元）。",
-        "根据历史 Pwn2Own / TyphoonPWN 赏金水平（每个漏洞 20,000 至 70,000 美元），这 948 个 LPE 在理论上的价值为 1890 万至 6630 万美元，是成本的 16 至 55 倍。",
-        "发现了至少 10 种新的 Linux 利用技术（经第三方专家确认为新发现），包括：\n- 一种新的持久弹性对象（用于缓存喷射）\n- 一种新的页面修剪技术\n- 新的数据专有提权/任意写入技术\n- 任意类型混淆",
-        "OpenAI"
-      ]
-    },
     "zaihua_news/3356": {
       "id": "zaihua_news/3356",
       "title": "West Hollywood, California, allows multiple partners to register as domestic partners",
@@ -657,7 +603,8 @@
         "非居民也可以注册。所有各方必须同意且不得有血缘关系，尽管他们的权利不像已婚夫妇那样广泛。今年 3 月，该市将“家庭或关系结构”加入了反歧视规则的保护类别列表中。",
         "California Post",
         "版本预览"
-      ]
+      ],
+      "media_failures": 1
     },
     "zaihua_news/3357": {
       "id": "zaihua_news/3357",
@@ -1256,6 +1203,179 @@
       "first_seen_at": "2026-11-06T10:23:13.257149+00:00",
       "media_next_index": 0,
       "text_next_index": 0
+    },
+    "zaihua_news/3390": {
+      "id": "zaihua_news/3390",
+      "title": "US Democrats Plan Investigations into Apple, Meta and Musk-Owned Companies",
+      "paragraphs": [
+        "U.S. Democrats are preparing a new round of congressional investigations into major companies, with Apple, Meta and Musk-owned companies among the early targets. The investigations may focus on Apple hosting a tracking app used by immigration enforcement, Meta requiring local governments to sign nondisclosure agreements for data center projects, and Trump using Musk-owned AI chatbot Grok to plan military operations.",
+        "People familiar with the matter said Democrats are ramping up preparations after winning majorities in the House and Senate. Apple, Meta, X and Musk did not immediately respond to requests for comment.",
+        "The Washington Post\nApple\nDemand documents related to donations to Trump’s White House ballroom project, potentially under threat of a subpoena; continue investigating its decision to remove an ICE tracking app from the App Store under pressure from the Trump administration.",
+        "Meta\nDemand documents related to ballroom donations; investigate nondisclosure agreements (NDAs) with local governments for data center projects and require details on electricity and water usage.",
+        "Alphabet / Google\nDemand documents related to ballroom donations; investigate data center NDAs; require reports on AI model safety incidents within 48 hours of discovery.",
+        "Amazon\nDemand documents related to ballroom donations; investigate data center NDAs.",
+        "Nvidia\nDemand documents related to ballroom donations; Republican lawmakers have asked CEO Jensen Huang to give a closed-door congressional briefing on November 18 about his interactions with Alice Huang, who is accused of being a Chinese intelligence agent, and the company’s anti-espionage safeguards.",
+        "Microsoft\nDemand documents related to ballroom donations.",
+        "Oracle\nInvestigate data center NDAs with local governments.",
+        "OpenAI\nRequire reports to Congress within 48 hours of discovering AI model “misalignment” or a safety incident; the CEO may be subpoenaed to testify.",
+        "Anthropic\nRequire reports to Congress within 48 hours of discovering an AI model safety incident; the CEO may be subpoenaed to testify.",
+        "Musk-owned companies (xAI, X, SpaceX, Tesla)\nInvestigate layoffs, contract cancellations and data use during Musk’s leadership of DOGE; review federal contracts and potential conflicts of interest; require preservation of official records of Trump’s conversations with Grok; potentially review xAI’s federal contracts and AI safety issues.",
+        "These measures are currently mostly at the stage of sending letters demanding information and preparing subpoenas and hearings. They are part of an oversight plan Democrats are advancing after the midterm elections."
+      ],
+      "published": "2026-11-06T10:37:43+00:00",
+      "link": "https://t.me/zaihua_news/3390",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T17:38:14.916314+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3391": {
+      "id": "zaihua_news/3391",
+      "title": "🚘 Tesla to gradually phase out Cybertruck production by mid-next year",
+      "paragraphs": [
+        "Tesla CEO Elon Musk said in a post on X Friday that the company will “gradually wind down” Cybertruck production at its Texas Gigafactory by mid-next year, making room to ramp up Cybercab production.",
+        "The factory is the only known site assembling Cybertrucks, and no mention was made of moving production elsewhere. Since its 2023 launch, deliveries are estimated to have peaked at around 70,000, far below earlier forecasts of 250,000 annual sales.",
+        "The Verge"
+      ],
+      "published": "2026-11-06T12:28:33+00:00",
+      "link": "https://t.me/zaihua_news/3391",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/UH2AYQtCLrKBrD4iaTJMmFEyac9YRLt2mm-KLjQK6b4fCCF38R_nwaCZ0TqNj1x-uYmLyIkPYv76FLVDSKi85DfbJPQ4vTC_1Zfxid4bDDm9W0OlP05sskDWug-H4q6zPG-P3oRCPNEtmlw3-NLnhQcilRJSC5IwROXjFmtVF_k9avimuqQjPjW_vu1SZVggWxH6fffBDMssDHWwKUe4zvzN89GRnPHRldi7npwEaz8B4z8X9tPeGKx3R3o6CGy5tV_YS-QBOBknM4rmZpK9rkUddI7-nfnT6nhN-FDIJlHLr-xixR2uXb5utbdCY6L9Mx2honG_tKfvHlJOfTFKXA.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T17:38:14.916314+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3392": {
+      "id": "zaihua_news/3392",
+      "title": "PepsiCo Renews Beverage Supply Agreement with KFC Across Eight Countries",
+      "paragraphs": [
+        "PepsiCo announced today that it has renewed its beverage supply partnership with KFC across eight international markets: Australia, India, the UK, Spain, Germany, France, the Netherlands, and Belgium. The renewal extends a decades-long partnership between the two companies, whose operations now span markets across the Middle East, Europe, Asia Pacific, and Latin America. The financial terms of the agreement were not disclosed.",
+        "36kr"
+      ],
+      "published": "2026-11-06T13:00:33+00:00",
+      "link": "https://t.me/zaihua_news/3392",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T17:38:14.916314+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3393": {
+      "id": "zaihua_news/3393",
+      "title": "📱 The EU accuses TikTok’s recommendation algorithm of creating a “rabbit hole” effect",
+      "paragraphs": [
+        "The European Commission has accused TikTok’s recommendation algorithm of creating a “rabbit hole” effect, in violation of the Digital Services Act. The Commission says TikTok has failed to take effective measures to address the risks and is demanding changes to its “For You” algorithm to rely more on users’ explicit preferences, improve control options, and test the algorithm regularly.",
+        "If the issue is not resolved, parent company ByteDance could face a fine next year of up to 6% of its global annual revenue. The EU says repeatedly pushing similar content could affect mental health. The accusation is part of a broader investigation.",
+        "CNBC"
+      ],
+      "published": "2026-11-06T14:04:04+00:00",
+      "link": "https://t.me/zaihua_news/3393",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T17:38:14.916314+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3394": {
+      "id": "zaihua_news/3394",
+      "title": "Taobao’s MNN team open-sources a 0.3B on-device model",
+      "paragraphs": [
+        "On November 6, Taobao’s MNN team open-sourced MNN-Pocket-0.3B, an on-device model with around 300 million parameters. It runs fully offline on the iPhone 18 Pro, averaging about 350 tokens/s during decoding. The INT4 deployment files are just 173 MB.",
+        "The team targeted peak memory usage below 300 MB and decoding speeds above 200 tokens/s. The final model uses a 28-layer architecture, and its vocabulary was trimmed from 151K to 64K. The team open-sourced several versions for pretraining, post-training, and on-device deployment.",
+        "IT Home"
+      ],
+      "published": "2026-11-06T15:14:05+00:00",
+      "link": "https://t.me/zaihua_news/3394",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/TNks3hyfbMASyWS8c8kqQM25t50Oz44qi9g8jgiHzoVDikytsDij7tYfNc6MPKWk7ueSmT9MjccbXqDZ0-xmRRokDajUeq4WqKsXaFhVJtmx_otbinP3icDdB9bNLPdHY0qoSHhT60b53Jsyemkzc4EQua2ik_2cc5QfGTTAgU78f4mY1_W_o5LJ1-WeJoEhtxec9rCOEU6WSTDfwt6YA-cfgny6PO0YsaZVsrUO3UJnT8vaca2CLstxmHKoyMbpZmbCPinhy__mPwwGA6L6LFmxZnqvOeubZu_r9gmuYrm20Rz5IAzGJ-JytXb-SeiA6PLTk1gxDcV253KTSoi0qg.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T17:38:14.916314+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3395": {
+      "id": "zaihua_news/3395",
+      "title": "🍏 Researcher discovers around 100,000 words hidden from Apple Keyboard recommendations",
+      "paragraphs": [
+        "Independent researcher Derik Kauffman discovered around 100,000 entries that the iPhone keyboard on Apple systems will not recommend, including political phrases such as “Dictator Trump” and “Sleepy Joe.” These restrictions do not prevent users from typing the words manually, but block them from autocomplete and swipe typing.",
+        "Apple says the keyboard is designed to avoid recommending offensive language, but has not explained why political terms were included. David Greene of the Electronic Frontier Foundation says the list should not be secret and that users should be informed and allowed to modify it.",
+        "The Next Web"
+      ],
+      "published": "2026-11-06T15:25:33+00:00",
+      "link": "https://t.me/zaihua_news/3395",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T17:38:14.916314+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3396": {
+      "id": "zaihua_news/3396",
+      "title": "✈️ Telegram 13.2 supports HTML messages that run in chats",
+      "paragraphs": [
+        "Telegram’s Android, iOS, and macOS apps have been updated to version 13.2, and Desktop to version 7.4. Developers can use HTML, CSS, and JavaScript to create interactive messages that run directly in chats without opening a Mini App, such as mini-games with touch controls and saved progress.",
+        "Topics in groups and bots now support a “sidebar” layout, with the topic list opening from the right side of the screen. This layout is enabled automatically in channel direct messages and “Saved Messages.”",
+        "Tginfo  | Google Play | App Store"
+      ],
+      "published": "2026-11-06T15:57:04+00:00",
+      "link": "https://t.me/zaihua_news/3396",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/r94buPF3Q_A-7Yti0uAYhWvcqkiRL3bq0EpSk_rSjTHYpxqD4WdUXrq6W2cPgfgu37RCBMZH6bBul6DuyS9QFLj7HwrPuoi17-u7hxJllPy6Sz7SU9pgj2bP1kqei35XTdXIhaceqA5epHQE5EhQ56EXxvHNYOfSC3D1hgk3sG6duRIMuQ7Jf_cTRrFk8DyQsI7fyRF8B-0ESwSgwi0V1lo3D3lWsGbWnCydveNE_6ISbCylFmgt00E6rVY5lynO6jvy9cu3CnZCBlX_RsRlftJJ4dfxfudIk7F5l_IF0jRHGjxXekkfA1w8DyOWlAjfhlg7Z8WY_JTH9RxnbjBJwg.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T17:38:14.916314+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3397": {
+      "id": "zaihua_news/3397",
+      "title": "🍏 Rumor: Apple may remove the iPhone’s dedicated Action button next year",
+      "paragraphs": [
+        "Leaker Instant Digital says Apple will remove the dedicated Action button from new iPhones launching in the second half of 2027, merging its functions into the Camera Control button: press once to open the camera, or press and hold to trigger the action previously assigned to the Action button.",
+        "The Camera Control button debuted with the iPhone 16 and received mixed reviews. Pressing and holding it was originally used for Visual Intelligence, but iOS 27 has integrated that feature into the Camera app as a Siri mode.",
+        "MacRumors"
+      ],
+      "published": "2026-11-06T16:39:34+00:00",
+      "link": "https://t.me/zaihua_news/3397",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/bQPUiIUqWQ4hKwrtW1xJ3F9YQOrSWfAEV-skEt31ujpEFzdjLrvdeH2Xzdip2eXXAlLYD_itGOcLp86hQ_T84YuyxOf2dB4J7FEOaNQ6t1A0FneR73d-kD9hCXLhyiI3ChmvFN5HOFvdHOc-rCi6EdB37TwZwnkj0ux3QEJTus56w0wZwcXlmMpIFOFTDiIdjPC5kb11mKIQEXeOWj6Q7a1ukNEK56ZJqzX3fHwzkcQs8661ls9kEhJkzKCrnXGaqH45VBLkgxiQbaqMF5kvTt5L-Oh3mRMRWu7ESGbpaDZSpSQX70ENOXQazCjBZyw--TMrnGV8eUFs8clUQWxfRw.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T17:38:14.916314+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3398": {
+      "id": "zaihua_news/3398",
+      "title": "The U.S. Department of Justice’s “Superintelligence Task Force” is officially operational",
+      "paragraphs": [
+        "The U.S. Department of Justice announced that the Superintelligence Task Force (SINTF) is now operational. Established under a memo signed by Trump on October 13 and led by the Director of National Intelligence, the task force is responsible for maintaining U.S. leadership in AI and countering foreign AI “abuses.”",
+        "The task force will coordinate the Justice Department’s criminal and civil AI cases and help block legislative proposals for “burdensome regulation.” Pentagon CTO Emil Michael said details of AI regulation will be announced later this month.",
+        "Theregister"
+      ],
+      "published": "2026-11-06T17:02:04+00:00",
+      "link": "https://t.me/zaihua_news/3398",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-06T17:38:14.916314+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
     }
   },
   "alerts_sent": [
@@ -1479,6 +1599,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3389,
+  "last_seen_post_id": 3398,
   "mode": "gemini_batch_v2"
 }
