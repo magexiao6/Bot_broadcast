@@ -458,8 +458,35 @@ def main():
             print(f"Gemini request {batch_count + 1}: translating {len(payload)} news posts.")
             try:
                 translations = translate_news_batch(payload)
-            except (requests.RequestException, RuntimeError, ValueError, KeyError) as exc:
-                raise RuntimeError(f"Gemini translation failed; pending preserved: {exc}") from exc
+
+            except requests.HTTPError as exc:
+                status = (
+                    exc.response.status_code
+                    if exc.response is not None else None
+                )
+
+                if status in (429, 500, 502, 503, 504):
+                    print(
+                        f"Gemini 暂时不可用：HTTP {status}，"
+                        "保留待处理新闻，下次运行继续翻译"
+                    )
+                    save_state(state)
+                    return
+
+                raise
+
+            except (requests.Timeout, requests.ConnectionError) as exc:
+                print(
+                    f"Gemini 网络异常：{type(exc).__name__}，"
+                    "保留待处理新闻，下次运行重试"
+                )
+                save_state(state)
+                return
+
+            except (RuntimeError, ValueError, KeyError) as exc:
+                raise RuntimeError(
+                    f"Gemini 翻译结果异常：{exc}"
+                ) from exc
             for key, _ in batch:
                 state["pending"][key]["zh_parts"] = translations[key]
             save_state(state)
