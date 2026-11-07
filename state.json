@@ -603,7 +603,7 @@
         "该团队还开发了 MUSES，这是一种结合多个二级结构预测器预测结果以减少偏差的方法。其 3D 结构预测模块 Zfold 的表现与 AlphaFold 3 相当。数据、权重和代码均已公开。",
         "中国科大新闻网 | Nature"
       ],
-      "media_failures": 1
+      "media_failures": 2
     },
     "zaihua_news/3358": {
       "id": "zaihua_news/3358",
@@ -1401,6 +1401,128 @@
       "first_seen_at": "2026-11-07T02:17:40.111177+00:00",
       "media_next_index": 0,
       "text_next_index": 0
+    },
+    "zaihua_news/3402": {
+      "id": "zaihua_news/3402",
+      "title": "🍏 Apple says more than 100,000 apps support iPhone Duo",
+      "paragraphs": [
+        "Apple said that two weeks after iPhone Duo went on sale, more than 100,000 apps had been built for it on the App Store, with thousands of optimized apps launching every day. Apps including Microsoft Office, Zoom and YouTube have recently been updated to support the device. App Store pages for apps optimized for iPhone Duo will also display a dedicated “Made for iPhone Duo” badge.",
+        "Susan Prescott, Apple’s vice president of Worldwide Developer Relations, said thousands of developers had attended workshops held in 19 cities over the past month, and more than 2,000 people worldwide had taken part in over 50 in-person events.",
+        "9To5Mac"
+      ],
+      "published": "2026-11-07T02:30:33+00:00",
+      "link": "https://t.me/zaihua_news/3402",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-07T08:29:44.921120+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3403": {
+      "id": "zaihua_news/3403",
+      "title": "🤖Apple OS 27.3 contains a marker for China’s version of Siri AI features",
+      "paragraphs": [
+        "Apple is moving forward with bringing Siri AI to China. A feature flag for mainland China has appeared in Apple OS 27.3 IntelligenceFlow siriAIInChinaMainland  and is currently disabled.",
+        "The flag is read by Siri AI features in mainland China and is required for devices in China to be eligible for Siri AI, but this flag alone isn’t enough.",
+        "pdfu(@itspdfu)"
+      ],
+      "published": "2026-11-07T03:07:02+00:00",
+      "link": "https://t.me/zaihua_news/3403",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-07T08:29:44.921120+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3404": {
+      "id": "zaihua_news/3404",
+      "title": "Turkey Uses AI to Recover 100 Lost Artifacts from the U.S.",
+      "paragraphs": [
+        "Turkey’s Culture Ministry has put around 200 artifacts recovered from the United States on display at the Istanbul Archaeological Museums. Highlights include bronze statues from the ancient city of Boubon, looted in the 1960s, and 44 ceramic architectural plaques dating from 700 to 480 BCE.",
+        "The recovery effort used lead isotope analysis, comparisons of mold shapes, and TraceART, an AI platform launched in 2025 that scans auction sites and social media worldwide. Since 1980, Turkey has recovered more than 26,700 artifacts.",
+        "ARTnews"
+      ],
+      "published": "2026-11-07T03:44:03+00:00",
+      "link": "https://t.me/zaihua_news/3404",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/O2pKIqJ-QvXWe8UsaJkDOkaohODzziQaS_KBzPNRtRDzbXprW_-Yg4OzGdVVUPxWpgDhLlkPImAlA9RLgP7cDiit43cECvi_IhMmNi19l0m3sPxNuzXDE_633RwuBlTDn4AVsSvvv9L7bxz1GdYGRZLeifM7_wC3CbBVOCh_3hkUan9LI9PRF2Yue2EZVv70DZiPqsgCCuv20YW9IYQ9ji8ylsf8XtK90t0YASzWiF5F7RW30_JK0SZ_5pZR6cAL96WBw9aKD0tlfulTJwG2xc8985EqTQJXufoPQn8e9BE7jSpDWeJ5ERnv2IfOrD76Iy5A0TFcyvf0SID5Sxvxbg.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-07T08:29:44.921120+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3405": {
+      "id": "zaihua_news/3405",
+      "title": "TrendForce: Refurbished memory penetration in mobile phones may reach 9% next year",
+      "paragraphs": [
+        "TrendForce expects refurbished memory penetration in the mobile phone market to rise from around 3%–4% in 2026 to 7%–9% in 2027. Continued increases in memory contract prices are prompting phone brands to use lower-cost refurbished memory in entry-level and budget models. For now, it is mainly used in 4G phones priced below 1,299 yuan.",
+        "TrendForce notes that uncertainty around the sourcing and quality consistency of refurbished memory could affect product reliability, shorten device lifespans, and increase after-sales costs.",
+        "TrendForce"
+      ],
+      "published": "2026-11-07T04:32:35+00:00",
+      "link": "https://t.me/zaihua_news/3405",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-07T08:29:44.921120+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3406": {
+      "id": "zaihua_news/3406",
+      "title": "马斯克: Optimus robots may only be available for rent, not for sale",
+      "paragraphs": [
+        "马斯克 said at the 33rd Baron Investment Conference in New York that Tesla’s Optimus robots may only be available for rent, though rental prices and the work they can perform have not been disclosed. Each unit is expected to initially cost about $30,000, potentially dropping to $20,000. He also said they are five times as productive as an average person.",
+        "Early production of Optimus began at the Fremont factory this October, with planned annual capacity of 1 million units. However, it will take at least another year to reach full production speed, and external deliveries are planned for around the end of 2027.",
+        "IT Home"
+      ],
+      "published": "2026-11-07T06:34:08+00:00",
+      "link": "https://t.me/zaihua_news/3406",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-07T08:29:44.921120+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3407": {
+      "id": "zaihua_news/3407",
+      "title": "DeepSeek Web and API Services Partially Disrupted; Fix Implemented",
+      "paragraphs": [
+        "On November 7, DeepSeek experienced a partial outage affecting the V4 Pro API, V4.1 Flash API, chat, and search services. The company has implemented a fix and is monitoring the services to confirm it has worked.",
+        "This is DeepSeek’s second outage in a week. The current outage has lasted around 30 minutes.",
+        "status.deepseek.com"
+      ],
+      "published": "2026-11-07T07:45:32+00:00",
+      "link": "https://t.me/zaihua_news/3407",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/bl85BaSM1atB75bwTFbNLvezm3GGL48DVZuHT7gWmOLxV0KgDKeAx0kaJQ0deOYx8xE55sforpplM4ZzAowOfAZzhR8Y36B-A4TT2kbzAzmsfCabsaOzcsWVS5k31je9kxYjoL7BfrIMCVrNukTjUK1eJJKjPJJLCNL97pKWC32WkCYJd3P9vZVPiduZB10mZNvUjRPLNN6z6LPXEYtZn9pdPAHS7Sc0hVKuLkgG36Lv9ImThbNntL2x1jHnpDqSjtlHw5WUULfVcJwW02U8m71mmymITyWXxeaM2WN8FmTueFgMTIMd1wDsO-pkK7e95-ZzIgD8GwoOb1Cbjwq3iQ.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-07T08:29:44.921120+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3408": {
+      "id": "zaihua_news/3408",
+      "title": "Claude Code accused of potentially leaking email addresses while searching the web",
+      "paragraphs": [
+        "A developer complained that Claude Code had filled in the user’s login email address in web requests and sent them without permission, causing them to receive large numbers of scam emails every day.",
+        "An Anthropic engineer said the login email had previously been added to the model’s context to address Claude incorrectly filling in authors’ names. The issue was reported as early as July this year, with email addresses sent to Wikipedia, the U.S. Securities and Exchange Commission, and others. Version 2.1.317 added a block, but it can be bypassed with a Python script. The company plans to remove login email addresses from the context in the next release.",
+        "GitHub"
+      ],
+      "published": "2026-11-07T08:09:32+00:00",
+      "link": "https://t.me/zaihua_news/3408",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-07T08:29:44.921120+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
     }
   },
   "alerts_sent": [
@@ -1624,6 +1746,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3401,
+  "last_seen_post_id": 3408,
   "mode": "gemini_batch_v2"
 }
