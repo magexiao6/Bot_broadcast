@@ -1,6 +1,7 @@
 """Translate 1-5 English Telegram news posts in one Gemini API request."""
 import json
 import os
+import time
 
 import requests
 
@@ -56,20 +57,61 @@ def translate_news_batch(news_items):
         "required": ["items"],
     }
 
-    response = requests.post(
-        f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent",
-        headers={"x-goog-api-key": api_key, "Content-Type": "application/json"},
-        json={
-            "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-            "generationConfig": {
-                "temperature": 0.1,
-                "responseMimeType": "application/json",
-                "responseSchema": schema,
-            },
-        },
-        timeout=90,
-    )
+    # 遇到 Gemini 临时故障，最多尝试3次
+    retry_status = {429, 500, 502, 503, 504}
+    for attempt in range(1, 4):
+        try:
+            response = requests.post(
+                f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent",
+                headers={
+                    "x-goog-api-key": api_key,
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "contents": [
+                        {
+                            "role": "user",
+                            "parts": [{"text": prompt}]
+                        }
+                    ],
+                    "generationConfig": {
+                        "temperature": 0.1,
+                        "responseMimeType": "application/json",
+                        "responseSchema": schema
+                    }
+                },
+                timeout=90
+            )
+            # 成功，继续解析 Gemini 返回的 JSON
+            if response.status_code == 200:
+                break
+            # 不可重试的错误，例如401、403、404
+            if response.status_code not in retry_status:
+                response.raise_for_status()
+            # 已到最后一次，抛出异常
+            if attempt == 3:
+                response.raise_for_status()
+            wait_seconds = 5 * (2 ** (attempt - 1))
+            print(
+                f"Gemini HTTP {response.status_code}，"
+                f"第 {attempt} 次请求失败，"
+                f"{wait_seconds} 秒后重试",
+                flush=True
+            )
+            time.sleep(wait_seconds)
+            
+        except (requests.Timeout, requests.ConnectionError) as exc:
+            if attempt == 3:
+                raise
+            wait_seconds = 5 * (2 ** (attempt - 1))
+            print(
+                f"Gemini 网络异常：{type(exc).__name__}，"
+                f"{wait_seconds} 秒后重试",
+                flush=True
+            )
+            time.sleep(wait_seconds)
     response.raise_for_status()
+
 
     payload = response.json()
     try:
