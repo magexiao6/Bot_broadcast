@@ -574,68 +574,12 @@
     "zaihua_news/3352",
     "zaihua_news/3353",
     "zaihua_news/3355",
-    "zaihua_news/3356"
+    "zaihua_news/3356",
+    "zaihua_news/3357",
+    "zaihua_news/3358",
+    "zaihua_news/3359"
   ],
   "pending": {
-    "zaihua_news/3357": {
-      "id": "zaihua_news/3357",
-      "title": "USTC builds structure-guided RNA foundation model published in Nature",
-      "paragraphs": [
-        "A team from the University of Science and Technology of China has introduced structRFM, a structure-guided RNA foundation model. The paper was published online in Nature on November 5. The model incorporates base-pairing information from secondary structures into sequence pretraining, trained on about 21 million paired sequence–structure examples, and achieves state-of-the-art performance on multiple tasks.",
-        "The team also developed MUSES, a method that combines predictions from multiple secondary-structure predictors to reduce bias. Its 3D structure prediction module, Zfold, performs on par with AlphaFold 3. The data, weights, and code have all been made publicly available.",
-        "中国科大新闻网 | Nature"
-      ],
-      "published": "2026-11-05T04:49:35+00:00",
-      "link": "https://t.me/zaihua_news/3357",
-      "media": [
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/OXeU1TzuD6H-GTMJo7nnNLnkeMvX_inaXXEj-L_mJCtcZccc1-MQJJF8yQzX2h34lEzLA-KnDZ0mM1OYr91h2Kzs-6bCfXPWpLMekoAvcb6v4h2vC33XgPxdDj5nAX0_0IbacBa-mbNFY7i9ZDRPf-yv-PJ13jHb7TDSGSVK6_7JDYk7dvuBaB5_0exuh7jt34tlZnvvNO9PFSgclOIb1qlrUPZK2WRJpXnkOr5NF_NmCVpDm3kUG4Kowzr3zutTK_NZJTclHHjBN5cPDaelZLveGN2tu0-62sBmEpu4ztadoYTX3K32HDv08kpUiuo6GDok9xvg7OP2PWcAT80RCg.jpg"
-        }
-      ],
-      "media_sent": false,
-      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0,
-      "zh_parts": [
-        "中国科大构建结构引导的 RNA 基础模型并发表于《自然》",
-        "中国科学技术大学的一个团队推出了结构引导的 RNA 基础模型 structRFM。该论文于 11 月 5 日在线发表在《自然》杂志上。该模型将来自二级结构的碱基配对信息纳入序列预训练中，在约 2100 万对序列-结构示例上进行训练，并在多项任务上取得了先进的性能。",
-        "该团队还开发了 MUSES，这是一种结合多个二级结构预测器预测结果以减少偏差的方法。其 3D 结构预测模块 Zfold 的表现与 AlphaFold 3 相当。数据、权重和代码均已公开。",
-        "中国科大新闻网 | Nature"
-      ],
-      "media_failures": 2
-    },
-    "zaihua_news/3358": {
-      "id": "zaihua_news/3358",
-      "title": "Node.js to Release Security Updates for Three Release Lines After November 11",
-      "paragraphs": [
-        "Node.js has announced upcoming security updates: new versions of the 22, 24, and 26 release lines will be released on or shortly after November 11, 2026, to fix security vulnerabilities. The highest severity rating addressed in this release is HIGH.",
-        "Node.js(@nodejs) | Node.js"
-      ],
-      "published": "2026-11-05T05:18:06+00:00",
-      "link": "https://t.me/zaihua_news/3358",
-      "media": [],
-      "media_sent": false,
-      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0
-    },
-    "zaihua_news/3359": {
-      "id": "zaihua_news/3359",
-      "title": "A wealthy Indian bets on homegrown satellite internet, takes on SpaceX",
-      "paragraphs": [
-        "Indian billionaire Sunil Mittal says the Eutelsat backed OneWeb plans to build a global satellite internet network independent of the US and China, competing with SpaceX’s Starlink.",
-        "Starlink has more than 10,000 satellites in orbit and at least 13.6 million users in the September quarter, with connectivity revenue topping $5 billion. OneWeb has about 650 satellites, and its low Earth orbit revenue for the same period was just €70.9 million. Mittal says OneWeb has been awaiting approval in India for years and is first in the queue.",
-        "Bloomberg"
-      ],
-      "published": "2026-11-05T06:20:06+00:00",
-      "link": "https://t.me/zaihua_news/3359",
-      "media": [],
-      "media_sent": false,
-      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0
-    },
     "zaihua_news/3360": {
       "id": "zaihua_news/3360",
       "title": "华尔街 Daily: Rising Memory Chip Prices Could Actually Boost Apple’s iPhone Profits",
@@ -655,7 +599,14 @@
       "media_sent": false,
       "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
       "media_next_index": 0,
-      "text_next_index": 0
+      "text_next_index": 0,
+      "zh_parts": [
+        "华尔街日报：存储芯片价格上涨实际上可能提升苹果 iPhone 的利润",
+        "华尔街日报估计，将 iPhone 18 Pro 从 256 GB 升级到 1 TB 需要多花 600 美元，而额外的闪存成本约为 192 美元。这为苹果留下了 408 美元的额外利润，利润率高达 300%。上一代 iPhone 17 Pro 的同等升级需要多花 400 美元，而额外的内存成本仅为 42 美元。",
+        "苹果已经承认，存储芯片价格的上涨正在挤压其毛利率。然而，分析师估计其 2026 年的闪存采购成本约为 250 亿美元，其毛利率可能仅下降一个百分点。",
+        "蓝点网"
+      ],
+      "media_failures": 1
     },
     "zaihua_news/3361": {
       "id": "zaihua_news/3361",
@@ -676,7 +627,13 @@
       "media_sent": false,
       "first_seen_at": "2026-11-05T16:50:48.301720+00:00",
       "media_next_index": 0,
-      "text_next_index": 0
+      "text_next_index": 0,
+      "zh_parts": [
+        "微软：Windows 11 内存占用高不是问题",
+        "微软 Windows 负责人帕万·达沃卢里（Pavan Davuluri）表示，在任务管理器中看到内存占用达到 70% 甚至 90% 并不意味着内存耗尽：Windows 会缓存你可能会用到的应用和数据，并在需要时释放空间。",
+        "在 11 月 3 日的一篇博客文章中，他将内存比作办公桌，将固态硬盘（SSD）比作抽屉，并表示：“真正的考验是你的计算机是否保持响应。”针对 8 GB 设备的全新调优可以在内存中多保留最多 2 GB 的活动数据。",
+        "Windows Latest"
+      ]
     },
     "zaihua_news/3362": {
       "id": "zaihua_news/3362",
@@ -697,7 +654,13 @@
       "media_sent": false,
       "first_seen_at": "2026-11-05T16:50:48.301720+00:00",
       "media_next_index": 0,
-      "text_next_index": 0
+      "text_next_index": 0,
+      "zh_parts": [
+        "意大利厨师因拒绝制作菠萝披萨被解雇后上诉被驳回",
+        "意大利厨师达维德·坦布雷拉（Davide Tamburella）今年 5 月因拒绝在披萨上放菠萝而被布里斯班的 La Costa 餐厅解雇。他向澳大利亚公平工作委员会（Fair Work Commission）提起了不当解雇诉讼，但遭到驳回。",
+        "裁决称，他认为在披萨上放菠萝是“对意大利文化的侮辱”，并且在四年内三次拒绝使用这种水果；委员会以提交时间过晚为由驳回了该诉讼。餐厅表示，此事不仅仅关乎披萨的配料。",
+        "英国广播公司新闻网"
+      ]
     },
     "zaihua_news/3363": {
       "id": "zaihua_news/3363",
@@ -1523,6 +1486,27 @@
       "first_seen_at": "2026-11-07T08:29:44.921120+00:00",
       "media_next_index": 0,
       "text_next_index": 0
+    },
+    "zaihua_news/3409": {
+      "id": "zaihua_news/3409",
+      "title": "Sogou Ask and Ask Mall officially shut down, having once served over 100 million users",
+      "paragraphs": [
+        "Tencent’s Q&A community Sogou Ask and Ask Mall officially ceased operations at 11:59 p.m. on November 7, 2026. Their pages are no longer accessible, Ask Bean redemptions have closed, and accounts have been automatically deactivated. The platform, which once served over 100 million users and operated for nearly 20 years, has officially come to an end.",
+        "The platform began as Tencent’s Soso Ask, launched in 2007. It was renamed Sogou Ask in 2014 and returned to Tencent in 2021 following Sogou’s privatization. The official reason for the shutdown was a business adjustment. Users were advised to back up their questions and answers themselves.",
+        "CNMO Tech"
+      ],
+      "published": "2026-11-07T09:02:04+00:00",
+      "link": "https://t.me/zaihua_news/3409",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/Gq2xf4PJDrb87IjJuckMvO3r2tsTiLG-Xp0oG0PiH176p9Kvm9evdKQ-z7mx8UxZiBQwavp3gwEQBsG8t6X1Luxg6nsfq4n6jbp4NuQLQT19D_LwyYmPm4U-txPBt-StGv3uus4v9_unZG6KAQUwe5DQMdkJEU2EcrnhS5AwHXQBiHsMmDlxnx19vwz5TPTwqvvqiw8o2bT6J04UL3efFTwH061kDx2P0EySEYOt7hqrikLUtfjvVNwbk0FrnkxzC7Rg-7Pa4J10ShU1wV11E1y1fjy-dD0Rjky_Lgc-W9ylehh7mH-Csm9A1RK6MDtlSUXttnR6F8Ta4mfiiNUwow.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-07T09:02:08.101387+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
     }
   },
   "alerts_sent": [
@@ -1746,6 +1730,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3408,
+  "last_seen_post_id": 3409,
   "mode": "gemini_batch_v2"
 }
