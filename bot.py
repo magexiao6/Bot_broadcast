@@ -350,13 +350,19 @@ def deliver_one(state, news_id):
                 else:
                     send_album(group)
             except (requests.RequestException, RuntimeError, ValueError) as exc:
-                item["media_failures"] = item.get("media_failures", 0) + 1
-                print("Photo upload failed:", news_id, type(exc).__name__)
-                if item["media_failures"] < PHOTO_MAX_FAILURES:
-                    save_state(state)
-                    return False
-                print("Skipping expired photo after repeated failures:", news_id)
+                status = getattr(
+                    getattr(exc, "response", None),
+                    "status_code",
+                    None
+                )
+                print(
+                    f"图片处理失败：{news_id}，"
+                    f"HTTP状态码：{status}，"
+                    f"异常类型：{type(exc).__name__}"
+                )
+                print("跳过本条剩余图片，继续发送双语文字")
                 item["media_skipped"] = True
+                item["media_failures"] = item.get("media_failures", 0) + 1
                 break
             cursor += len(group)
             item["media_next_index"] = cursor
