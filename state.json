@@ -577,91 +577,12 @@
     "zaihua_news/3356",
     "zaihua_news/3357",
     "zaihua_news/3358",
-    "zaihua_news/3359"
+    "zaihua_news/3359",
+    "zaihua_news/3360",
+    "zaihua_news/3361",
+    "zaihua_news/3362"
   ],
   "pending": {
-    "zaihua_news/3360": {
-      "id": "zaihua_news/3360",
-      "title": "华尔街 Daily: Rising Memory Chip Prices Could Actually Boost Apple’s iPhone Profits",
-      "paragraphs": [
-        "华尔街 Daily estimates that upgrading the iPhone 18 Pro from 256 GB to 1 TB costs an extra $600, while the additional flash memory costs about $192. That leaves Apple with $408 more in profit, a 300% margin. The equivalent upgrade on the previous-generation iPhone 17 Pro cost an extra $400, while the additional memory cost just $42.",
-        "Apple has acknowledged that rising memory chip prices are squeezing its gross margin. However, analysts estimate that its flash memory purchases will cost about $25 billion in 2026, and its gross margin may fall by only one percentage point.",
-        "Blue Dot Network"
-      ],
-      "published": "2026-11-05T07:34:06+00:00",
-      "link": "https://t.me/zaihua_news/3360",
-      "media": [
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/Yi16dZx9pvnnILyyFRuyaqXVTbRL-7Zyl_PnPQYw0P8OP3fwVKtaBXxUk8KSFhUbQ4UPWEwsp4qP5u8y_ZTF52QUC9gfr0EmW5WG2pyxKSJyNbGiTLuV4h5cFOZByqQ2OUz-SssShh_EDsuw9luq4qcthGlvZ_UMVATeNb2Mhu5CopQQJzsxOSd8x_gaVGmymlawOK-jBStxWYhmg1WNDZ1tXlSI3qGmfAp8bSTydqwGYy2_YvirMYfz4MxDCXyTDZurqb0-_ylUsCzs7NlD5r0_5m-0EAa10xcfyUaS30wBz0QOqDhdHHLDdo0b_pamu2yLCQb5mXysyNJmdgAM-A.jpg"
-        }
-      ],
-      "media_sent": false,
-      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0,
-      "zh_parts": [
-        "华尔街日报：存储芯片价格上涨实际上可能提升苹果 iPhone 的利润",
-        "华尔街日报估计，将 iPhone 18 Pro 从 256 GB 升级到 1 TB 需要多花 600 美元，而额外的闪存成本约为 192 美元。这为苹果留下了 408 美元的额外利润，利润率高达 300%。上一代 iPhone 17 Pro 的同等升级需要多花 400 美元，而额外的内存成本仅为 42 美元。",
-        "苹果已经承认，存储芯片价格的上涨正在挤压其毛利率。然而，分析师估计其 2026 年的闪存采购成本约为 250 亿美元，其毛利率可能仅下降一个百分点。",
-        "蓝点网"
-      ],
-      "media_failures": 1
-    },
-    "zaihua_news/3361": {
-      "id": "zaihua_news/3361",
-      "title": "Microsoft: High memory usage in Windows 11 isn’t a problem",
-      "paragraphs": [
-        "Microsoft Windows chief Pavan Davuluri says that seeing memory usage at 70% or even 90% in Task Manager doesn’t mean you’re running out of memory: Windows caches apps and data you might use, then frees up space when needed.",
-        "In a November 3 blog post, he compared memory to a desk and an SSD to a drawer, saying, “The real test is whether your computer stays responsive.” New tuning for 8 GB devices can keep up to 2 GB more active data in memory.",
-        "Windows Latest"
-      ],
-      "published": "2026-11-05T09:04:15+00:00",
-      "link": "https://t.me/zaihua_news/3361",
-      "media": [
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/mwfej6MCEFpZ7s-7M1zr8HcefdjTMssVdHJmM35vjnoTPO-WW0zP3ZfWNB4HiOPCpMYGfRhsOKFYVvFJm7VbtdZ1K6mrdE6hSH9gXNsdet2_ZAUDQnagVg7rUppJIo8EEzo6oHBu9B1Tf-0fmCDNkWqOkT9g8Vp5rVXaGqNL18B1g0KlYWsMWVD-vM803MFvQGBwIIyLuT7m027PxD6bLQi8CWS5CAV0DY0lFgX31tapcZamgzCPgVebyicotumwpdWqVVeinIAm_jWaNd4qIVoeqLy5j8h91jhER0UxSq9nSTzKzJDmPkqgCuN5n_j8l__tMXlctDlzKIeVT_fqYw.jpg"
-        }
-      ],
-      "media_sent": false,
-      "first_seen_at": "2026-11-05T16:50:48.301720+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0,
-      "zh_parts": [
-        "微软：Windows 11 内存占用高不是问题",
-        "微软 Windows 负责人帕万·达沃卢里（Pavan Davuluri）表示，在任务管理器中看到内存占用达到 70% 甚至 90% 并不意味着内存耗尽：Windows 会缓存你可能会用到的应用和数据，并在需要时释放空间。",
-        "在 11 月 3 日的一篇博客文章中，他将内存比作办公桌，将固态硬盘（SSD）比作抽屉，并表示：“真正的考验是你的计算机是否保持响应。”针对 8 GB 设备的全新调优可以在内存中多保留最多 2 GB 的活动数据。",
-        "Windows Latest"
-      ]
-    },
-    "zaihua_news/3362": {
-      "id": "zaihua_news/3362",
-      "title": "Italian chef fired for refusing to make pineapple pizza loses appeal",
-      "paragraphs": [
-        "Italian chef Davide Tamburella was fired from Brisbane’s La Costa restaurant in May this year after refusing to put pineapple on a pizza. He lodged an unfair dismissal claim with Australia’s Fair Work Commission, but it was rejected.",
-        "The ruling said he considered putting pineapple on pizza “an insult to Italian culture” and had refused to use the fruit three times over four years; the commission rejected the claim on the grounds that it was submitted too late. The restaurant said the matter was not just about pizza toppings.",
-        "BBC News"
-      ],
-      "published": "2026-11-05T09:42:31+00:00",
-      "link": "https://t.me/zaihua_news/3362",
-      "media": [
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/utiet9sC3KTxbmHilrYxsgDiSNvMWX5FK6W-max8rKB3boj1H_2gvsHn8B0m9lMEeECh5JNcIW7uTUGmTfj3Cjl_fUV-Vh55oJ-NrgPSSn96YxyFSWjgqiJXrbOKBelZTbUy7AIbDqcekCn8gpquS8gqmkcn6PHQP8MohoRtlCdKDPY6bXJzOLRbrgSupXk84cu4bTwJNhCVBuDicdh47ixl3xre6hN9UT7PTIBDq0IPoqk0kX5yNL02mqS4bO4zceOOheP2F5IyPuyEJh-_h-0BXZ3VncRm_9kpbDk8B4RbUI6GBTUWmPTR-Bj2SOlMd1ISOLJP8f9-R-TFZhF2sg.jpg"
-        }
-      ],
-      "media_sent": false,
-      "first_seen_at": "2026-11-05T16:50:48.301720+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0,
-      "zh_parts": [
-        "意大利厨师因拒绝制作菠萝披萨被解雇后上诉被驳回",
-        "意大利厨师达维德·坦布雷拉（Davide Tamburella）今年 5 月因拒绝在披萨上放菠萝而被布里斯班的 La Costa 餐厅解雇。他向澳大利亚公平工作委员会（Fair Work Commission）提起了不当解雇诉讼，但遭到驳回。",
-        "裁决称，他认为在披萨上放菠萝是“对意大利文化的侮辱”，并且在四年内三次拒绝使用这种水果；委员会以提交时间过晚为由驳回了该诉讼。餐厅表示，此事不仅仅关乎披萨的配料。",
-        "英国广播公司新闻网"
-      ]
-    },
     "zaihua_news/3363": {
       "id": "zaihua_news/3363",
       "title": "2027 holiday schedule released: fewest make-up workdays in recent years",
