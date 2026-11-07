@@ -573,39 +573,10 @@
     "zaihua_news/3351",
     "zaihua_news/3352",
     "zaihua_news/3353",
-    "zaihua_news/3355"
+    "zaihua_news/3355",
+    "zaihua_news/3356"
   ],
   "pending": {
-    "zaihua_news/3356": {
-      "id": "zaihua_news/3356",
-      "title": "West Hollywood, California, allows multiple partners to register as domestic partners",
-      "paragraphs": [
-        "The West Hollywood City Council unanimously passed an ordinance proposed by Mayor John Heilman, allowing groups of three or more partners to register as domestic partners with the city clerk. They will gain hospital and city jail visitation rights, as well as tenant protections.",
-        "Registration is open to nonresidents. All parties must consent and cannot be related by blood, though their rights do not extend as far as those of married couples. In March, the city added “family or relationship structure” to its list of protected categories under anti-discrimination rules.",
-        "California Post",
-        "Version Preview"
-      ],
-      "published": "2026-11-05T03:30:44+00:00",
-      "link": "https://t.me/zaihua_news/3356",
-      "media": [
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/XQGsP5qMPjHfFA7JLu2yB4b4tzE1sqGfjfjo0LZuNK65HjNsKbMB1o-exMB_F7YXuT_MRZX7rbjLRt78zC8cioPCgWgE9ECmI0Qu9kl17G_MOgtitcnAvmKUft4vwIcjcgf52zn1gXdMbndZFwdjjBBZATcFvS6G2JH24y47lcECOoFubKCui3PnOM9bEQ3e2ENmwEGnWQxqVijogaZPBG7hiqqBUFzBN7yc5CS0DX0mvC0bF9PHzgNWQY_2SYFsSFLFFDE9-RZ2Qvv5hTmlApRIHAmt6fIBvSMIORZTPTk4T_yp2jb0T7Pbuq9ykJBXEnRLvdD4CAKq2P62J2dsHQ.jpg"
-        }
-      ],
-      "media_sent": false,
-      "first_seen_at": "2026-11-05T08:36:12.513344+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0,
-      "zh_parts": [
-        "加利福尼亚州西好莱坞允许多个伴侣注册为家庭伴侣",
-        "西好莱坞市议会一致通过了由市长约翰·海尔曼（John Heilman）提出的条例，允许三个或更多伴侣组成的群体在市书记官处注册为家庭伴侣。他们将获得医院和市监狱的探视权以及租户保护。",
-        "非居民也可以注册。所有各方必须同意且不得有血缘关系，尽管他们的权利不像已婚夫妇那样广泛。今年 3 月，该市将“家庭或关系结构”加入了反歧视规则的保护类别列表中。",
-        "California Post",
-        "版本预览"
-      ],
-      "media_failures": 2
-    },
     "zaihua_news/3357": {
       "id": "zaihua_news/3357",
       "title": "USTC builds structure-guided RNA foundation model published in Nature",
@@ -631,7 +602,8 @@
         "中国科学技术大学的一个团队推出了结构引导的 RNA 基础模型 structRFM。该论文于 11 月 5 日在线发表在《自然》杂志上。该模型将来自二级结构的碱基配对信息纳入序列预训练中，在约 2100 万对序列-结构示例上进行训练，并在多项任务上取得了先进的性能。",
         "该团队还开发了 MUSES，这是一种结合多个二级结构预测器预测结果以减少偏差的方法。其 3D 结构预测模块 Zfold 的表现与 AlphaFold 3 相当。数据、权重和代码均已公开。",
         "中国科大新闻网 | Nature"
-      ]
+      ],
+      "media_failures": 1
     },
     "zaihua_news/3358": {
       "id": "zaihua_news/3358",
@@ -1376,6 +1348,59 @@
       "first_seen_at": "2026-11-06T17:38:14.916314+00:00",
       "media_next_index": 0,
       "text_next_index": 0
+    },
+    "zaihua_news/3399": {
+      "id": "zaihua_news/3399",
+      "title": "TRAE accounts will be upgraded to Doubao Feishu accounts on November 18",
+      "paragraphs": [
+        "TRAE announced that, starting November 18, 2026, personal accounts on TRAE CN will be automatically upgraded to Doubao Feishu accounts. Enterprise customers are not affected. Code, projects, history, membership benefits, and all types of credits will be retained.",
+        "After the upgrade, the same account can be used to sign in to Doubao App, Feishu, PICO, Volcano Engine, Doubao Input Method, and other products. Users who do not accept the upgrade must contact customer service or close their account themselves before November 18.",
+        "Official documentation"
+      ],
+      "published": "2026-11-07T01:17:38+00:00",
+      "link": "https://t.me/zaihua_news/3399",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-07T02:17:40.111177+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3400": {
+      "id": "zaihua_news/3400",
+      "title": "🤖 Anthropic plans to launch its IPO roadshow next week, targeting a listing during the week of November 16",
+      "paragraphs": [
+        "People familiar with the matter said Anthropic plans to begin its IPO roadshow next week, pitching potential investors, and aims to go public during the week of November 16, before the U.S. Thanksgiving holiday.",
+        "The roadshow comes after two weeks of sharp volatility in tech stocks. The company had been expected to raise more than $80 billion at a $1.5 trillion valuation, but recent concerns about AI stocks and spending could lead it to seek a lower valuation.",
+        "The Information | Sina.com"
+      ],
+      "published": "2026-11-07T01:27:33+00:00",
+      "link": "https://t.me/zaihua_news/3400",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/v1dMej7LKpoUR_9GgbVVe06xSTe6NSNIpqcuxbP5je8LJck3P_OpiL6aQEDrlX6wiMr04iTPBrqah45ZBTT130XQIu_O2AVTnDX4tPVRIt-oQAfX2LSNP3ib8h_O_EERYYyVVUNzfzsfShfDSzeq39chf47TcHv4VugPQHYzGer2ysnJst0S8Od5bxHPiY-3bVcPqF7itvHDEtzkiXIB2hui9AZf-V0y-Ik6FnJWCa0nNJywPwK_GJzADxU3qh99eFKrre-EpYEKg18ithm6AFAenwz7Z8SbAGH6mmtO-07pUCOYd5cz4itlLM3hLB_A_l_YzoRSBWal_1qjxMJxBQ.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-07T02:17:40.111177+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3401": {
+      "id": "zaihua_news/3401",
+      "title": "📱 Microsoft is gradually ending its agreement to rent AI computing capacity from Oracle",
+      "paragraphs": [
+        "Microsoft is gradually winding down its agreement to rent AI computing capacity from Oracle, having declined to renew contracts in recent months. Oracle shares briefly fell about 3%. People familiar with the matter said Oracle’s hardware uses an older generation of Nvidia chips that no longer meets Microsoft’s requirements.",
+        "The agreement was announced in 2023 to support the AI version of Bing Search. Oracle said demand for AI infrastructure remains strong. In September, it renewed a GPU contract signed four years ago at a price 20% higher than the original. Microsoft declined to comment.",
+        "Bloomberg"
+      ],
+      "published": "2026-11-07T02:00:34+00:00",
+      "link": "https://t.me/zaihua_news/3401",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-07T02:17:40.111177+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
     }
   },
   "alerts_sent": [
@@ -1599,6 +1624,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3398,
+  "last_seen_post_id": 3401,
   "mode": "gemini_batch_v2"
 }
