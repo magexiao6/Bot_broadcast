@@ -672,9 +672,137 @@
     "zaihua_news/3453",
     "zaihua_news/3454",
     "zaihua_news/3455",
-    "zaihua_news/3456"
+    "zaihua_news/3456",
+    "zaihua_news/3457",
+    "zaihua_news/3458",
+    "zaihua_news/3459",
+    "zaihua_news/3460",
+    "zaihua_news/3461"
   ],
-  "pending": {},
+  "pending": {
+    "zaihua_news/3462": {
+      "id": "zaihua_news/3462",
+      "title": "Significant discrepancies in October sales data for HIMA’s three brands",
+      "paragraphs": [
+        "In October 2026, the sales volumes reported by the automakers for Seres Auto, Luxeed, and Stelato were 22,105, 6,090, and 6,174 vehicles, respectively; the rumored corresponding retail volumes were 21,095, 4,016, and 2,976 vehicles—the reported figures were higher by 1,010, 2,074, and 3,198 vehicles, or about 4.8%, 51.6%, and 107.5%, respectively.",
+        "Seres production and sales report｜Chery sales announcement report｜BAIC sales data report｜Rumored retail data｜Sina Auto methodology investigation"
+      ],
+      "published": "2026-11-10T11:44:19+00:00",
+      "link": "https://t.me/zaihua_news/3462",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn5.telesco.pe/file/P_RwenB--nwYF6T5EpfoLS7ceJJkLZlG9pJZoDp0lIcI1SznGp11cAiu3iOyxWoMg_d-5Ze_HmGlvvo44p4b_cjyrAHmYti68v-ScZpecPADMLJWoGvt39Hz_01IeFNoEJRKzfa1C-CpjdW0vckwWoGGC8FqYqthrYpCgYWd85NW_t5Nnk7W6jF14vvwJwH5nCd4N8vnNR5z39jMX2Gu0GNi6_1ZzEHcgywJPWhUnY9B3InkEllFiSkGRR-rrmcycCLrw6vSUDchZwQZFV0PXRIdwe9W8P-0LvbVRZhIWIHGqAxPp1yfAshv-NLT3eG13k-AQqv3_4ZMJ6aZPK-5jw.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-10T15:49:37.957265+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3463": {
+      "id": "zaihua_news/3463",
+      "title": "马斯克: Grok 4.8 enters the reinforcement learning phase",
+      "paragraphs": [
+        "马斯克 says he has abandoned JAX/SGLang and rewritten the entire reinforcement learning and inference stack from scratch in C/C++, which is why it took a bit longer. Pretraining is complete, and 4.8 has now entered the RL phase, with evaluation scores starting to rise.",
+        "Later this week, it will be rolled out gradually to Bot users. He says 4.8 has almost nothing in common with 4.7; it isn't impressive yet, but the foundation is right.",
+        "Elon Musk"
+      ],
+      "published": "2026-11-10T12:28:34+00:00",
+      "link": "https://t.me/zaihua_news/3463",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-10T15:49:37.957265+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3464": {
+      "id": "zaihua_news/3464",
+      "title": "Fireworks hit by new attack, customer data leaked",
+      "paragraphs": [
+        "Fireworks has confirmed a new round of hacking, with some customer billing information, model weights and datasets leaked; it is jointly investigating with Palo Alto Networks' Unit 42. Harvey says its customer data was not affected, while it remains unclear whether other customers and end users were compromised.",
+        "People familiar with the matter say some large customers paying millions of dollars a year are considering switching. Fireworks' annualized revenue had reached $1 billion in July this year, and it originally planned to launch a new funding round this week, targeting a valuation of at least $30 billion.",
+        "Sina Finance"
+      ],
+      "published": "2026-11-10T13:00:39+00:00",
+      "link": "https://t.me/zaihua_news/3464",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-10T15:49:37.957265+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3465": {
+      "id": "zaihua_news/3465",
+      "title": "🤖Anthropic switches to a whitelist system: mainland China, Hong Kong, and Macau are not on the list; effective November 12",
+      "paragraphs": [
+        "Anthropic has released its “Supported Regions Policy,” changing product availability to a whitelist system: Claude.ai, Claude Code, Cowork, the API, and Claude models offered through cloud platforms and authorized resellers are available only in the 185 countries and regions on the list; anything not listed is unsupported.",
+        "The policy’s three prohibitions are stricter than the list itself: use while physically located in an unsupported region is a violation, including employees of companies in supported regions traveling on business; use by entities registered or headquartered in unsupported regions, and by their personnel, is a violation regardless of whether the person is in a supported region; personnel of companies directly or indirectly majority-owned or controlled by entities in unsupported regions are likewise in violation.",
+        "The list includes Taiwan, China; for Ukraine, it excludes five regions—Crimea, Donetsk, Kherson, Luhansk, and Zaporizhzhia; mainland China, Hong Kong, and Macau are all not included. However, countries such as Iraq, Libya, Somalia, Sudan, and Palestine are included, showing that it is not copying the U.S. sanctions list wholesale but reflects Anthropic’s own compliance approach; territories and dependencies are counted with their parent country, e.g., Puerto Rico is treated as the United States.",
+        "Anthropic"
+      ],
+      "published": "2026-11-10T13:45:02+00:00",
+      "link": "https://t.me/zaihua_news/3465",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-10T15:49:37.957265+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3466": {
+      "id": "zaihua_news/3466",
+      "title": "🍎iPhone 20 Pro leak: all-solid-state buttons, no front cutouts",
+      "paragraphs": [
+        "Multiple leaks claim that Apple may launch the iPhone 20 series in September 2027 to mark the 20th anniversary of the iPhone. The Pro models are reportedly being developed with Samsung using a quad-curved display with equal depth on all four sides, concealing the metal frame as much as possible; the screens may measure 6.41 and 6.96 inches.",
+        "It is also testing under-display Face ID and a front camera, solid-state buttons with no physical travel, and may feature a second-generation 2nm A21 Pro chip, in-house stacked sensors, and a silicon-anode battery.",
+        "新浪科技"
+      ],
+      "published": "2026-11-10T14:44:13+00:00",
+      "link": "https://t.me/zaihua_news/3466",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/ZPdwlSR61PHJ9UmYL784Kh3_cRYcTk4buCsgnSU43XY08vWwZEoTC_LKNAyBwWWvNZ7TvLZmmKHvW1c5xFWu9nYJjVCw6DksTYLVgd0ZOHnGNENWGpzwOPurqJhcv0RiqWJliC4NRvJRBJfZ4wGzLNov-JmSj7cp8IOqciV_S3sPKwKqApE4aLC0Cv3Vo7lRBO5c6Y1CVCzTx1hWBuOeMw0D3m1oQ9_fVkVrKXuvpCRaVmtOx3pryEeNnwg3wtDHvD3uxUEBfVz4l7JFSDxYcjW2ImMw9Nd-OB26dymSB7S4divMl9RKqS1Ql44DM92hEWs0eU-oTiCCDeyY0VImrA.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-10T15:49:37.957265+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3467": {
+      "id": "zaihua_news/3467",
+      "title": "MiniMax open-sources MiniMax H3 Image, bringing 4K image generation into the ten-second range",
+      "paragraphs": [
+        "MiniMax has released the MiniMax H3 Image model with open weights. The model supports text-to-image, image reference, and image editing, and can generate a 4K image at 4096×4096 resolution—about 16 million pixels—in around 10 seconds. It supports up to 16 input reference images, with improvements focused on complex instruction understanding, multi-image referencing, and visual detail.",
+        "The company also launched a Highspeed version; standard mode is about 1.5 to 2 times faster than mainstream tools, while Highspeed mode is 3 to 4 times faster. The model is now available on Hugging Face and the open platform API, and has been integrated into products including MiniMax Code and Hailuo. The standard version costs about $0.069 per 4K image, with a first-week promotional price of about $0.034.",
+        "HuggingFace"
+      ],
+      "published": "2026-11-10T15:39:46+00:00",
+      "link": "https://t.me/zaihua_news/3467",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-10T15:49:37.957265+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3468": {
+      "id": "zaihua_news/3468",
+      "title": "Google releases Gemini 4 Carbon model",
+      "paragraphs": [
+        "Google announces the launch of its next-generation frontier model Gemini 4 Carbon, focused on cybersecurity and long-horizon tasks. It ranks first on the Artificial Analysis Intelligence Index v5.0 with a score of 59, leading on benchmarks including vulnerability discovery, exploitation, and remediation.",
+        "Starting this week, it will be released to a small group of cybersecurity defenders, then gradually expanded to trusted partners and developers. Pricing is the same as Argon: $2 per million input tokens and $10 per million output tokens.",
+        "Google"
+      ],
+      "published": "2026-11-10T15:48:37+00:00",
+      "link": "https://t.me/zaihua_news/3468",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-10T15:49:37.957265+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    }
+  },
   "alerts_sent": [
     "zaihua_news/2970:no_match",
     "zaihua_news/2999:no_match",
@@ -896,6 +1024,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3456,
+  "last_seen_post_id": 3468,
   "mode": "gemini_batch_v2"
 }
