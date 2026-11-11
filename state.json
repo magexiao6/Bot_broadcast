@@ -700,7 +700,129 @@
     "zaihua_news/3482",
     "zaihua_news/3483"
   ],
-  "pending": {},
+  "pending": {
+    "zaihua_news/3484": {
+      "id": "zaihua_news/3484",
+      "title": "🐧 Tencent Yuanbao Search Officially Launches",
+      "paragraphs": [
+        "Tencent's all-new search product \"Yuanbao Search\" launched on November 11. It can be used via  so.qq.com  or switched to in the latest version of QQ Browser. The product rebuilds the search pipeline based on the Yuanbao large model, covers web pages across the internet and academic literature, and connects to 157 authoritative sources. It can also search content in the Tencent ecosystem, such as WeChat Official Accounts.",
+        "Yuanbao Search supports text, voice, and photo search. Ads are separately labeled as \"Related Ads\" and can be collapsed; search results prioritize authoritative institutions and official sources.",
+        "Sina Finance"
+      ],
+      "published": "2026-11-11T09:00:46+00:00",
+      "link": "https://t.me/zaihua_news/3484",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-11T16:27:10.956158+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3485": {
+      "id": "zaihua_news/3485",
+      "title": "Stripe announces OpenRouter is now part of the company",
+      "paragraphs": [
+        "Stripe announces that OpenRouter has joined the company. Stripe says it is building economic infrastructure for AI and, together with OpenRouter, will help businesses explore new models and optimize token routing and usage.",
+        "Stripe(@stripe)"
+      ],
+      "published": "2026-11-11T09:46:17+00:00",
+      "link": "https://t.me/zaihua_news/3485",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/NoiBfHR6_lpy39xxz6ftCsSYDuczAbivCK3lDGwNE7s9yIMxiGsz3AExTwdjvwu6MWIM3KV6eSzGYGI8Ll5oGyAVV9ni09krI7XRAZigxxL_IHFcCiAVaOTNRpvAC73MSBuXoTKb4hKItIVnXJudkhmwPk2nZNNaXuqZzc6uASxnP_TCehKSa7aDjaPf93eIB82k4Qwo_I-KNxeLtBLM5Lt01VaS9Qmlop7Gsc8AELgl93OoIvG0DozdcmFWznQYHPDXVrjY_88xGAgJb2N6ng7BmOtFKF7CL_kcoHAeEX2YeCfXZgaB84n7t677EMe0D9Ni0ub7dSQ8dS5_VbU-sg.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-11T16:27:10.956158+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3486": {
+      "id": "zaihua_news/3486",
+      "title": "Transition Period for Taxation of Offshore Trust Income Ends, Cumulative Filings Exceed 160 Billion Yuan",
+      "paragraphs": [
+        "On November 11, the State Taxation Administration said that the 90-day transition period for taxing offshore trust income had ended smoothly, with cumulative individual income tax filings exceeding 160 billion yuan, of which more than 120 billion yuan was collected in October alone, driving national individual income tax revenue in October to grow by nearly 90%.",
+        "On July 24, 2026, the Ministry of Finance and the State Taxation Administration announced regulations stipulating that no late payment surcharges would be imposed for completing filing and tax payment within the 90-day transition period. The tax authorities said that next they would urge those who did not voluntarily file or made false filings to pay the outstanding amount and impose late payment surcharges, and those who still failed to correct would be placed on file for inspection in accordance with the law.",
+        "Xinhua Net"
+      ],
+      "published": "2026-11-11T10:36:09+00:00",
+      "link": "https://t.me/zaihua_news/3486",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-11T16:27:10.956158+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3487": {
+      "id": "zaihua_news/3487",
+      "title": "AMD uses AI to move cold memory pages to flash, claims it can cut server costs by 80%",
+      "paragraphs": [
+        "AMD has turned the Mext technology it acquired into a software package that uses an AI model to swap memory pages between DRAM and cheaper NVMe flash before the operating system or applications notice, thereby reducing the memory servers require.",
+        "AMD says replacing half of DRAM with flash can still retain up to 99% of performance; it estimates it can reduce enterprise server costs by up to 83%. The solution requires purchasing a Mext license together with Epyc servers.",
+        "Theregister"
+      ],
+      "published": "2026-11-11T11:16:16+00:00",
+      "link": "https://t.me/zaihua_news/3487",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-11T16:27:10.956158+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3488": {
+      "id": "zaihua_news/3488",
+      "title": "📱 ByteDance Prepares Muse-Like Agent, Aims to Catch Up With OpenAI by 2030",
+      "paragraphs": [
+        "ByteDance plans to release a Meta Muse-like AI assistant in the coming weeks to consolidate its lead in AI video and hopes the product will help it narrow the gap with top US labs within three years.",
+        "Co-founder Zhang Yiming presented the plan to the AI team at an internal all-hands meeting, saying it would take until at least 2029 or 2030 to match Anthropic and OpenAI at the frontier; the company will invest up to $70 billion to build the Seedance video AI platform and does not advocate relying on model distillation.",
+        "Bloomberg | The Economic Times"
+      ],
+      "published": "2026-11-11T12:31:38+00:00",
+      "link": "https://t.me/zaihua_news/3488",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/gtidIKa4DqwPmdBUy4elFhXN1Ovwh6-D8uPy9QQF6BdibzH-GYK56pD1i59ggZtNHVEjyf1pe_kyNmlTEmPyb61F5Xnv2KuoNTedeq0SMS2gxW3RLpVVPfFvRHL-16DvVi9HVHeQPcnnk6VU-nZccSuCzhi5SAkHPO0vK-mlw2GKwTdlf81YpVRfCvn4RwKmOEQO1eUJj0E8-m7S9LEn3-3Cx99ITWlQnUbsjDeF2QpYMevGX2ptlrC_QdHZX_Ds9pCQibB189Ov62PZ55b0aOjcWpgIIDmsJn9KJC_HeR3p-aLlDjZalp76qT5Ua43vr2bGOwwOySS9cqswrEnwAg.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-11T16:27:10.956158+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3489": {
+      "id": "zaihua_news/3489",
+      "title": "The Information investigation: Alice Huang helped 240,000 Nvidia chips enter China",
+      "paragraphs": [
+        "The Information investigation says Alice Huang, using her relationship with Nvidia CEO Jensen Huang, helped about 240,000 banned chips enter China, mostly H100 and H200 chips, involving roughly $7.5 billion in AI GPU imports and companies including Shanghai Century Litong and Singapore-based Megaspeed.",
+        "Jensen Huang has admitted to an extramarital affair with this Megaspeed executive, who is also suspected of being a Chinese Ministry of State Security officer. The Chinese Embassy denied any connection to her, and the FBI is investigating the matter.",
+        "Tom's Hardware"
+      ],
+      "published": "2026-11-11T14:41:11+00:00",
+      "link": "https://t.me/zaihua_news/3489",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-11T16:27:10.956158+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3490": {
+      "id": "zaihua_news/3490",
+      "title": "Voyager 1 to Reach One Light-Day from Earth, NASA Invites the World to Flash Lights",
+      "paragraphs": [
+        "NASA invites the public to face the sky after sunset on November 17 and use a flashlight or the official website to flash “VGR” in Morse code, paying tribute to Voyager 1. At 10:16 UTC on November 18, it will become the first human-made object one light-day from Earth.",
+        "Voyager 1 is about 25.9 billion kilometers from Earth, traveling at about 61,000 kilometers per hour, and next year marks the 50th anniversary of its launch. Its cameras were turned off long ago, so it cannot see Earth’s lights.",
+        "Theregister"
+      ],
+      "published": "2026-11-11T15:19:43+00:00",
+      "link": "https://t.me/zaihua_news/3490",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-11T16:27:10.956158+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    }
+  },
   "alerts_sent": [
     "zaihua_news/2970:no_match",
     "zaihua_news/2999:no_match",
@@ -922,6 +1044,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3483,
+  "last_seen_post_id": 3490,
   "mode": "gemini_batch_v2"
 }
