@@ -712,7 +712,97 @@
     "zaihua_news/3495",
     "zaihua_news/3496"
   ],
-  "pending": {},
+  "pending": {
+    "zaihua_news/3497": {
+      "id": "zaihua_news/3497",
+      "title": "People familiar with the matter: \"Tencent is laying off 50%\" is a rumor and a misreading",
+      "paragraphs": [
+        "On November 12, a person close to Tencent said that online claims that \"Tencent is laying off 8,000 people\" and \"laying off half its workforce\" are completely untrue, and that the so-called \"50% layoffs\" is a rumor and a misreading.",
+        "Previously, during Tencent's 28th anniversary Linktime online livestream, management said it would accelerate organizational transformation. Unlike the cost-cutting and efficiency-improvement efforts of a few years ago, this time, as it faces the AI era, it is more focused on \"improving efficiency\": half of the people will safeguard the core business and improve efficiency in their work, while the other half will explore new areas such as AI Native.",
+        "Sina Finance"
+      ],
+      "published": "2026-11-12T04:23:30+00:00",
+      "link": "https://t.me/zaihua_news/3497",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-12T11:55:08.159747+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3498": {
+      "id": "zaihua_news/3498",
+      "title": "Dario Amodei: AI Expected to Conquer Cancer and Other Hard-to-Treat Diseases Within 10 Years",
+      "paragraphs": [
+        "Anthropic CEO Dario Amodei predicts that advances in AI could make cancer, Alzheimer's disease, heart disease and mental illnesses relics of the past within 10 years.",
+        "Anthropic has recently acquired several biotechnology startups, disclosed last month that it has launched in-house drug development, and set up a laboratory in San Francisco to study how AI can support basic biological research. In August this year, Dario said on X that the best way to convince AI skeptics is to actually cure cancer.",
+        "Sina Finance"
+      ],
+      "published": "2026-11-12T07:26:22+00:00",
+      "link": "https://t.me/zaihua_news/3498",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-12T11:55:08.159747+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3499": {
+      "id": "zaihua_news/3499",
+      "title": "🍎Apple explains the Secure Isolation Zone in detail: preventing covert recording by covering the indicator dot",
+      "paragraphs": [
+        "Apple published a blog post on November 12 detailing the \"Secure Isolation Zone\" (Secure Exclaves) architecture built for environmental sensing: audio and video are processed inside an isolated runtime, and the main system, apps and Apple itself cannot read the raw data; it only outputs metadata such as whether a face or a voice has been recognized.",
+        "This architecture is already used in HomeView facial recognition and in the indicator dot on the iPhone 18 Pro screen: the indicator must confirm that the dot has been lit for at least three seconds and verify the pixel color and brightness before audio is allowed.",
+        "Apple"
+      ],
+      "published": "2026-11-12T09:13:48+00:00",
+      "link": "https://t.me/zaihua_news/3499",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/pyPIv3zOddxckM9mrxKy8TtHOyIBa1BglfnhXZWMMr32ipp_DxhJoR2LR4h9piOf8J13ZATBnfoHi6ZAc9g9rnGidZVrqwdJJRCGGOhTa4NZyqkTMhWRcXXd3k6WPjaG29VgcRGHcNsYCmmrG2K1U97IkwU_PoZJLIz_Y4BYOvPbRsURZ_-rBlpeQfHE-T6FwE5Nvq5RNp6Fe2Adrg_XSeBEOJz7OY9fxHGFruMq163V-50RFnZ0jPqYZRccdmHUiezytpudbdMp89Pdejc2YAO03t5VPC3QpGPJzfV8Zk76Otq9GlUNKKfwGlScwh_WTWNn4uHAf0qwACpLe32dvg.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-12T11:55:08.159747+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3500": {
+      "id": "zaihua_news/3500",
+      "title": "Eli Lilly's oral weight-loss drug approved in China, the country's first oral GLP-1",
+      "paragraphs": [
+        "Eli Lilly's oral GLP-1 weight-loss drug orforglipron calcium tablets (brand name Muyouda) was approved by the National Medical Products Administration on November 12 as a Class 1 new drug for adults with obesity or overweight and at least one weight-related comorbidity, making it the country's first approved oral GLP-1 weight-loss drug. The drug is taken once daily without food or water restrictions and will compete for the market with once-weekly injectable weight-loss drugs from Novo Nordisk, Pfizer and Innovent Biologics. Its type 2 diabetes indication is still under review; its price and launch date have not been announced.",
+        "Reuters"
+      ],
+      "published": "2026-11-12T10:10:12+00:00",
+      "link": "https://t.me/zaihua_news/3500",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-12T11:55:08.159747+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3501": {
+      "id": "zaihua_news/3501",
+      "title": "Samsung patent: Galaxy Watch measures visceral fat with radar",
+      "paragraphs": [
+        "A new Samsung patent shows that future Galaxy Watches may use ultra-wideband radar to transmit signals to the abdomen, then combine bioelectrical impedance readings with height, weight, age, and sex to estimate subcutaneous and visceral fat.",
+        "Samsung watches have used BIA sensors to measure body fat since the Galaxy Watch 4 in 2021, but they can only estimate overall composition; visceral fat usually requires CT or MRI. The patent does not specify which model it is intended for, and the watch would need an added UWB radar, which could appear on the Galaxy Watch 10.",
+        "Android Headlines"
+      ],
+      "published": "2026-11-12T11:05:42+00:00",
+      "link": "https://t.me/zaihua_news/3501",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/pfUwaXRcObNYAVshYbhcB3wxF6ACpyZnaWf6hj7e6RLHqlKJeRQvFMuqi8FZPH-kp3sjXPet7UaQUkYyZIAziTtvdejWOMO8oC1NsCJzeV_4YtEqx5p4lKzLHMkB71oh19mq0P9eBSdDLSJb6TYrRO0BmZtzx0uXz-kfzRd81aEmTP78aA0YGz8uBXPe0cIyMhxDWauNtzxgEjvytAoNv6Kt-i0Mog7EE5AyfwnBJFC0ZL6Vo9HOwJquUR81CNgWgapVRLqEXEXjyTjYTs9uWc0KhTUAs9laja3axZvXa_s-30tJRERjZAJ7YvK1EmvkZzgiOtNHlzJzRVN_8aUeIw.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-12T11:55:08.159747+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    }
+  },
   "alerts_sent": [
     "zaihua_news/2970:no_match",
     "zaihua_news/2999:no_match",
@@ -934,6 +1024,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3496,
+  "last_seen_post_id": 3501,
   "mode": "gemini_batch_v2"
 }
