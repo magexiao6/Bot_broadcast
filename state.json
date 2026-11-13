@@ -729,7 +729,173 @@
     "zaihua_news/3513",
     "zaihua_news/3514"
   ],
-  "pending": {},
+  "pending": {
+    "zaihua_news/3515": {
+      "id": "zaihua_news/3515",
+      "title": "Shanghai announces findings of investigation into gene-editing incident at Shanghai Jiao Tong University School of Medicine",
+      "paragraphs": [
+        "The child patient involved was diagnosed with the rare disease Snijders Blok-Campeau syndrome. In 2023, family members contacted Qiu Moumou's team to customize a gene-editing therapy; after the injection in March 2025, the child died of thrombotic microangiopathy; the paper was published in Nature in February 2026.",
+        "The investigation found deficiencies in preclinical research, ethical review, and informed consent, and some personnel accepted about 1.06 million yuan in property from the family. Qiu Moumou and Yang Mou were dismissed and had their qualifications revoked for 5 years, and the relevant institutions were summoned for talks, ordered to rectify, and given administrative penalties.",
+        "Xinhua"
+      ],
+      "published": "2026-11-13T09:25:24+00:00",
+      "link": "https://t.me/zaihua_news/3515",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-13T15:36:59.046327+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3516": {
+      "id": "zaihua_news/3516",
+      "title": "Early Python contributor Tim Peters dies at 74",
+      "paragraphs": [
+        "Python creator Guido van Rossum announced that early Python community contributor Tim Peters has died at the age of 74.",
+        "He was Python's second real user, the author of the Timsort sorting algorithm, the writer of The Zen of Python (PEP 20), and had served on the Python Software Foundation board for 13 years.",
+        "It's FOSS(@Itsfoss)"
+      ],
+      "published": "2026-11-13T09:55:49+00:00",
+      "link": "https://t.me/zaihua_news/3516",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/ttlQXGHM4JvAU4a43F77DcZGx0ThzrzaRG8Y6tWBEoyk4VXI0J1rX3xjYvWPGBkQtzC2BgcK79-3nFhU3Pwz40B9NiqcrrdpxM9qlHDBVMIHC6cAfEzhPyHJAgIIIineSiiJ7YK_S7CmnVATIN4AgJBnKmrp_eirLG3BU_ygO1u3u3gvtbRTL1qtM8QGMKxsVSfjI3BCgIVtsoZ8_4U354pTj8hnD2o0VmQF7mqPURobypBo0-E0DO-Esd46GQkfCjyc9TUWT-Piv9jkbrNE0kjrVtviMXLZhdfZBaanqR6Quy41xZ7ErL3vVYSkQFhKwrwkmWrIUhjsxftxXExAtw.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-13T15:36:59.046327+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3517": {
+      "id": "zaihua_news/3517",
+      "title": "🤖 Claude.ai, Claude Code, including login, has been experiencing numerous errors",
+      "paragraphs": [
+        "Official: We are investigating the authentication issues users are encountering when logging in to Claude.ai and Claude Code. We will provide the latest updates as soon as possible.",
+        "Claude is down! It's not an account ban, don't panic!",
+        "Claude"
+      ],
+      "published": "2026-11-13T10:18:11+00:00",
+      "link": "https://t.me/zaihua_news/3517",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-13T15:36:59.046327+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3518": {
+      "id": "zaihua_news/3518",
+      "title": "杜罗夫评黄仁勋 Ousted by the Board: Don't Set Up a Board",
+      "paragraphs": [
+        "帕维尔·杜罗夫在 Telegram 发文称, 黄仁勋犯了's rookie mistake—he set up a board. 杜罗夫 compared: he himself was kicked out by a board in 2014 for refusing a spy, while in 2026 黄仁勋 was similarly kicked out for saying \"yes\" to a spy.",
+        "杜罗夫调侃 \"The board will always screw you,\" and advised founders not to set up a board, but to be their own board.",
+        "Pavel Durov"
+      ],
+      "published": "2026-11-13T10:58:23+00:00",
+      "link": "https://t.me/zaihua_news/3518",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-13T15:36:59.046327+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3519": {
+      "id": "zaihua_news/3519",
+      "title": "🌙 Moonshot AI restructures corporate structure to pave way for Hong Kong IPO",
+      "paragraphs": [
+        "Chinese AI startup Moonshot AI is completing a corporate restructuring to pave the way for an initial public offering, with plans to list in Hong Kong.",
+        "According to people familiar with the matter, its holding company based in the Cayman Islands will be retired, and shares held by early USD investors will be transferred to the company's main operating entity in China.",
+        "The Wall Street Journal"
+      ],
+      "published": "2026-11-13T11:29:46+00:00",
+      "link": "https://t.me/zaihua_news/3519",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-13T15:36:59.046327+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3520": {
+      "id": "zaihua_news/3520",
+      "title": "📱 Microsoft Outlook, Teams global outage lasts over 12 hours",
+      "paragraphs": [
+        "Microsoft Outlook, Teams and Copilot remained down on November 13, with the outage lasting more than 12 hours and disrupting communications for businesses and governments worldwide. Microsoft said the cause was a server issue, found no malicious activity, had expanded remediation, and was seeing signs of stabilization.",
+        "Some government agencies in Australia, Japan and the United States were affected; Euronext email was disrupted; and some financial institutions in Taiwan switched to fax to confirm transactions. This is the second outage of Microsoft 365 services this year.",
+        "Reuters"
+      ],
+      "published": "2026-11-13T12:21:42+00:00",
+      "link": "https://t.me/zaihua_news/3520",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-13T15:36:59.046327+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3521": {
+      "id": "zaihua_news/3521",
+      "title": "GTA6 Can Be Streamed on Douyin After Restrictions on Violent and Gory Imagery",
+      "paragraphs": [
+        "Grand Theft Auto 6 will be officially released on November 18, 2026, at 19:00. Douyin has issued live-streaming compliance guidelines to streamers, focusing on restricting scenes such as large-scale blood splatter, dismemberment and decapitation, and shooting law enforcement officers. It recommends using filters or colorblind mode to change red blood to green or gray; violating content will still be handled in accordance with community guidelines.",
+        "Previously, in 2016, the Ministry of Culture publicly named and criticized 19 online live-streaming platforms, and GTA5 was listed as prohibited live-streaming content. Platforms such as Bilibili and Douyu successively banned it from streaming.",
+        "GTA6 (Grand Theft Auto 6) Douyin Streaming Compliance Guidance"
+      ],
+      "published": "2026-11-13T13:28:31+00:00",
+      "link": "https://t.me/zaihua_news/3521",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn5.telesco.pe/file/mgCc0WIAKsl7C7C7JxV0u6HHtnzx6Vc9IZP_-MEEwtS-8Uvhr1ogU1cw14ggfOt-Pn0aE89wHjO5eshcW_H1k2ae2BKPjs7UEMxjUlQ_gbiSzd7L-LbijXLH3UXVxfMF9KtBza4hl505YjY2KtM5Gd7QHsN0x1Vt1XFNbejTnTyLIU0mx3wzShiEX9IwnFOd4C4v-IGowbUcw051INL0UfKOr_Ylcvja2nc4T1ntZ-puPcYrDy0Sc91oulBlZr4T5LlPq6JLKoU3XGy9no-wtpLhCsGG84_KWgxw51Svy5aAVn2gsBj3GJol_IaevxDA0SmmcfYU3DaSUp7Qq0YpSg.jpg"
+        },
+        {
+          "type": "photo",
+          "url": "https://cdn5.telesco.pe/file/ewKfWHMN-oTSayvLSsY2Eo0suXbqODQzjx27Ez6PrQfErKix1ECigy92bwjzVKajlJbdFDKBzAd_RyB3_iXYxs8kjwkU5h5UUZrGjNjpA_w2StwHqR-2HSoxALRemRqcEMmhqGNflie2nkwkoGtYkgsoD62Hw5swQt3qgDrxjRdk1O_WOjGFvHOH66dcqAThQhcWf9JfubrBJCInQe_9GWf_5S-tqDDOZzZnLEsrhQYA0boZIQ-YIqNSLMd648segUvD3eR9BE8TZQxA-jLKC69RFcQ_j_tAK0H5bgztcHdBGjnOK6fuKFz1RXIRV0fjuXqd3yCS8AJ9evacBULVCg.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-13T15:36:59.046327+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3524": {
+      "id": "zaihua_news/3524",
+      "title": "🤖 DeepSeek Open Full-Suite App API",
+      "paragraphs": [
+        "Today, DeepSeek opened the full-suite app API. By enabling the corresponding parameters in the existing API, developers can obtain conversational capabilities such as deep-thinking search, file input, link reading, and voice, while the server automatically handles tool calls and context stitching.",
+        "The V4.1-Flash model is now supported on three endpoints; Search, Fetch, OCR, ASR, and TTS can be called separately. The official team has also open-sourced a front-end demo that can import chat history.",
+        "DeepSeek",
+        "Update: \ndeepseek-ai/chat-demo : You can now deploy and use the DeepSeek web version locally via the API.",
+        "Try it at: https://deepseek-ai.github.io/chat-demo/"
+      ],
+      "published": "2026-11-13T14:28:36+00:00",
+      "link": "https://t.me/zaihua_news/3524",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn5.telesco.pe/file/lRkvFTwrqjJk9Um5YtyndVQDoJ96kuewa4Gchy6ktJNBqzTyI3PGhfwaqHzPT2oACOk2o7Y4AFmqsDwmDAQUV_oCBhUH5NMLwlDOTnZjJij01PUXJzdaKnZ02Ck4o6ocWQYFJe4VFjECOi83-fbfccmy7r_uGAIn_-yUA-_0ifG759q8-fsRRv3ETzWYjV-v2SBtfRv8NA6CovDIiGmxVYjIEJvgPbQyjsDt_TMsFRD66FXTpaBBeCtbB5wEvCzLjqenLxN7AIeSRCE33wBn3d3Ut_eoQrvcCqIwQPRH8l5MaxAovq3Qo_ouVt9tcU0fCnCmjtKv1FeJ5dnmsHEFzg.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-13T15:36:59.046327+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3525": {
+      "id": "zaihua_news/3525",
+      "title": "SpaceX lays off about 60 from Grok Imagine team",
+      "paragraphs": [
+        "马斯克's SpaceX last week laid off about 60 R&D staff from Grok Imagine, retaining only a small number of staff to keep the video and image generation tool basically running. The product can still be used normally at present, but its prospects are unclear after the dedicated team was disbanded.",
+        "In February this year, after SpaceX acquired xAI for $250 billion in stock, it shifted its focus to AI coding tools and the GrokBot agent; in August, it acquired AI coding startup Cursor for $60 billion.",
+        "新浪科技"
+      ],
+      "published": "2026-11-13T15:01:08+00:00",
+      "link": "https://t.me/zaihua_news/3525",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-13T15:36:59.046327+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    }
+  },
   "alerts_sent": [
     "zaihua_news/2970:no_match",
     "zaihua_news/2999:no_match",
@@ -951,6 +1117,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3514,
+  "last_seen_post_id": 3525,
   "mode": "gemini_batch_v2"
 }
