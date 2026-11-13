@@ -717,7 +717,17 @@
     "zaihua_news/3500",
     "zaihua_news/3501",
     "zaihua_news/3502",
-    "zaihua_news/3503"
+    "zaihua_news/3503",
+    "zaihua_news/3504",
+    "zaihua_news/3505",
+    "zaihua_news/3506",
+    "zaihua_news/3507",
+    "zaihua_news/3508",
+    "zaihua_news/3509",
+    "zaihua_news/3510",
+    "zaihua_news/3511",
+    "zaihua_news/3513",
+    "zaihua_news/3514"
   ],
   "pending": {},
   "alerts_sent": [
@@ -941,6 +951,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3503,
+  "last_seen_post_id": 3514,
   "mode": "gemini_batch_v2"
 }
