@@ -830,116 +830,15 @@
     "zaihua_news/3623",
     "zaihua_news/3624",
     "zaihua_news/3625",
-    "zaihua_news/3626"
+    "zaihua_news/3626",
+    "zaihua_news/3627",
+    "zaihua_news/3628",
+    "zaihua_news/3629",
+    "zaihua_news/3630",
+    "zaihua_news/3631",
+    "zaihua_news/3632"
   ],
-  "pending": {
-    "zaihua_news/3627": {
-      "id": "zaihua_news/3627",
-      "title": "💬 WeChat Xiaowei’s testing scope has expanded, reaching 30 million daily active users",
-      "paragraphs": [
-        "Tencent stated in its Q3 2026 financial report that the testing scope of WeChat Xiaowei has expanded, with daily active users reaching 30 million, and it is gradually being integrated into scenarios such as WeChat chats, Moments, Official Accounts, and Channels.",
-        "Xiaowei uses a customized WeLM model optimized for cost efficiency. Tencent says its inference cost is low and continues to decline; in the future, some inference tasks are expected to run on users’ devices.",
-        "WeChat Pai | WeChat(@Weixin_WeChat)"
-      ],
-      "published": "2026-11-18T11:35:49+00:00",
-      "link": "https://t.me/zaihua_news/3627",
-      "media": [
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/kq3auze-VBNJ4Y3Yy6ZpdV4MMuCIoF66oUN6TOez82fyNpazu34ylVUTkYBr-DuDpgTFQkyVpnAKYIcyw-aHUvCM4UZCX66ogf73BqAwA-FAiMRH0luPcHgkZn5nCQc_hhXVEvoN5uypPA5KLRfKeG3zadcML9SFWT_1MDLDw9la00NVIRWxpzhTwscfA7QgvNC_ZvI3Iym8SmNhmE2ybb6diwC23zofGCxjVR5WImZbWqh3q_aO0bF6Bl4OADbeGlDtRIwO80km2L4LrNOHlH0uUbIceTkdiL9ri5NeeidvxmasUKFi6v7cn3jfYSOrRhEzN9JgkBF4i2Pgzn6l-A.jpg"
-        }
-      ],
-      "media_sent": false,
-      "first_seen_at": "2026-11-18T19:33:37.563365+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0
-    },
-    "zaihua_news/3628": {
-      "id": "zaihua_news/3628",
-      "title": "Nine departments plan to promote “vehicle-battery integrated scrapping” for new energy vehicles",
-      "paragraphs": [
-        "The Ministry of Commerce and eight other departments on November 17 proposed revising the Implementation Rules for the Measures for the Administration of Scrapped Motor Vehicle Recycling, to promote the recycling and dismantling of new energy vehicles through “vehicle-battery integrated scrapping,” and to study and formulate a digital identity management system for power batteries and related administrative regulations.",
-        "The interim measures implemented in April this year stipulate that if a scrapped new energy vehicle is missing its power battery, the vehicle shall be deemed incomplete. The new system is intended to further clarify requirements for the recycling stage and record battery circulation information; the specific management measures remain to be formulated.",
-        "华尔街见闻"
-      ],
-      "published": "2026-11-18T12:23:21+00:00",
-      "link": "https://t.me/zaihua_news/3628",
-      "media": [],
-      "media_sent": false,
-      "first_seen_at": "2026-11-18T19:33:37.563365+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0
-    },
-    "zaihua_news/3629": {
-      "id": "zaihua_news/3629",
-      "title": "Cambridge Dictionary's 2026 Word of the Year is \"human\"",
-      "paragraphs": [
-        "Cambridge Dictionary has named \"human\" (人类) as its 2026 Word of the Year, defining it as having the qualities, flaws, and emotions characteristic of humans, as distinguished from gods, animals, or machines.",
-        "Lexicographer Colin McIntosh said that AI is changing the way people talk about \"the human,\" and that this renewed focus on the concept of the human captures the mood of the times. Bill Gates, Geoffrey Hinton, and others have also spoken out this year about humanity's place in the AI era.",
-        "University of Cambridge"
-      ],
-      "published": "2026-11-18T13:20:17+00:00",
-      "link": "https://t.me/zaihua_news/3629",
-      "media": [],
-      "media_sent": false,
-      "first_seen_at": "2026-11-18T19:33:37.563365+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0
-    },
-    "zaihua_news/3630": {
-      "id": "zaihua_news/3630",
-      "title": "DeepSeek server-side search and web crawling are now free",
-      "paragraphs": [
-        "DeepSeek Starting at 12:00 Beijing time on November 18, 2026, server-side search and web crawling triggered when calling models will no longer be billed separately; billing will be based only on model Token usage. Web-enabled tools, the Anthropic API's web_search tool, and the Responses API's web_search tool will trigger these services.",
-        "The previously launched Search and Fetch APIs are billed per request, at CNY 5 per 1,000 successful requests.",
-        "IT之家"
-      ],
-      "published": "2026-11-18T13:44:50+00:00",
-      "link": "https://t.me/zaihua_news/3630",
-      "media": [],
-      "media_sent": false,
-      "first_seen_at": "2026-11-18T19:33:37.563365+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0
-    },
-    "zaihua_news/3631": {
-      "id": "zaihua_news/3631",
-      "title": "After flying  for 49 years, the Voyager 1 probe reached a distance of one light-day from Earth, about 26 billion kilometers",
-      "paragraphs": [
-        "Voyager 1 reached a point about 26 billion kilometers from Earth at just after 5:16 a.m. EST on November 18, taking about 49 years, becoming the first human-made object to be one light-day from Earth. It takes 24 hours for radio signals to travel from Earth to the probe.",
-        "NASA can still send and receive signals with the probe, but round-trip communication takes about two days. Currently, only two science instruments on Voyager 1 are still operating; NASA recently adjusted the power supply to the equipment, expecting to save 10 watts of power and extend the mission by about two and a half years.",
-        "CNN | NASA Science"
-      ],
-      "published": "2026-11-18T14:42:58+00:00",
-      "link": "https://t.me/zaihua_news/3631",
-      "media": [],
-      "media_sent": false,
-      "first_seen_at": "2026-11-18T19:33:37.563365+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0
-    },
-    "zaihua_news/3632": {
-      "id": "zaihua_news/3632",
-      "title": "Xint disclosed 5 nginx vulnerabilities that can be used to target host root",
-      "paragraphs": [
-        "Xint, publicly disclosed as NGINX2Root: 5 nginx vulnerabilities plus a Linux kernel flaw; when chained, they allow an nginx visitor to obtain host root. Among them, CVE-2026-123007 is an HTTP/2 flow-control memory corruption that allows unauthenticated command execution in a worker.",
-        "nginx 1.30.7 and 1.31.9 fixed 10 CVEs on November 18; Rapid7 has released a PoC, and there is no in-the-wild exploitation yet; if upgrading is not possible, external HTTP/2 must be disabled.",
-        "NGINX2Root | Precursor Security"
-      ],
-      "published": "2026-11-18T16:21:52+00:00",
-      "link": "https://t.me/zaihua_news/3632",
-      "media": [
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/mgAX7lAYEvLlL92Lqk90kjjQdjT5c6K5roakXXr9UcDZOVkBq0dEl-powRx4_xA8zzYYvqAVQ_ytYx2bmnALzSQGQSVuR0tm5tpBCQq1E-ZfHgZgjw0o8z5aFP3Gv0Rx75t7VhUwV_OvmYSgFr_Dp2Xfn8Uxf2IR6AxkL7ERk1rjy6jMqoYWMbrwZNIsv3vyxI-TqIuLim-W7DK4yGl-gzfkHbpS6-ZEhpOvWmk0PUL4icJHwj-PuPUU1H3xpcwLDOL-sk_WbCIWsZL1ionRf-yvoFIyvCKpSeBZQfAVDosFkhOGb0nCIx9V5tPaGD2Vxsmohoyjg7-R9VS5SwE-pw.jpg"
-        }
-      ],
-      "media_sent": false,
-      "first_seen_at": "2026-11-18T19:33:37.563365+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0
-    }
-  },
+  "pending": {},
   "alerts_sent": [
     "zaihua_news/2970:no_match",
     "zaihua_news/2999:no_match",
