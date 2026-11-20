@@ -854,63 +854,12 @@
     "zaihua_news/3648",
     "zaihua_news/3649",
     "zaihua_news/3650",
-    "zaihua_news/3651"
+    "zaihua_news/3651",
+    "zaihua_news/3652",
+    "zaihua_news/3654",
+    "zaihua_news/3655"
   ],
-  "pending": {
-    "zaihua_news/3652": {
-      "id": "zaihua_news/3652",
-      "title": "GTA 6 Preorders Top 17 Million, PS5 Accounts for 75%",
-      "paragraphs": [
-        "Sensor Tower estimates that GTA 6 preorders reached 17.07 million copies before launch, with revenue of approximately $1.65 billion. Of these, the PS5 version accounts for 12.73 million copies, or 75%, and the Xbox Series X|S version accounts for 4.35 million copies, or 25%.",
-        "The game will launch on PS5 and Xbox Series X|S on November 19, 2026, and a PC version has not yet been released. On launch day, some third-party merchants raised their prices for the PS5 Pro; Tmall's self-operated China digital edition is 9,498 yuan, and the Hong Kong edition is 14,579 yuan.",
-        "GameSpot | Sina Mobile"
-      ],
-      "published": "2026-11-19T13:41:20+00:00",
-      "link": "https://t.me/zaihua_news/3652",
-      "media": [
-        {
-          "type": "photo",
-          "url": "https://cdn1.telesco.pe/file/fQekmtMevUsYmDQaCM_U2l34OpG-K_IZdzqkUzPwByJVV2N32cYkgRtRbXv86iqC9XbX9X3WuIEqYEjIfVg3GMnmxG7TlHhcPnd6gZiLdT-mgMKKM39j6MQsemDw0j4itrYfSuSMc4Bhj0hGc_w_reRp3YLNCXGF5y7benL7Fu_hvfLrWKrA9-oVJTJwANPeEhgrvydJ-kfB37KxAPnOnW--kQxC0CmumK0ARuIaJoVOhOY3q_mO3njuT9JifrXFwPd0uDH5wl_OCA7tdGIjrnXDezyQjzQLx5vO-2ZY9ou6bMqYTeEh3IiMh9H9Rnfk3OblfuLnkM4Y2mshw6Pjcg.jpg"
-        }
-      ],
-      "media_sent": false,
-      "first_seen_at": "2026-11-19T18:38:04.525445+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0
-    },
-    "zaihua_news/3654": {
-      "id": "zaihua_news/3654",
-      "title": "✈️ Telegram macOS beta adds “Hidden Chats”",
-      "paragraphs": [
-        "Telegram macOS beta 13.2 (283584) adds an experimental feature Hidden Chats: set a passphrase of at least 8 characters in “Privacy & Security”; after that, enter the passphrase in the search box to open a separate hidden chat space. Hidden conversations will disappear from the chat list, folders, search, and notifications, and incoming calls from the other party will be automatically declined; multiple spaces can be set up, each with a different passphrase.",
-        "Hidden spaces will automatically close when the screen is locked, the Mac sleeps, or after 5 minutes of inactivity, and can also be manually closed by pressing ⌘L. Passphrases are not saved and cannot be recovered; logging out and logging back in will not restore them. This feature only takes effect on the Mac where it was set up and does not sync to other devices; moreover, when jumping to Telegram Web from an unlocked client, it may be bypassed by silent login. Therefore, it can only prevent others from looking over your shoulder, and cannot serve as an account security mechanism.",
-        "TGInfo"
-      ],
-      "published": "2026-11-19T16:05:23+00:00",
-      "link": "https://t.me/zaihua_news/3654",
-      "media": [],
-      "media_sent": false,
-      "first_seen_at": "2026-11-19T18:38:04.525445+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0
-    },
-    "zaihua_news/3655": {
-      "id": "zaihua_news/3655",
-      "title": "🤖 Anthropic rose 34% at the open on its first trading day, reaching a market capitalization of $1.5 trillion",
-      "paragraphs": [
-        "The artificial intelligence company Anthropic (ANT) officially listed on Nasdaq today, with an issue price of $83 per share. It opened at $111.5, up 34% from the issue price. Based on the opening price, the company's market capitalization is approximately $1.5 trillion. This IPO issued 980 million shares, with total offering proceeds of approximately $81.34 billion, of which the company issued 956.35 million shares and existing shareholders sold 23.6486 million shares.",
-        "In addition, Anthropic will raise $26 billion through a concurrent private placement, involving strategic investors such as Google, Nvidia, Microsoft, AMD, Broadcom, Micron and TSMC. The combined transaction size of the IPO and concurrent private placement is approximately $107.34 billion.",
-        "Cailian Press"
-      ],
-      "published": "2026-11-19T16:56:53+00:00",
-      "link": "https://t.me/zaihua_news/3655",
-      "media": [],
-      "media_sent": false,
-      "first_seen_at": "2026-11-19T18:38:04.525445+00:00",
-      "media_next_index": 0,
-      "text_next_index": 0
-    }
-  },
+  "pending": {},
   "alerts_sent": [
     "zaihua_news/2970:no_match",
     "zaihua_news/2999:no_match",
