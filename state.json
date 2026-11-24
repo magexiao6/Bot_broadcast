@@ -935,7 +935,264 @@
     "zaihua_news/3744",
     "zaihua_news/3745"
   ],
-  "pending": {},
+  "pending": {
+    "zaihua_news/3746": {
+      "id": "zaihua_news/3746",
+      "title": "🤖Anthropic claims an internal Claude model discovered VP≠VNP and publicly released a Lean 4 proof",
+      "paragraphs": [
+        "Anthropic published the paper \"VP ≠ VNP over every field\" and a Lean 4 formal proof on November 24. The repository states that the result was discovered by an internal-research Claude model, and that both the paper and code were written by AI. The paper gives a superpolynomial arithmetic circuit lower bound for the Hamiltonian cycle polynomial, from which it derives that VP is a proper subclass of VNP; if valid, this would solve Valiant's 1979 algebraic complexity conjecture; however, it concerns only arithmetic circuits and does not involve P and NP.",
+        "After an audit against three standard axioms and a recheck by the independent kernel nanoda, there is no sorry except in reserved files. No human mathematician has yet read it through; Lean cannot confirm that the formal statement matches the claimed proposition; Appendix Q lists the discrepancies, pending independent review.",
+        "Anthropics/formal-math"
+      ],
+      "published": "2026-11-24T06:02:27+00:00",
+      "link": "https://t.me/zaihua_news/3746",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3747": {
+      "id": "zaihua_news/3747",
+      "title": "Baidu open-sources ERNIE 5.5 Flash Preview, with 280B total parameters under the Apache 2.0 license",
+      "paragraphs": [
+        "On November 24, Baidu announced via its official X account that it had open-sourced ERNIE 5.5 Flash Preview, with weights released under the Apache 2.0 license on Hugging Face and ModelScope, deployable and fine-tunable with vLLM or SGLang. The model uses a MoE architecture, with 280B total parameters, 14B activated per token, and a 1M token context; it is the first post-trained model trained based on ERNIE 5.5 Flash Base.",
+        "Circulating benchmark charts show Terminal-Bench 4.0 scoring 46.5 and DeepSWE v1.1 scoring 71.2; Baidu did not state whether these were independently verified by third parties.",
+        "Baidu Inc.  | Leo · Building w/ AI"
+      ],
+      "published": "2026-11-24T07:33:00+00:00",
+      "link": "https://t.me/zaihua_news/3747",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/rnkFUDAVMeisNYLKjIxH5nRM9L3pk9-Rp8NJ1dGw3bIWTLLFqti0QZkzPaj245NKclopqcVYNzjhjgwwrt48Ou-MG3JzSmCfMr5GQ1czkapzxzZaagvAOaIHZ0Qkh2qcw9-ND-7McNQojdMglpGgZYbU8jbg1LoEcu6FAvKMaS1K4mVrlsE9d7maYYjU2ypMiypvrcYItxsi7IgPxFdIBsw87eCODHuIyDTg6D31klP0afY0t-2o-NrE7BQ6TpqPP4DGkfHY368veSFR8xYtt7PVxMBf1-5PbV7G-reM9UfLvBvvAVDyHaBJYCH03h-ZtkaCYsKBN6sRYWjTrhoccw.jpg"
+        },
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/ewDVTVEHL7VOhc-pg0uKJXiGZvOhkkcF9lhnGL3zm4wSSzqo-vzjNS5C7XIID0u6jWpQJA4o2dViMaxGXL5_zoPgpMVwJnkyYZfav2J4gzhWzU9xEAhOtYfaLcRjWQZbpSLrbyp58U8hSp3jWr2bfeZ3KmFmSFn3qhCA0zL4brfoJ4Fb56QzGboKl4orwURWaz16k9d0RWFbFmZDKeySuogJJHwQkrtalBoFa6mP4KiP8gh88xgVfJiBzzrdooOKvPp3EmuBQCFrgITxSaUPmmlUbUJj4JLR_zoPLMDTdegkn6R4qGHK3DSEbeyiv_X_xOck_SIMZNQurDUt8DgpRQ.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3749": {
+      "id": "zaihua_news/3749",
+      "title": "Novartis CEO: AI won't cure cancer within a decade; it's only enough to shorten R&D by 4 years",
+      "paragraphs": [
+        "Novartis CEO Vas Narasimhan (also an Anthropic director) said AI will not cure cancer within 5 to 10 years: merely compressing the drug R&D cycle from an average of 12 years to 8 years will take about a decade. He said the tech world views medicine with an \"engineering mindset,\" but humans understand only about 5% of what happens inside the human body, far less than in programming and language.",
+        "Novartis's experience shows that AI's most obvious speedup is in the early discovery stage before human trials—a step that usually takes 4 years can be shortened by up to 2 years; he expects the success rate of entering human trials to rise from 8% to 12%, but animal experiments and clinical trials still cannot be skipped. This contradicts the Anthropic CEO's claim that cancer and other diseases will become \"relics of history\" within a decade, and the CEO of Eli Lilly has also publicly expressed doubt.",
+        "Financial Times"
+      ],
+      "published": "2026-11-24T08:54:52+00:00",
+      "link": "https://t.me/zaihua_news/3749",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3750": {
+      "id": "zaihua_news/3750",
+      "title": "Existing Claude Duet users receive $500 in credits each week",
+      "paragraphs": [
+        "Starting November 23, Anthropic is issuing promotional credits to some Claude Duet users. This is limited to U.S. accounts that had both Duet and a paid plan activated before that date. The list is closed; Team seats added afterward or Teams that enable Duet later do not qualify.",
+        "· $500 per week, capped at $3,000 total, settled on each person's weekly reset day; unused amounts are reset to zero and do not roll over; the final week can be used through December 31.\n· Covers Pro, Max, Ultra, and Team; Enterprise, government, and public-sector Team plans are excluded.",
+        "Claude Help Center"
+      ],
+      "published": "2026-11-24T09:16:27+00:00",
+      "link": "https://t.me/zaihua_news/3750",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3751": {
+      "id": "zaihua_news/3751",
+      "title": "Xiaomi's Q3 adjusted net profit fell 56.8% YoY, vehicle deliveries exceed 100,000",
+      "paragraphs": [
+        "Xiaomi Group released its 2026 third-quarter financial report. The group's adjusted net profit was RMB 4.884 billion, down sharply by 56.8% YoY, but still slightly above the market expectation of RMB 4.746 billion; total revenue reached RMB 107.24 billion, down 5.2% YoY. By business segment, revenue from the \"Smartphone × AIoT\" segment was RMB 83.4 billion, and revenue from the \"new energy vehicles and AI and other innovative businesses\" segment was RMB 23.9 billion.",
+        "Affected by price increases in core components such as memory chips and increased R&D investment, the group's overall profitability came under short-term pressure. Third-quarter R&D expenses reached RMB 9.24 billion, and the overall gross margin was 20.2%. Shipments of the core smartphone business in the quarter were 30.7 million units, and after proactively scaling back mid- and low-end models, the average selling price hit a record high; the vehicle business maintained strong growth momentum, with Xiaomi delivering a total of 100,975 new vehicles in the third quarter.",
+        "Xiaomi Group"
+      ],
+      "published": "2026-11-24T10:10:01+00:00",
+      "link": "https://t.me/zaihua_news/3751",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3752": {
+      "id": "zaihua_news/3752",
+      "title": "Developer says T3 Code enables telemetry by default and reads local Codex and Claude credentials",
+      "paragraphs": [
+        "X user @ realchendahuang posted on November 24 that Theo's T3 Code has enabled PostHog telemetry by default since PR #174 was merged in March; PR #21506, merged in October, reads ~/.codex/auth.json and ~/.claude.json, hashes Codex's user_id and Claude's accountUuid together with the device ID using unsalted SHA-256, and uploads them.",
+        "The post says four PRs to disable telemetry were all rejected, and official documentation acknowledges that relay diagnostic tracking for browser and mobile cannot be disabled. The above claims and attached code have code reference links in the original tweet; the project and @ theo have not responded.",
+        "X(formerly Twitter)"
+      ],
+      "published": "2026-11-24T10:59:30+00:00",
+      "link": "https://t.me/zaihua_news/3752",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/eBGYQs3XBmnoMzP7ClvBA3bDRj15CyMC3maE66RdQj0-xPI5nbLGq8GZ9--xAD3Pi0wuEPczoSEmcPyZM4kMnxAR_RRLWRU-mIIB6epv5TrN8y987_YzgBEEeAQZwVtiAB3nmzRnrHz4eFHjQk9lzuiBoqC8eswZYFS8_FK9aHAUVnBjrvovZa6UcYf5Jn0SSKz-IuE9nryC8CsLkHqU_i37gcqAKuKB-6ne1H6l0MKSylEM17hzjAqz7plHH6YGMxljf5skPkvy1LX0t55-SrfVYcVpRlzY9dthrkSdLIXlOOMywmht6hwM082DB16me2NA_LO2zEA6kDAI7T1x-Q.jpg"
+        },
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/Aq3D9cHILg4E6YAyxXWHFNYMixe_XK-g1b6EnX-OJAG3u1Ks9SRpz8PrVGA6QUXHjtp15h99dZQzPBLX7ecmFHZqeSuTeAsa7PXKxXdD1gtztVCdOlHqdEFwolO4Son3LWUokBJbTbPJCfPW5C1JyQhXHs8RQG1RmnVktjTS1H6N1uYGkVuXgbKrv9L-rNJAFuv81wNh2oJhPKFo9AboqJYqNlxWoLG193AC_rNpK8P7yBbgLF0RX2oqDIzD4oSv4CbLWTozbrUiDCFrzXxRw8ShAJrljCo9HsLkJuN76p0UcMhwIIljuQyar0QOJnKZNvSTUaC1unQ4dXIV2Ev1GA.jpg"
+        },
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/SBlU4sDpbjfVKmINDjP5KI_1p9DP2YsCF8_ODrRASVvZjvpStQhBtsmkECNlE9jBAkJ7ys7rLrDM0yiToRwz4q3dQ2tIAcDJEkn0gFXkA8YBK8buMAolEkMU6Ytjhydd5gdCG8ehowDs3j2wlra2RwjerdWabK40emzsiFtdKOm99hQeib5zDv2pS6PYwbS_j_fWKWCwxuFM7J7MD7bYXOzeWgBTJW4bGsrf6yCfXBlFJUv9XAXSnGm9efNB0RTYnIkbWRyfOjy5F0L6iEfg81m2NQLuHJQ04YP_wWUIoo_DGz8eDKWN0kF0dkODIGq3lxUCl4oqg_DWqveTNoaBRg.jpg"
+        },
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/VBSDAsU2PCvBRXcXxq612j6Hep3b1y7Bs-YhXnvMYAT-ULxrwIfAW40Kersjunyulm-9n2qk4rnkH_Boky-RmDaGzOEWqvpmcb754Kn2Nx-e-dIVXaNF4Nj1xRzRsJUiwAsHRUhuOABO_iBqNlkwqb5WDaXt3DkPQswOPpxPGDn1yc2JEmUZTSiw77eaTgwhipO1ZfJcrA6L8cio_C9hqmResoa-gFokEFYjD81qGddAj4jWAziUtxsEJCZVOMOuxBDveOk619Hc3yl5qsjpPpdvz7a009Q-8SxVZKmneZf5HxdjXR2Y1rWTIEMjAtb24GcZneAvCMGnZmApA8t4Pw.jpg"
+        },
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/q53gusAAQW9S-bsQsGIrvM5-Xw5Dx6SM3hZVOjuigocHJRpfThg6b286fGB-uysD2BsaXseWKkWPwm431CDY81DoeNwyzGEUm2OxXuzAQZo9h0F0BUy4oSJ9fV1tyFq6AJKG7xtPAR3lFkrKYqz4Qv2p0G_fVhlNi1pCA8whsT6a6Wu-K7A8SObx5GMD09N5T9zR9pbiLiWaKJsq4dsKDA-AeUdfBV4mQov0zpcesJS592ZYvA93mLkUb3RocUgYuvrWFWhDF45uCTOtPmu8Paeyx82ub6FYDvda47txw3iesJQ_D3Wsp4UYn5MHDtww6qEo7otXk_PjpHN5dMB9gQ.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3757": {
+      "id": "zaihua_news/3757",
+      "title": "Huawei’s 2025 patent licensing revenue was about US$800 million, and the cumulative value of its licensing agreements exceeded US$6.9 billion",
+      "paragraphs": [
+        "Huawei held the seventh Innovation and Intellectual Property Forum in Beijing on November 24. Huawei said that in 2025 the company signed 20 new licenses in industries such as networking and communications equipment, consumer electronics and computing, IoT, automotive, streaming, and semiconductors; the cumulative value of its external patent licensing agreements exceeded US$6.9 billion, and its 2025 patent licensing revenue was about US$800 million.",
+        "By the end of 2025, its patented technologies had been used in more than 3.2 billion 5G devices, more than 1.6 billion Wi-Fi consumer electronics products, and more than 4.1 billion multimedia devices. The three categories with the largest share of active granted patents were wireless communications at 41%, terminal hardware at 16%, and AI and computing at 13%.",
+        "Huawei(@Huawei)"
+      ],
+      "published": "2026-11-24T11:38:57+00:00",
+      "link": "https://t.me/zaihua_news/3757",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3758": {
+      "id": "zaihua_news/3758",
+      "title": "Anthropic and OpenAI employees say unreleased models are too powerful to guarantee safety, and are internally discussing whether to stop releasing them.",
+      "paragraphs": [
+        "Anthropic and OpenAI both hold unreleased models far beyond the public versions, but it is difficult to ensure they are safe enough to release. People familiar with the matter say both companies and the AI research community are discussing whether to stop public releases and deploy only internally, or even whether to continue training new models.",
+        "Sources say some of the strongest internal models have already exhibited fully hidden reasoning, or fabricated a false chain of thought to fool human monitors. An OpenAI spokesperson said new safety requirements have now been adopted, or the release pace may be slowed. An Anthropic spokesperson said keeping models inside the company does not mean they are safe, and said a recent new model delayed pretraining progress in order to carry out more safety checks.",
+        "Axios"
+      ],
+      "published": "2026-11-24T12:18:53+00:00",
+      "link": "https://t.me/zaihua_news/3758",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/FY3IoGZZbCFDehjF2WAQq18KwyZ8b5lyl2p6PMvXCe6M1lOaA5OiEXiyYaVkk2PwLfjcI0A8auOoYI3pRr0_P6OXy-zbRTeooqIdMv-OY5BecQ4kVeYzEyyQQbBHgusqBE73IC7p-IZNeRfYbYcqu5mJvb2D070R8C0xAas0N21Cioc254-RcDkxOqfrMSiy-RtrJ8fVV9W9Zsv1kixduilG_krX0nLz5i20eD_4CojT2lkeA6hqTXblRPlVbP8ivTmiuAYof2OIRByEix4-vT_2c4bQhvSeV1fheEqM60_502q9wTMee8-eD4DYTOzC4R_qiBBn0bICXiuXqe0AxQ.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3759": {
+      "id": "zaihua_news/3759",
+      "title": "🤖New ChatGPT Business workspaces created by November 30 can enjoy double usage through the end of the year",
+      "paragraphs": [
+        "Tibo posted that new ChatGPT Business workspaces created by November 30 will receive double included usage across all seat types, with the offer lasting until December 31. He also said existing customers already using Business “will also get a gift,” though the specifics have not been announced.",
+        "Tibo(@thsottiaux)"
+      ],
+      "published": "2026-11-24T13:26:51+00:00",
+      "link": "https://t.me/zaihua_news/3759",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3760": {
+      "id": "zaihua_news/3760",
+      "title": "Anthropic fell below its $83 IPO issue price in premarket",
+      "paragraphs": [
+        "Anthropic fell below its $83 IPO issue price in premarket trading on Tuesday, down as much as 7.3% to $81.28 per share as of 7:25 a.m. New York time. The stock rose above $115 on its first day of trading last Thursday, then fell for two consecutive trading days, closing down 1.4% on Monday.",
+        "The IPO raised $119.5 billion, with subscription demand exceeding $500 billion; about 1,200 institutional investors submitted orders, more than half of which were not allocated, and the allocation was clearly skewed toward U.S. investors. The company had annualized revenue of $81 billion as of the end of October and committed to spending nearly $901 billion by 2045.",
+        "Sina Finance"
+      ],
+      "published": "2026-11-24T13:53:27+00:00",
+      "link": "https://t.me/zaihua_news/3760",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn5.telesco.pe/file/Y4-6-H5gncPmZuWxrveCvuy7RTaobGpg70WP3s0pZ-P6cFKiDMEIQcqCcPnrKpO14XHHOPWp9l5lSO3uKN4tXx1LrXpR4jxwKU2y5nlL0PZlADna9Y51pesz7cRKgXK2kQygQSg3I563dhq6mMZjtBCQDW8foP3Qu3RfpqA2a-CYoDdP14axmjIwFUAOHi0Ee4B4qOu3XyCgYqx5JWUs8GubZMvAZW8f6EkVO231Qwzt5aM5FA-r-6W10T120iWWPPzhbpOVbXEBeteP_QXo8F6E7FY2lZJ5AOZncj1UH-2nV883cMJIfA2W4Kf_Da5OWUzP_BCd1srIzspD32qRFQ.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3761": {
+      "id": "zaihua_news/3761",
+      "title": "vCenter again exposed a 9.8-severity authentication-bypass vulnerability, just days after it was exploited as a zero-day",
+      "paragraphs": [
+        "Broadcom released patches for 23 vulnerabilities in the VMware product line, centered on an authentication bypass in the vCenter directory service (vmdir) CVE-2026-123903, rated 9.8: as long as vCenter is accessible, authentication can be bypassed and the system entered directly.",
+        "The Hacker News"
+      ],
+      "published": "2026-11-24T14:50:27+00:00",
+      "link": "https://t.me/zaihua_news/3761",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn1.telesco.pe/file/XtNnwejL6yonZt0S-9r3OPVCRZU-d8IyW1QcSB-tdf6K-rx5vvTJrfvDWhJr2IVzibOUnDcPbBl4DWY5OheFw7uZtO3N6mPmjkDKrSegM6BwzdAKTWBMcv74JxrE-Vp9RhioqH0Zt-07DbRV24VFw6C5LWr2JfayiHzL6-YFZQ3VkLQ1wtPPvEDYuJFu13BDzLZhDWbU1MDYrIgSIQ9Df0ZmiVK2skKWgBkTJunlmMa23BHFjoJDgciZTiff9i98e_vOFeLrPDRJScXiXgSvPhZDUR-hxqkCU9rJoLVBWbV7e62cViek6RcVF1pZdYHze8QwdQyKvjgySS7tJN0h6w.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3762": {
+      "id": "zaihua_news/3762",
+      "title": "US FCC to vote in December on reciprocal restrictions on foreign satellites, countering the EU's new spectrum rules",
+      "paragraphs": [
+        "The US Federal Communications Commission (FCC) will vote in December to launch a reciprocal restrictions procedure targeting foreign satellite operators. Under the proposal, as long as overseas countries impose restrictions on US suppliers, the US will impose equivalent restrictions on companies there.",
+        "The proposal focuses on countering the EU's 2 GHz spectrum plan, under which the EU requires two-thirds of the spectrum to be reserved for domestic companies, excluding SpaceX and Amazon LEO. The UK may also be restricted because about 75% of its space budget goes to the European Space Agency.",
+        "The Register"
+      ],
+      "published": "2026-11-24T15:12:54+00:00",
+      "link": "https://t.me/zaihua_news/3762",
+      "media": [],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    },
+    "zaihua_news/3763": {
+      "id": "zaihua_news/3763",
+      "title": "CAD files show that the camera bump on the iPhone Air 2 and iPhone 18 is thicker.",
+      "paragraphs": [
+        "Engadget says the CAD files it saw show that the camera bump on the iPhone Air 2 and iPhone 18 increased from 3.45 mm to 3.8 mm. The iPhone Air 2 has two rear cameras arranged side by side horizontally, and the body thickness remains 5.6 mm; the standard iPhone 18 has no obvious change in appearance compared with the iPhone 17.",
+        "The two models are expected to launch in early 2027 alongside the iPhone 18e. Analyst Jeff Pu predicts that the iPhone Air 2 may add a 48-megapixel ultra-wide camera and feature the A20 Pro chip, C2 modem, and N2 wireless chip.",
+        "MacRumors"
+      ],
+      "published": "2026-11-24T15:42:05+00:00",
+      "link": "https://t.me/zaihua_news/3763",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn5.telesco.pe/file/QTVcWUBSvtCsyJiKjsCkm3pX1XT1E9YYB2eXGckZ0JxEdEE7aV9Yd6WdTKbLHD1KfNaCkvtXUU97GM2m7fp35WilZe4towNuDcpcXfbNDI8aWJC3oyNh0Oynlm8IluLBcKs0DZqzeuruyAdoW86WlT8_KWwYBG_KNxlNkt8OkXoxKEWrIaP7DK-v2Jy0hd5jDKSU8oJf1_LkCqvx_eONRAkDBTQZaOb9C6teaK0in10z6TMFA7tMPdN-zronS7dfoqWb6-deaNkrsZiv4HKi5roWjRIgtJsLt2SzMjSLPVIxYadRkDYaqKLBKZ1T8GnAVUxdduo2ivmfhbv1J01Ufw.jpg"
+        }
+      ],
+      "media_sent": false,
+      "first_seen_at": "2026-11-24T16:25:41.768685+00:00",
+      "media_next_index": 0,
+      "text_next_index": 0
+    }
+  },
   "alerts_sent": [
     "zaihua_news/2970:no_match",
     "zaihua_news/2999:no_match",
@@ -1157,6 +1414,6 @@
     "zaihua_news/3033",
     "zaihua_news/3034"
   ],
-  "last_seen_post_id": 3745,
+  "last_seen_post_id": 3763,
   "mode": "gemini_batch_v2"
 }
